@@ -2,7 +2,7 @@
 layout: post
 title: "New (bloggy) beginnings"
 author: "Chris Meardon"
-categories: 
+categories: blog
 tags: [blog, theme]
 image: hello.jpg
 ---

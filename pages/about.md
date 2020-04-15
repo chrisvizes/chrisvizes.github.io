@@ -19,11 +19,11 @@ A passion of mine revolves around tutoring and **science communication**. Helpin
 As a Director of [Uni-Truths](https://www.uni-truths.com), I have helped evolve this web platform into a tool used by over 500 users across much of the worlds universities. Within this role was how I first gained experience and interest in Tableau Desktop to firstly see what the software could do for *me*, but evolved into creating a variety of dashboards to provide analytics into the business itself. **I was my first and longest client.** 
 
 # Awards & Accreditations
-- Tableau Desktop Certified Associate (Jan 2020)
+- **Tableau Desktop Certified Associate** (Jan 2020)
     - Achieved via an exam demonstrating a comprehensive understanding of functionality in Tableau Desktop.
-- Alteryx Designer Core (Dec 2019)
+- **Alteryx Designer Core** (Dec 2019)
     - Achieved via an exam demonstrating comfort with the core tooling of Alteryx Designer.
-- George Pugh Memorial Prize (Jul 2018)
+- **George Pugh Memorial Prize** (Jul 2018)
     - An outstanding contribution towards the life of the School of Physics and wider student community awarded by the Department of Physics, University of Bristol.
 
-### *Now*, that's plenty about me. Check out some of the things I've been making [🏠]()
+### *Now*, that's plenty about me. Check out some of the things I've been making [🏠](https://chrisvizes.github.io/)

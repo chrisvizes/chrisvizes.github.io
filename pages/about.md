@@ -16,7 +16,7 @@ While there I had the pleasure of working with the physics society **[Chaos](htt
 A passion of mine revolves around tutoring and science communication. Helping someone achieve a lightbulb moment and get enthusiastic about a subject has been a focus of mine across a variety of roles and I am always looking to help others. I've been a personal tutor, an overseas academic mentor, a study session leader and have been attempting translating this experience over to the world of data visualisation.
 
 ## Uni-Truths Ltd
-As a Director of [Uni-Truths](www.uni-truths.com), I have helped evolve this web platform into a tool used by over 500 users across much of the worlds universities. Within this role was how I first gained experience and interest in Tableau Desktop to firstly see what the software could do for *me*, but evolved into creating a variety of dashboards to provide analytics into the business itself. I was my first and longest client. 
+As a Director of [Uni-Truths](https://www.uni-truths.com), I have helped evolve this web platform into a tool used by over 500 users across much of the worlds universities. Within this role was how I first gained experience and interest in Tableau Desktop to firstly see what the software could do for *me*, but evolved into creating a variety of dashboards to provide analytics into the business itself. I was my first and longest client. 
 
 # Accreditations
 - Tableau Desktop Certified Associate (Jan 2020)

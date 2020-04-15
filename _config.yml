@@ -16,7 +16,7 @@ sass:
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           "Chris Vizes"
 description:	       "data visualisation and more"
-author:              "Chris Meardon"
+author:              "Chris Meardon" # I removed this from the footer so I think it's not needed
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:

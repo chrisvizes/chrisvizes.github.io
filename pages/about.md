@@ -2,7 +2,7 @@
 layout: misc
 title: About
 ---
-Welcome to my blog, here's a little bit about myself and my background.
+Welcome to my blog, here's a little bit about me and my background.
 
 ## My Current Role
 I am a Trainee Consulting Analyst for The Information Lab. Here, I have recieved 4 months of dedicated Tableau and Alteryx training by some of the leading members in these communities (**[Data School](https://www.thedataschool.co.uk/)**). Following this training I will be consulting for 4 x 6 month placements in a variety of industries. 

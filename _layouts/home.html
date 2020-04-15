@@ -7,9 +7,17 @@ title: Home
 
 <article>
   <a href="{{ site.github.url }}{{ post.url }}">
+
+    <!-- There's a check here if there is a cover_image specified in the posts front matter and uses that in the home feed if so -->
+    {% if post.cover_image %}
+    <div class="featured-posts" {% if post.cover_image %}style="background-image:url({{ site.github.url }}/assets/img/{{ post.cover_image }})"{% endif %}>
+      <h2><span>{{ post.title }}</span></h2>
+    </div>
+    {% else %}
     <div class="featured-posts" {% if post.image %}style="background-image:url({{ site.github.url }}/assets/img/{{ post.image }})"{% endif %}>
       <h2><span>{{ post.title }}</span></h2>
     </div>
+    {% endif %}
   </a>
 </article>
 

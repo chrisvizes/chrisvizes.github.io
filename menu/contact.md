@@ -3,4 +3,7 @@ layout: page
 title: Contact
 ---
 
-If you are having any problems, any questions or suggestions, feel free to [tweet at me](https://twitter.com/intent/tweet?text=%40paululele), or [file a GitHub issue](https://github.com/lenpaul/lagrange/issues/new)
+The easiest way to get hold of me is via twitter, which you can follow a link for below.
+
+<a class="twitter-grid" data-partner="tweetdeck" href="https://twitter.com/chris_vizes">Maybe I'm active on here?</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+

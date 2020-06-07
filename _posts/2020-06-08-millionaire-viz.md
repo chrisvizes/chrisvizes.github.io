@@ -13,7 +13,7 @@ I'm planning on taking the Tableau Certified Professional exam soon and as a par
 ## What I did
 To kick off this sprint, I created a dashboard taking a look at data on the number of adults with wealth greater than $1M. Now I'm not exactly sure on the definitions here of wealth, nor how it is measured so please take my dashboard with a pinch of salt. 
 
-![The dashboard](/assets/img/Millionaires_dash.png "I should probably make this a hyperlink")
+[![The dashboard](/assets/img/Millionaires_dash.png "I should probably make this a hyperlink")](www.google.com)
 
 
 

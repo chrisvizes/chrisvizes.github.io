@@ -22,7 +22,7 @@ As a Director of [Uni-Truths](https://www.uni-truths.com), I have helped evolve 
 - **Alteryx Designer Advanced** (Jun 2020)
     - Able to demonstrate higher-level abilities with Alteryx Designer.
 - **Tableau Desktop Certified Associate** (Jan 2020)
-    - Achieved via an exam demonstrating a comprehensive understanding of functionality in Tableau Desktop.
+    - Able to demonstrate a comprehensive understanding of functionality in Tableau Desktop.
 - **Alteryx Designer Core** (Dec 2019)
     - Able to demonstrate comfort with the core tooling of Alteryx Designer.
 - **George Pugh Memorial Prize** (Jul 2018)

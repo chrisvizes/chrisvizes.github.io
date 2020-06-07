@@ -30,10 +30,12 @@ To try and grow I want to record down my thoughts on the dashboard. It may also 
 ![BAN](/assets/img/millionaire_ban.png )
  
 ### The Bad
-Focus colour reused not great
-bottom viz doesn't answer the question
-confusing wording on annotation
-took more than 1.5 hours
-top viz too big taking up too much of the screen
-Perhaps mis represented numbers? DS says units were thousands of adults but that give US 18 billion adults?
-Definition of numbers not present
+* I've used a blue colour to highlight features of the dashboard, but by using the same colour for different highlighted elements, I've introduced a potential source of confusion. For example the blue at first indicates the US, but then turns into indicating the countries we are comparing to the US. These colour uses are also both visible at the same time, being in near proximity to each other, amplifying the issue. I don't think it's too much of an issue as the other labelling is pretty clear, but it feels against best practice and perhaps there was a better solution here.
+![Colour Issue](/assets/img/colour_issue.png )
+* The bottom chart was meant to show how the US is predicted to maintain it's large domination of the worldwide millionaire population and I think it does answer it to some extent, but it's the best chart choice for it. I think I made the chart first, liked it, and then tried to fit it into the narrative, which is the cause of the issue. The measure to show this "dominance" is not the total # of millionaires (as on the axis), but rather what % of the world the US makes up. The US drops by this measure almost 10% but you cannot clearly see that from the chart and this information is important. A chart showing parts to whole for the three different time periods with the US, and perhaps a couple other leading countries or the rest of the world, would have worked better I think. 
+* The annotation "Dropping 9% by 2024 to 28.6% of the world" was poor wording, especially in the context of the chart it was on. "Dropping 9%" implies that I'm refering to the measure shown on the chart, but I'm not. This drop is comparing the US dominance of the world, which is not only affected by the # of millionaires in the US, but also the # in all the other countries. If the above issue was addressed with the chart choice then I think that would help.
+* It took me more than an hour to create, coming in at roughly an hour and a half. This is not an easy issue to address other than just stopping when the time is up. Perhaps I should have scaled back the work towards the end when I could see I wasn't going to finish. Perhaps more foresight was needed in how long the design was going to take me. Perhaps I should of found my angle more quickly. This one is a hard one and has been a big focus of my time at the Information Lab since starting 6 months ago. 
+* The top bar chart of the viz takes up so much room and may not even be visible in one go for some users. I don't think there really is a need for this, perhaps I should have reduced the label detail, shrank it down and then had the waterfall by it's side. I think there is a better layout, but I can't quite picture it.
+* I didn't turn off or address mobile layouts.
+* I'm not entirely sure if this is an issue or not, but I may have misrepresented the numbers. The source says the figures are in terms of thousands, but I have not shown them as such. I did this because I couldn't see how the numbers would make sense if they represented thousands. It would have shown billions of US millionaires, but there aren't billions of US citizens! More investigation needed.
+* Part of this comes down to myself no knowing, but I should have included a definition of terms used. I.e. who do I define as a millionaire? When was the study? Who was the study by? How was the data collected? What is the prediction based on? 

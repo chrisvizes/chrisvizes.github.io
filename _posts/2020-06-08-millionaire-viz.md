@@ -23,7 +23,9 @@ To kick off this sprint, I created a dashboard taking a look at data on the numb
 * To compare the countries on this value and show how countries rank at the same time is the perfect case for a bar chart and I think this was the right choice. 
 * Breaking up the countries into the top countries and then the rest of the world was suitable here too as the numbers became less important the further down and really we are looking at US comparisons.
 * To tell the story of how dominant the US is, I think going from the bar chart to the waterfall, showing how all the countries add up to the US,  was an effective way to do this. It makes the sum of these value visually clear. 
-![BAN and waterfall](/assets/img/millionaire_waterfall.png "What is this field again?")
+![waterfall](/assets/img/millionaire_waterfall.png "What is this field again?")
+* I think using the BAN of the US percentage was a great fit for the flow of the story working through the dashboard. 
+![BAN](/assets/img/millionaire_ban.png )
  
 
 

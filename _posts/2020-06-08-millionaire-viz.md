@@ -13,7 +13,9 @@ I'm planning on taking the Tableau Certified Professional exam soon and as a par
 ## What I did
 To kick off this sprint, I created a dashboard taking a look at data on the number of adults with wealth greater than $1M. Now I'm not exactly sure on the definitions here of wealth, nor how it is measured so please take my dashboard with a pinch of salt. 
 
-![The dashboard](/assets/img/Millionaires_dash "I should probably make this a hyperlink")
+![The dashboard](/assets/img/Millionaires_dash.png "I should probably make this a hyperlink")
+![Working process](/assets/img/blogging-working-process.png "yeah, I'm not sure why I made this an image either...")
+
 
 ## Reflections
 * I quite like my focus into one particular country as it created a better story as you move through down the dashboard.
@@ -21,7 +23,7 @@ To kick off this sprint, I created a dashboard taking a look at data on the numb
 * To compare the countries on this value and show how countries rank at the same time is the perfect case for a bar chart and I think this was the right choice. 
 * Breaking up the countries into the top countries and then the rest of the world was suitable here too as the numbers became less important the further down and really we are looking at US comparisons.
 * To tell the story of how dominant the US is, I think going from the bar chart to the waterfall, showing how all the countries add up to the US,  was an effective way to do this. It makes the sum of these value visually clear. 
-![BAN and waterfall](/assets/img/millionaire_waterfall "What is this field again?")
+![BAN and waterfall](/assets/img/millionaire_waterfall.png "What is this field again?")
  
 
 

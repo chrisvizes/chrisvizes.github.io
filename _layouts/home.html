@@ -4,6 +4,7 @@ title: Home
 ---
 
 {% for post in paginator.posts %}
+<<<<<<< HEAD
 
 <article>
   <a href="{{ site.github.url }}{{ post.url }}">
@@ -21,6 +22,22 @@ title: Home
   </a>
 </article>
 
+=======
+<div class="posts">
+  <h1>
+    <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
+  </h1>
+  {% if post.image %}
+  <div class="thumbnail-container">
+    <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image }}"></a>
+  </div>
+  {% endif %}
+  <p>
+    {{ post.content | strip_html | truncate: 350 }} <a href="{{ site.github.url }}{{ post.url }}">Read more</a>
+    <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
+  </p>
+</div>
+>>>>>>> 484317ee4ac82f97e294e27ca628e7260977c28f
 {% endfor %}
 
 <!-- Pagination links -->
@@ -33,7 +50,12 @@ title: Home
 
   {% if paginator.previous_page %}
     <a class="pagination-button pagination-active" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">{{ site.data.settings.pagination.next_page }}</a>
+<<<<<<< HEAD
     {% else %}
       <span class="pagination-button">{{ site.data.settings.pagination.next_page }}</span>
+=======
+  {% else %}
+    <span class="pagination-button">{{ site.data.settings.pagination.next_page }}</span>
+>>>>>>> 484317ee4ac82f97e294e27ca628e7260977c28f
   {% endif %}
 </div>

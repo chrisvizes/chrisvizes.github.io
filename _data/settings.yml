@@ -1,35 +1,20 @@
 # Change 'comments' to true for Disqus comments
 disqus:
   comments: false
-<<<<<<< HEAD
-  disqus_shortname: 'millennial-3'
-=======
   disqus_shortname: 'https-lenpaul-github-io-lagrange'
->>>>>>> 484317ee4ac82f97e294e27ca628e7260977c28f
 
 # If you are not using Google Analytics, please change 'google-ID' to an empty string
 google-ID: 'UA-163700586-1'
 
 menu:
-<<<<<<< HEAD
 - {name: 'About', folder: 'pages', file: 'about.html'}
 - {name: 'Contact', folder: 'pages', file: 'contact.html'}
-=======
-- {name: 'About', path: 'menu', url: 'about.html'}
-- {name: 'Blog', path: 'menu', url: 'writing.html'}
-- {name: 'Contact', path: 'menu', url: 'contact.html'}
->>>>>>> 484317ee4ac82f97e294e27ca628e7260977c28f
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
 social:
 - {icon: 'twitter', link: 'https://twitter.com/chris_vizes'}
-<<<<<<< HEAD
-
-# - {icon: 'rss-square', link: 'rss-feed.xml'}
-=======
 - {icon: 'linkedin', link: 'https://www.linkedin.com/in/chris-meardon/'}
 # - {icon: 'rss-square', link: '/rss-feed.xml'}
->>>>>>> 484317ee4ac82f97e294e27ca628e7260977c28f
 
 # Customize site text
 pagination:
@@ -38,10 +23,6 @@ pagination:
 
 sharing_button_prompt: 'Share'
 
-<<<<<<< HEAD
-related_posts: 'You may also enjoy...'
-=======
 related_posts: 'You may also enjoy:'
->>>>>>> 484317ee4ac82f97e294e27ca628e7260977c28f
 
 post_date_prefix: 'Written on'

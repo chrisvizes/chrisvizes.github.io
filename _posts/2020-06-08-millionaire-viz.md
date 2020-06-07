@@ -28,6 +28,9 @@ To try and grow I want to record down my thoughts on the dashboard. It may also 
 * I like the reference line on the waterfall chart making it clearer how the totals are the same. It's pretty subtle but I think helps. 
 * I think using the BAN of the US percentage was a great fit for the flow of the story working through the dashboard. 
 ![BAN](/assets/img/millionaire_ban.png )
+* It's a nice blue.
+* I think I got the flow working quite well here for where the eye travels down the page in roughly the path shown below. Left to right, top to bottom, looking at the big numbers and highlighted colours first. This helps follow the narrative of the dashboard. 
+![Flow](/assets/img/mill_flow.png )
  
 ### The Bad
 * I've used a blue colour to highlight features of the dashboard, but by using the same colour for different highlighted elements, I've introduced a potential source of confusion. For example the blue at first indicates the US, but then turns into indicating the countries we are comparing to the US. These colour uses are also both visible at the same time, being in near proximity to each other, amplifying the issue. I don't think it's too much of an issue as the other labelling is pretty clear, but it feels against best practice and perhaps there was a better solution here.
@@ -39,3 +42,11 @@ To try and grow I want to record down my thoughts on the dashboard. It may also 
 * I didn't turn off or address mobile layouts.
 * I'm not entirely sure if this is an issue or not, but I may have misrepresented the numbers. The source says the figures are in terms of thousands, but I have not shown them as such. I did this because I couldn't see how the numbers would make sense if they represented thousands. It would have shown billions of US millionaires, but there aren't billions of US citizens! More investigation needed.
 * Part of this comes down to myself no knowing, but I should have included a definition of terms used. I.e. who do I define as a millionaire? When was the study? Who was the study by? How was the data collected? What is the prediction based on? 
+
+## Day One Complete
+That's the first one done, and even a little blog to reflect on it. Fingers crossed I can keep pumping the dashboards out at least in preparation for the exam. 
+
+## Have any feedback or ideas?
+Pop me a message on twitter @Chris_Vizes
+
+Thanks for reading.

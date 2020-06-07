@@ -5,11 +5,8 @@ author: "Chris Meardon"
 categories: blog
 tags: [blog]
 image: "making-a-blog-cover.jpg"
-<<<<<<< HEAD
 cover_image: "making-a-blog-cover-cover.jpg" # this is an example of using a different image for the image of the blog in the home feed compared to the top of the blog
 
-=======
->>>>>>> 484317ee4ac82f97e294e27ca628e7260977c28f
 ---
 
 ## Let's talk about how this blog came into existence.

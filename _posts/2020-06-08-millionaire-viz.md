@@ -4,8 +4,8 @@ title: "Kicking off exam preparations with a viz about millionaires"
 author: "Chris Meardon"
 categories: blog
 tags: [tableau,dashboard]
-image: 
-cover_image: "/assets/img/millionaires.png"
+image: "millionaires.png"
+cover_image: "millionaires.png"
 ---
 ## The Plan
 I'm planning on taking the Tableau Certified Professional exam soon and as a part of preparing for it, I am planning to practice making quick dashboards that are effective and follow visual best practice. My plan is to make one each day, spending no more than an hour on each. The time limit here is key as it is an important factor in the exam and creates pressure to have an efficient process in creation. 

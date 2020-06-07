@@ -24,12 +24,15 @@ To try and grow I want to record down my thoughts on the dashboard. It may also 
 * To compare the countries on this value and show how countries rank at the same time is the perfect case for a bar chart and I think this was the right choice. 
 * Breaking up the countries into the top countries and then the rest of the world was suitable here too as the numbers became less important the further down and really we are looking at US comparisons.
 * To tell the story of how dominant the US is, I think going from the bar chart to the waterfall, showing how all the countries add up to the US,  was an effective way to do this. It makes the sum of these value visually clear. 
+
 ![waterfall](/assets/img/millionaire_waterfall.png "What is this field again?")
 * I like the reference line on the waterfall chart making it clearer how the totals are the same. It's pretty subtle but I think helps. 
 * I think using the BAN of the US percentage was a great fit for the flow of the story working through the dashboard. 
+
 ![BAN](/assets/img/millionaire_ban.png )
 * It's a nice blue.
 * I think I got the flow working quite well here for where the eye travels down the page in roughly the path shown below. Left to right, top to bottom, looking at the big numbers and highlighted colours first. This helps follow the narrative of the dashboard. 
+
 ![Flow](/assets/img/mill_flow.png )
  
 ### The Bad

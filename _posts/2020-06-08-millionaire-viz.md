@@ -5,7 +5,7 @@ author: "Chris Meardon"
 categories: blog
 tags: [tableau,dashboard]
 image: 
-cover_image: "millionaires.png"
+cover_image: "/assets/img/millionaires.png"
 ---
 ## The Plan
 I'm planning on taking the Tableau Certified Professional exam soon and as a part of preparing for it, I am planning to practice making quick dashboards that are effective and follow visual best practice. My plan is to make one each day, spending no more than an hour on each. The time limit here is key as it is an important factor in the exam and creates pressure to have an efficient process in creation. 
@@ -14,7 +14,7 @@ I'm planning on taking the Tableau Certified Professional exam soon and as a par
 To kick off this sprint, I created a dashboard taking a look at data on the number of adults with wealth greater than $1M. Now I'm not exactly sure on the definitions here of wealth, nor how it is measured so please take my dashboard with a pinch of salt. 
 
 ![The dashboard](/assets/img/Millionaires_dash.png "I should probably make this a hyperlink")
-![Working process](/assets/img/blogging-working-process.png "yeah, I'm not sure why I made this an image either...")
+
 
 
 ## Reflections

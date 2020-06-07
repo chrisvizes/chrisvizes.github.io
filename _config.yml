@@ -1,18 +1,5 @@
 # Site Build Settings
 
-<<<<<<< HEAD
-=======
-# Jekyll-paginate-v2 configuration
-#  pagination:
-#   enabled: true
-#   per_page: 5
-#   permalink: '/page/:num/'
-#   title: ':title - page :num of :max'
-#   limit: 0
-#   sort_field: 'date'
-#   sort_reverse: true
-
->>>>>>> 484317ee4ac82f97e294e27ca628e7260977c28f
 # jekyll-paginate configuration
 paginate:            5
 
@@ -22,7 +9,6 @@ highlighter:         rouge
 permalink:           none
 plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
 
-<<<<<<< HEAD
 sass:
   sass_dir: assets/css
   style: :nested
@@ -31,12 +17,6 @@ sass:
 title:		           "Chris Vizes"
 description:	       "Data visualisation and more"
 author:              "Chris Meardon" # I removed this from the footer so I think it's not needed
-=======
-# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
-title:		           'Chris Vizes'
-description:	       'Data visualisation and more'
-author:              'Chris Meardon'
->>>>>>> 484317ee4ac82f97e294e27ca628e7260977c28f
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
 #feed:

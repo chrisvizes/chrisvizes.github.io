@@ -1,9 +1,5 @@
 _site
 Gemfile.lock
-<<<<<<< HEAD
-=======
-*.gem
->>>>>>> 484317ee4ac82f97e294e27ca628e7260977c28f
 .sass-cache
 .jekyll-metadata
 .DS_Store

@@ -8,7 +8,7 @@ Welcome to my blog, here's a little bit about me and my background.
 I am a Trainee Consulting Analyst for The Information Lab. Here, I have recieved 4 months of dedicated Tableau and Alteryx training by some of the leading members in these communities (**[Data School](https://www.thedataschool.co.uk/)**). Following this training I have 4 x 6 month placements in a variety of industries lined up. 
 
 ## University
-I have a BSc in **Physics** (2:1) from the University of **Bristol** where I took particular interest in my **computational** and **experimental** units (i.e. exams no thank you).
+I have a BSc in **Physics** (2:1) from the University of Bristol where I took particular interest in my computational and experimental units (i.e. exams no thank you).
 
 While there I had the pleasure of working with the physics society **[Chaos](https://www.bristolchaos.com)** in a variety of roles, spending my final year as the President. The 18-person strong committee managed to achieve the Best Academic & Careers Society award from the National Union of Students in 2018.
 

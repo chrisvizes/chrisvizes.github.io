@@ -13,7 +13,7 @@ I'm planning on taking the Tableau Certified Professional exam soon and as a par
 ## What I did
 To kick off this sprint, I created a dashboard taking a look at data on the number of adults with wealth greater than $1M. Now I'm not exactly sure on the definitions here of wealth, nor how it is measured so please take my dashboard with a pinch of salt. 
 
-[![The dashboard](/assets/img/Millionaires_dash.png "I should probably make this a hyperlink")](https://public.tableau.com/profile/chris.meardon#!/vizhome/MillionairesoftheWorldUSDomination/Millionaires)
+[![The dashboard](/assets/img/Millionaires_dash.png "Click to go to Tableau Public")](https://public.tableau.com/profile/chris.meardon#!/vizhome/MillionairesoftheWorldUSDomination/Millionaires)
 
 ## Reflections
 To try and grow I want to record down my thoughts on the dashboard. It may also help indicate why I made certain decisions if you're interested. Without blowing my own trumpet, let's start on a positive note. 

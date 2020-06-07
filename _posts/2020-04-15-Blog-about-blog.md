@@ -11,7 +11,7 @@ cover_image: "making-a-blog-cover-cover.jpg" # this is an example of using a dif
 
 ## Let's talk about how this blog came into existence.
 
-I've been writing blogs for the [Data School Blog](https://www.thedataschool.co.uk/author/chris-meardon/) since starting my role there on topics around tableau and alteryx tutorials/ tips and what it's like being a data schooler. My writing is usually pretty relaxed and I like to have a laugh to keep things a bit more interesting. However, sometimes I'm a bit too casual for the companies blog or I'd rather be free from conforming to my idea of what is appropriate for their blog. 
+I've been writing blogs for the [Data School Blog](https://www.thedataschool.co.uk/author/chris-meardon/) since starting my role there on topics around tableau and Alteryx tutorials/ tips and what it's like being a data schooler. My writing is usually pretty relaxed and I like to have a laugh to keep things a bit more interesting. However, sometimes I'm a bit too casual for the companies blog or I'd rather be free from conforming to my idea of what is appropriate for their blog. 
 
 I also thought it would be a good challenge for me to get back into web development and to also have a place that acts as a portfolio to help build my personal brand.
 
@@ -26,7 +26,7 @@ To give an idea on how I operate the blog after it is all set up, see the diagra
 ## How I publish new content
 ![Working process](/assets/img/blogging-working-process.png "yeah, I'm not sure why I made this an image either...")
 
-The text editor that I use is VSCode which has an integrated terminal which I then use for pushing the new content to Github, but there are many tools for this process. Any kind of text editor paired with the basic terminal on your machine will do fine. I believe the simplest approach may be to edit the blog directly with Github itself (even the desktop application). The point I'm trying to make is that once the blog has been set up, writing blogs is quick and simple. I like using VSCode because of functionality around writing other bits of the code for the website (aside blogs) and it comes with many quality of life inprovements that I am used to. 
+The text editor that I use is VSCode which has an integrated terminal which I then use for pushing the new content to Github, but there are many tools for this process. Any kind of text editor paired with the basic terminal on your machine will do fine. I believe the simplest approach may be to edit the blog directly with Github itself (even the desktop application). The point I'm trying to make is that once the blog has been set up, writing blogs is quick and simple. I like using VSCode because of functionality around writing other bits of the code for the website (aside blogs) and it comes with many quality of life improvements that I am used to. 
 
 ## Blog setup
 
@@ -41,6 +41,6 @@ I spent a few evenings *(imagine 200 commits/changes)* trying to understand how 
 
 
 #### Well I think that wrap things up
-Check out my repository for the blog to see the code behind this, but the best place to learn about how to do this yourself if you're not comfortable with that I have mentioned, is probably a combination of youtube tutorials and guides on Github Pages or Jekyll. 
+Check out my repository for the blog to see the code behind this, but the best place to learn about how to do this yourself if you're not comfortable with that I have mentioned, is probably a combination of Youtube tutorials and guides on Github Pages or Jekyll. 
 
 #### Thanks for reading

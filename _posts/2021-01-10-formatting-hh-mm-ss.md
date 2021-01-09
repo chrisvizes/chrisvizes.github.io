@@ -4,7 +4,7 @@ title: "Tableau: How to Format Seconds into hh:mm:ss (like a clock)"
 author: "Chris Meardon"
 categories: blog
 tags: [tableau,formatting,calculation]
-image: "formatting-clock-thumb.png"
+image: "formatting-clock-cover.png"
 cover_image: "formatting-clock-cover.png"
 ---
 ## Why

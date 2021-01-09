@@ -47,7 +47,10 @@ So:
 we have 
 
 extensions
+
 yy:ww:hh:mm:ss
+
+
 what about if my time is in hours,mins,days,months (harder)?
 
 make a bunch of examples of how to do it for all the possible scenarios you can think of

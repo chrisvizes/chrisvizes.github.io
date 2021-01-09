@@ -6,7 +6,7 @@ categories: blog
 tags: [tableau,formatting,calculation]
 image: "formatting-clock-cover.png"
 cover_image: "formatting-clock-cover.png"
-excerpt: "Sometimes it can be useful to turn a number of seconds, say 678, into the format hh:mm:ss to make it more readable. This blog will show you how to do this within Tableau, and extend it for some other use cases."
+excerpt: "How do you turn a number of seconds, say 678, into the format hh:mm:ss to make it more readable. This blog will show you how to do this within Tableau, and extend it for some other use cases."
 ---
 ## Why
 Sometimes it can be useful to turn a number of seconds, say 678, into the format hh:mm:ss to make it more readable. This blog will show you how to do this within Tableau, and extend it for some other use cases.
@@ -93,7 +93,38 @@ So 99999 seconds on a dd:hh:mm:ss clock would be 01:03:46:39
 
 So 100 minutes on a hh:dd:ss clock would be 01:40:00
 
+### Moving Theory Into Tableau
+To do this in Tableau Desktop we can create a calculated field for each conversion, i.e. converting the field representing seconds into each of hh, mm and ss and ensuring we show the value 1 as 01 and 5 as 05 for example:
+
+ss<br>
+```
+if len(str([Seconds]%60)) < 2
+    then '0' + str([Seconds]%60)
+else str([Seconds]%60)
+end
+```
+
+mm<br>
+```
+if len(str(floor([Seconds]/60) % 60)) < 2
+    then '0' + str(floor([Seconds]/60) % 60)
+else str(floor([Seconds]/60) % 60)
+end
+```
+
+hh<br>
+```
+if len(str(floor([Seconds] / 3600) % 24)) < 2
+    then '0' + str(floor([Seconds] / 3600) % 24)
+else str(floor(floor([Seconds] / 3600) % 24))
+end
+```
+
+Then we can add these strings together with a ':' between:<br>
+`[H] + ':' + [M] + ':' + [S]`<br>
+and we have a string processing our input seconds into the format hh:mm:ss, done. 
+
 ## Wrapping up
 
-This can be extended to take any unit of time as the input (A) and to create any format clock, if the conversion between the input and output time units is known (B). The maximum number for the units of time (C) is optional and in particular it may be useful to omit on the largest time unit on the clock. This works for Tableau, but also anywhere else these functions or similar are available, by using:<br>
+This method lays out how to covert time from seconds into a formatted string in Tableau that can be more easily readable, like a digital clock. This can be extended to take any unit of time as the input (A) and to create any format clock, if the conversion between the input and output time units is known (B). The maximum number for the units of time (C) is optional and in particular it may be useful to omit on the largest time unit on the clock. This works for Tableau, but also anywhere else these functions or similar are available, by using:<br>
 `Floor(A/B)%C` 

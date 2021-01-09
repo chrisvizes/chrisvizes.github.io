@@ -4,7 +4,7 @@ title: "Tableau: How to Format Seconds into hh:mm:ss (like a clock)"
 author: "Chris Meardon"
 categories: blog
 tags: [tableau,formatting,calculation]
-image: "formatting-clock-cover.png"
+image: "formatting-clock-thumb.png"
 cover_image: "formatting-clock-cover.png"
 ---
 ## Why
@@ -16,7 +16,7 @@ For Tableau to be able to know how many hours minutes and seconds the number rep
 
 This is a result of how dates are stored in some systems and how Tableau assumes we are following this convention. So we need another way. 
 
-## Motivate How
+## Motivating the Method
 My first thought is to use a calculation instead that breaks the number - like 678 - into how many hours minutes and seconds it represents and then combining them into one string, kind of like a clock interface. 
 
 If we had less than 60 seconds I hope you can see that we would just need to have a calculation that returns 
@@ -45,11 +45,11 @@ Brilliant, we now have the number of whole minutes on our clock, but if we had 6
 `floor(124/60) % 60 = 2 minutes`\
 `floor(3540/60) % 60 = 59 minutes`\
 and
-`floor(3600/60) % 60 = 0`\
+`floor(3600/60) % 60 = 0`
 
 Getting 0 in that last example is what we expect as 3600 seconds is one hour (60 x 60).
 
-## How
+## Generalising and 
 So:
 we have 
 

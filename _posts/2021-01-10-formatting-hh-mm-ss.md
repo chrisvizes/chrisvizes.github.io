@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to format seconds into hh:mm:ss"
+title: "Tableau: How to Format Seconds Into hh:mm:ss (like a clock)"
 author: "Chris Meardon"
 categories: blog
 tags: [tableau,formatting,calculation]

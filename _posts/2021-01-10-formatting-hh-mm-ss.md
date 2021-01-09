@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tableau: How to Format Seconds Into hh:mm:ss (like a clock)"
+title: "Tableau: How to Format Seconds into hh:mm:ss (like a clock)"
 author: "Chris Meardon"
 categories: blog
 tags: [tableau,formatting,calculation]
@@ -23,24 +23,26 @@ with [Seconds] being the field we had representing a time with the unit seconds.
 
 To calculate the value to use in our clock we need to find how many whole lots of 60 second we have and then keep the extra seconds left over. With 65 we have 60 seconds + 5 seconds, so we keep the 5. For 124 seconds we have 2 lots of 60 seconds + 4 seconds, so we keep the 4. There is an operator to do this mathematical function for us in Tableau (also found elsewhere) which uses the syntax '%'. [Seconds] % 60 tells us this left over number of seconds. 
 
-`65 % 60 = 5 seconds
-124 % 60 = 4 seconds`
+`65 % 60 = 5 seconds`
+`124 % 60 = 4 seconds`
 
 Great, we now have a way to calculate the seconds on the clock given we know [Seconds]. Next up, minutes.
 
 We need a way to convert our example of 65 seconds to the number of whole minutes that represents (1 in this case). A way to do this is to divide by 60, to get the number of minutes, and then use the floor function to round it down to a whole number. This would look like
 
-`floor(65/60) = 1 minute
+`floor(65/60) = 1 minute`
 or
-floor(124/60) = 2 minutes`
+`floor(124/60) = 2 minutes`
 
 Brilliant, we now have the number of whole minutes on our clock, but if we had 60 minutes (i.e. 1 hour) then we need our clock to restart back at 0, just like with seconds. We do this the same way as before:
 
-`floor(65/60) % 60 = 1 minute
+`floor(65/60) % 60 = 1 minute`
+
 or
-floor(124/60) % 60 = 1 minute
+
+`floor(124/60) % 60 = 1 minute`
 or
-floor(3600/60) 60 = 0 (which is good because 3600 seconds is an hour and the minutes should restart from 0 again)`
+`floor(3600/60) 60 = 0` (which is good because 3600 seconds is an hour and the minutes should restart from 0 again)`
 
 So:
 we have 

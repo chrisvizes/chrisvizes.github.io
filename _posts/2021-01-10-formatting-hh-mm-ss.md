@@ -7,6 +7,15 @@ tags: [tableau,formatting,calculation]
 image: 
 cover_image: 
 ---
+test
+
+test
+
+
+test
+
+
+
 Sometimes it can be useful to turn a number of seconds, say 678, into the format hh:mm:ss to make it more readable. This blog will show you how to do this within Tableau, and extend it for some other use cases.
 
 There's formatting options in Tableau that allow you to display numbers in a variety of formats e.g. 678, 678.00, 0.678k, £678 and there is a custom formatting where you could write "hh:mm:ss". Then it may seem that Tableau will display your number in an hour minute second format, but there is an issue. 

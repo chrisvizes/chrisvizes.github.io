@@ -6,6 +6,7 @@ categories: blog
 tags: [tableau,formatting,calculation]
 image: "formatting-clock-cover.png"
 cover_image: "formatting-clock-cover.png"
+excerpt: "test"
 ---
 ## Why
 Sometimes it can be useful to turn a number of seconds, say 678, into the format hh:mm:ss to make it more readable. This blog will show you how to do this within Tableau, and extend it for some other use cases.

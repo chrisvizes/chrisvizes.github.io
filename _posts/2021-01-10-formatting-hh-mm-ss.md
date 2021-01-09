@@ -36,13 +36,12 @@ or
 
 Brilliant, we now have the number of whole minutes on our clock, but if we had 60 minutes (i.e. 1 hour) then we need our clock to restart back at 0, just like with seconds. We do this the same way as before:
 
-`floor(65/60) % 60 = 1 minute`
-
+```floor(65/60) % 60 = 1 minute
 or
-
-`floor(124/60) % 60 = 1 minute`
+floor(124/60) % 60 = 1 minute
 or
-`floor(3600/60) 60 = 0` (which is good because 3600 seconds is an hour and the minutes should restart from 0 again)`
+floor(3600/60) 60 = 0
+(which is good because 3600 seconds is an hour and the minutes should restart from 0 again)```
 
 So:
 we have 

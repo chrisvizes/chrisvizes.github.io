@@ -29,7 +29,7 @@ To calculate the value to use in our clock we need to find how many whole lots o
 tells us this left over number of seconds. E.g.
 
 `65 % 60 = 5 seconds`\
-and
+and\
 `124 % 60 = 4 seconds`
 
 Great, we now have a way to calculate the seconds on the clock given we know [Seconds]. Next up, minutes.
@@ -45,14 +45,21 @@ Brilliant, we now have the number of whole minutes on our clock, but if we had 6
 `floor(65/60) % 60 = 1 minute`\
 `floor(124/60) % 60 = 2 minutes`\
 `floor(3540/60) % 60 = 59 minutes`\
-and
+and\
 `floor(3600/60) % 60 = 0`
 
 Getting 0 in that last example is what we expect as 3600 seconds is one hour (60 x 60).
 
-## Generalising and 
-So:
-we have 
+## Generalising the Method
+In general we can think of the formula needed to translate the amount of time in one unit, A, to the amount of whole units of time in another unit, B, reseting every time it hits it's maximum value, C, as:
+
+`floor(A/B)%C`
+
+| Priority apples | Second priority | Third priority |
+|-------|--------|---------|
+| ambrosia | gala | red delicious |
+| pink lady | jazz | macintosh |
+| honeycrisp | granny smith | fuji |
 
 extensions
 

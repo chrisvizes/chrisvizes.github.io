@@ -18,4 +18,6 @@ could have many images changed with a parameter?
 
 limitations
 -static
--hard to maintain
+-hard to maintai
+
+

@@ -56,11 +56,11 @@ In general we can think of the formula needed to translate the amount of time in
 
 | A | B | C | Floor(A/B)%C |
 |-------|--------|---------|---------|
-| **65** seconds | **1** second per **second** | reset at **60** minutes | Floor(65/1) % 60 = 5 seconds |
+| **65** seconds | **1** second per **second** | reset at **60** seconds | Floor(65/1) % 60 = 5 seconds |
 | **65** seconds | **60** seconds per **minute** | reset at **60** minutes | Floor(65/60) % 60 = 1 minute |
 | **124** seconds | **60** seconds per **minute** | reset at **60** minutes | Floor(124/60) % 60 = 2 minutes |
 | **3540** seconds |**60** seconds per **minute** | reset at **60** minutes | Floor(3540/60) % 60 = 59 minutes |
-| **3600** seconds | **60** seconds per **minute** | reset at **60** minutes | Floor(3600/60) % 60 = 0 minute |
+| **3600** seconds | **60** seconds per **minute** | reset at **60** minutes | Floor(3600/60) % 60 = 0 minutes |
 
 ### Extending Method to Other Examples: 3656 Seconds in hh:mm:ss
 

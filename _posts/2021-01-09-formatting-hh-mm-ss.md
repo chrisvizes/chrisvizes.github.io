@@ -126,5 +126,5 @@ and we have a string processing our input seconds into the format hh:mm:ss, done
 
 ## Wrapping up
 
-This method lays out how to covert time from seconds into a formatted string in Tableau that can be more easily readable, like a digital clock. This can be extended to take any unit of time as the input (A) and to create any format clock, if the conversion between the input and output time units is known (B). The maximum number for the units of time (C) is optional and in particular it may be useful to omit on the largest time unit on the clock. This works for Tableau, but also anywhere else these functions or similar are available, by using:<br>
+This method lays out how to convert time from seconds into a formatted string in Tableau that can be more easily readable, like a digital clock. This can be extended to take any unit of time as the input (A) and to create any format clock, if the conversion between the input and output time units is known (B). The maximum number for the units of time (C) is optional and in particular it may be useful to omit on the largest time unit on the clock. This works for Tableau, but also anywhere else these functions or similar are available, by using:<br>
 `Floor(A/B)%C` 

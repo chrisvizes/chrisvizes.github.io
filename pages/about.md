@@ -19,6 +19,8 @@ A passion of mine revolves around tutoring and science communication. Helping so
 As a Director of [Uni-Truths](https://www.uni-truths.com), I have helped evolve this web platform into a tool used by over 800 users across many of the worlds universities. Within this role I gained my initial experience and interest in Tableau Desktop to firstly see what the software could do for me, but evolved into creating a variety of dashboards to provide analytics into the business itself. 
 
 ## Awards & Certifications
+- **Tableau Certified Data Analyst** (Feb 2022)
+    - Able to enable stakeholders to make business decisions by understanding the business problem, identifying data to explore for analysis, and delivering actionable insights.
 - **Tableau Desktop Certified Professional** (Jul 2020)
     - Able to demonstrate advanced functionality and application of visual best practices with Tableau Desktop.
 - **Alteryx Designer Advanced** (Jun 2020)

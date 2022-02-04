@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Dashboard: Rebate Projection"
+title: "Dashboard - Rebate Projection"
 author: "Chris Meardon"
 categories: blog
 tags: [tableau,dashboard]
 image: "rebate-what-if.png"
-cover_image: "rebate-what-if.png"
+cover_image: ""
 ---
 Very excited to post a new dashboard! 
 

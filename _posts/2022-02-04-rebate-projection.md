@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Dashboard: Rebate Projection"
+title: "Dashboard: Rebate Projection - What if?"
 author: "Chris Meardon"
 categories: blog
 tags: [tableau,dashboard]

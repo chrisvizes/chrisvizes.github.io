@@ -5,7 +5,7 @@ title: About
 Welcome to my blog, here's a little bit about me and how I got here.
 
 ## My Current Role
-I am a Consulting Analyst for The Information Lab. Here, I have received 4 months of dedicated Tableau and Alteryx training by some of the leading members in these communities (**[Data School](https://www.thedataschool.co.uk/)**). Following this training I have had placements in a variety of industries with roles such as: Senior Consulting Analyst, Consultant BI Development Analyst & Tableau and Alteryx Consultant at clients such as Techmodal, BAE Systems, ViacomCBS and Iris Softward Group. 
+I am part of The Information Lab. Here, I have received 4 months of dedicated Tableau and Alteryx training by some of the leading members in these communities (**[Data School](https://www.thedataschool.co.uk/)**). Following this training I have had placements in a variety of industries with roles such as: Senior Consulting Analyst, Consultant BI Development Analyst & Tableau and Alteryx Consultant at clients such as Techmodal, BAE Systems, ViacomCBS and Iris Softward Group. 
 
 ## University
 I have a BSc in **Physics** from the University of Bristol where I took particular interest in my computational and experimental units.

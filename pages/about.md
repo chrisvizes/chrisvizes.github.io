@@ -18,6 +18,9 @@ A passion of mine revolves around tutoring and science communication. Helping so
 ## Uni-Truths Ltd
 As a Director of [Uni-Truths](https://www.uni-truths.com), I have helped evolve this web platform into a tool used all over the world within their university communities. Within this role I gained my initial experience and interest in Tableau Desktop to firstly see what the software could do for me, but evolved into creating a variety of dashboards to provide analytics into the business itself. 
 
+## Chillies 
+I also love to grow chillies. At the time of writing this I've got 90 little seedlings and it's very exciting. 
+
 ## Awards & Certifications
 - **Tableau Certified Data Analyst** (Feb 2022)
     - Able to enable stakeholders to make business decisions by understanding the business problem, identifying data to explore for analysis, and delivering actionable insights.

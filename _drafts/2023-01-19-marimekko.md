@@ -22,20 +22,21 @@ ELSE
     PREVIOUS_VALUE(0)
 END
 ```
+Put simply, this is the calculation that determines the position of the bars horizonatally. It is the x axis. It is what's on columns. 
 
-but with these few comments it is much easier to interpret and adapt to your needs
+but with these few comments it is much easier to interpret and adapt to your needs, so if you're looking to build a marimekko then this may help!
 ```
 IF FIRST()==0
     //the first mark 
 
-    THEN min([Failures per column])
+    THEN min([total measure per column])
     // the total of the measure for the first column of chart
 
-ELSEIF min(DATETRUNC('month', [Date])) 
-    != LOOKUP(min(DATETRUNC('month', [Date])),-1) 
+ELSEIF min(field that defines column) 
+    != LOOKUP(min([field that defines column])),-1) 
     // a new column of the marimekko
 
-    THEN PREVIOUS_VALUE(0) + min([Failures per column])
+    THEN PREVIOUS_VALUE(0) + min([total measure per column])
     // running total of the measure
 
 ELSE               

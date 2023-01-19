@@ -5,7 +5,7 @@ author: "Chris Meardon"
 categories: blog
 tags: [tableau,dashboard]
 image: "rebate-what-if.png"
-cover_image: ""
+cover_image: 
 excerpt: "Check out my latest public dashboard analysing rebate projects with mock data."
 ---
 Very excited to post a new dashboard! 

@@ -27,23 +27,29 @@ Put simply, this is the calculation that determines the position of the bars hor
 but with these few comments it is much easier to interpret and adapt to your needs, so if you're looking to build a marimekko then this may help!
 ```
 IF FIRST()==0
-    //the first mark 
-
+```
+the first mark 
+```
     THEN min([total measure per column])
-    // the total of the measure for the first column of chart
-
+```
+the total of the measure for the first column of chart
+```
 ELSEIF min(field that defines column) 
     != LOOKUP(min([field that defines column])),-1) 
-    // a new column of the marimekko
-
+```
+a new column of the marimekko
+```
     THEN PREVIOUS_VALUE(0) + min([total measure per column])
-    // running total of the measure
-
-ELSE               
-// this is not a new column or the first mark
-// (i.e. any part of the stacked bar chart that isn't the first one)
+```
+running total of the measure
+```
+ELSE  
+```             
+this is not a new column or the first mark (i.e. any part of the stacked bar chart that isn't the first one)
+```
     PREVIOUS_VALUE(0)
-    // keep the column width of the mark below
-
+```
+keep the column width of the mark below
+```
 END
 ``` 

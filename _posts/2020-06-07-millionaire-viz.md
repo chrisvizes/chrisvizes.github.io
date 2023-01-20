@@ -3,7 +3,7 @@ layout: post
 title: "Kicking off exam preparations with a viz about millionaires"
 author: "Chris Meardon"
 categories: blog
-tags: [tableau,dashboard]
+tags: [Tableau, Dashboard, Tableau Desktop, Tableau Public]
 image: "millionaires.png"
 cover_image: 
 ---

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Dashboard: Rebate Projection - What if?"
+title: "Rebate Projection - What if?"
 author: "Chris Meardon"
 categories: blog
-tags: [tableau,dashboard]
+tags: [Tableau,Tableau Desktop,Dashboard]
 image: "rebate-what-if.png"
 cover_image: 
 excerpt: "Check out my latest public dashboard analysing rebate projects with mock data."

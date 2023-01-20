@@ -53,3 +53,6 @@ keep the column width of the mark below
 ```
 END
 ``` 
+
+### Example
+Check out my dashboard on Tableau Public[![Tableau Public](/assets/img/public-snapshot.png 'Links to my Public profile where you can find the chart')](https://public.tableau.com/app/profile/chris.meardon)

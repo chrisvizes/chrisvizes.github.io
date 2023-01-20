@@ -3,7 +3,7 @@ layout: post
 title: "Tableau: How to Format Seconds into hh:mm:ss (like a clock)"
 author: "Chris Meardon"
 categories: blog
-tags: [tableau,formatting,calculation]
+tags: [Tableau,Formatting,Calculation, Tableau Desktop, Tableau Public]
 image: "formatting-clock-cover.png"
 cover_image: "formatting-clock-cover.png"
 excerpt: "How do you turn a number of seconds, say 678, into the format hh:mm:ss to make it more readable. This blog will show you how to do this within Tableau, and extend it for some other use cases."

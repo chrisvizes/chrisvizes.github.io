@@ -5,7 +5,7 @@ author: "Chris Meardon"
 categories: blog
 tags: [Tableau Server, Tableau Desktop]
 image:
-cover_image:
+cover_image: "data-source-error.png"
 ---
 
 ## The Scenario

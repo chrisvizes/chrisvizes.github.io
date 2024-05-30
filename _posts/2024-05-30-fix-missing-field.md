@@ -19,7 +19,7 @@ If you cannot edit the query within desktop/server/cloud then don't panic, we ca
 ### 1. Download the datasource or workbook
 
 - If you have the issue within Tableau Desktop (rather than a server product) then skip this step.
-- If you are using Tableau Cloud or Server then navigate to the datasource or workbook and download it. The file will be a `.tdsx` (packaged datasource) or `.twbx` (packaded workbook)
+- If you are using Tableau Cloud or Server then navigate to the datasource or workbook and download it. The file will be a `.tdsx` (packaged datasource) or `.twbx` (packaged workbook)
 
 ### 2. Unpackage the datasource / workbook
 
@@ -43,7 +43,7 @@ Then unpackage this file using the "extract all" feature in windows, or your fav
 
 ### 3. Open the .twb or .tds file with a text editor
 
-Workbooks (`.twb` files) and datasources (`.tds` files) are just XML containing all of their configuration. If you know what you're doing and you are careful, you can edit the XML yourself to make changes. That is what we are going to do. All you need is a text editor, e.g. notepade or VS Code.
+Workbooks (`.twb`) and datasources (`.tds`) are just XML containing all of their configuration. If you know what you're doing and you are careful, you can edit the XML yourself to make changes. That is what we are going to do. All you need is a text editor, e.g. notepade or VS Code.
 
 Open up the `.twb` or `.tds` file with a text editor.
 
@@ -73,7 +73,7 @@ We changed the custom sql used here, but you can extend this trick to change any
 
 ### Precision size adjustments
 
-In Tableau Desktop it is hard to precicely set the size of a mark to be the same across multiple sheets. However, if you open up the `.twbv file and find the part that sets the size of the mark, you can set the pixel size manually yourself. It allows much greater consistency and precision than using the Tableau Desktop interface.
+In Tableau Desktop it is hard to precicely set the size of a mark to be the same across multiple sheets. However, if you open up the `.twb` file and find the part that sets the size of the mark, you can set the pixel size manually yourself. It allows much greater consistency and precision than using the Tableau Desktop interface.
 
 ### Transparent colour hexcodes
 

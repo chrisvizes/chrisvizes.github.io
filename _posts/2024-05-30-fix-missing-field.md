@@ -4,7 +4,7 @@ title: ""
 author: "Chris Meardon"
 categories: blog
 tags: [Tableau Server, Tableau Desktop]
-image:
+image: "data-source-error.png"
 cover_image: "data-source-error.png"
 ---
 

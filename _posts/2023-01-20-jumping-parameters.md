@@ -21,7 +21,7 @@ With a dashboard open, select the object you want to dynamically hide and go to 
 **When the calculation is true, the object is shown, when it is false it is hidden.** 
 
 ### 2. Creating Structure of Zones
-What we are going to show and hide in the dashboard are blanks. But let's start showing the dashboard we are going to work on in this tutorial.
+What we are going to show and hide in the dashboard are blanks. But let's start showing the dashboard we are going to work on in this tutorial. 
 
 ![long dashboard](/assets/img/long-boi.gif)
 

@@ -5,7 +5,7 @@ author: "Chris Meardon"
 categories: blog
 tags: [Tableau, Tableau Desktop, Parameters, Parameter Actions, Tableau Public]
 image: "mpf-top.png"
-cover_image:
+cover_image: "mpf-top.png"
 ---
 
 Often parameters are used in place of filters in Tableau Desktop, but you can't have a specific parameter option on a dashboard multiple times in the current build. If you need to add this parameter option to different parts of a dashboard, e.g. a long dashboard, then this blog is for you.

@@ -6,6 +6,7 @@ categories: blog
 tags: [Tableau Server, Tableau Desktop]
 image: "data-source-error.png"
 cover_image: "data-source-error.png"
+excerpt: "When creating a datasource using custom SQL for Tableau Server, Tableau Cloud or Tableau Desktop there is an issue that arises when one of the fields used in the query no longer exists. Here I show a solution"
 ---
 
 ## The Scenario

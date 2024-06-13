@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ""
+title: "Fix missing field error - Tableau Desktop"
 author: "Chris Meardon"
 categories: blog
 tags: [Tableau Server, Tableau Desktop]

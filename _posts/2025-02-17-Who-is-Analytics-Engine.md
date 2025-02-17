@@ -67,3 +67,18 @@ _(10 minutes later)_
 Okay, the gang have been watered and some pots have been prepped to pot them up later on (have to warm up the soil first because these tropical plants don't like the northern UK climate).
 
 ---
+
+## dbt in the modern stack
+
+It's not a data loader and it's not a BI tool. It works with data platforms to transform data after it has been loaded and before BI tools can uses it. It also is particularly nice for T (ELT), with it's dev interface, testing, documentation and deployment.
+
+## DAGs look nice
+
+I'm a data visual person really, so I enjoy the nodes and how they connect. Directed Acyclic Graph (because I'll forget).
+
+## Being shown some more things in the Cloud IDE
+
+- **dbt run**: Run yo models(?), materialize your models(?), not sure on the language yet but it makes dbt do it's main thing
+- **dbt test**: oooo lovely, run tests against the materialized models
+- **the yml**: the _yamal_ looks important
+- **dbt docs generate**: automatically create documentation so stakeholders know what columns etc mean? sounds nice

@@ -82,3 +82,4 @@ I'm a data visual person really, so I enjoy the nodes and how they connect. Dire
 - **dbt test**: oooo lovely, run tests against the materialized models
 - **the yml**: the _yamal_ looks important
 - **dbt docs generate**: automatically create documentation so stakeholders know what columns etc mean? sounds nice
+- **dbt build**: run and test (Y)

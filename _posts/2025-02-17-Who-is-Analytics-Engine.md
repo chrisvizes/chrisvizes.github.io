@@ -50,8 +50,12 @@ The analytics engineer is the T (from ELT), transforming data from the warehouse
 
 But the lines are blurry and one person may wear many hats.
 
+---
+
 # CRISIS
 
 TWO chilli seedlings are withering, battle stations 🚨
-
+_(10 minutes later)_
 Okay, the gang have been watered and some pots have been prepped to pot them up later on (have to warm up the soil first because these tropical plants don't like the northern UK climate).
+
+---

@@ -26,7 +26,7 @@ Datawarehouses have changed the game and ETL processes are being replaces with E
 
 The analytics engineer is the T (from ELT), transforming data from the warehouse into the BI layer, ready for the analyst to use. This frees up work from the engineers, doing the EL, to work without handling requests from analysts. So analytics engineers does not replace data engineers and data analysts, but rather sits in the team with them. Leaving us with a work split like:
 
-## Data Engineers
+### Data Engineers
 
 - Build custom data ingestion integrations
 - Manage overall pipeline orchestration
@@ -34,14 +34,14 @@ The analytics engineer is the T (from ELT), transforming data from the warehouse
 - Build and maintain the data platform
 - Data warehouse performance optimization
 
-## Analytics Engineers
+### Analytics Engineers
 
 - Provide clean, transformed data ready for analysis
 - Apply software engineering practices to anaytics code (e.g. version control, testing, continuous integration)
 - Maintains data documenation & definitions
 - Train business users on how to use data platform data visualization tools
 
-## Data Analysts
+### Data Analysts
 
 - Deep insights work (e.g. why did churn spike last month? What are the best acquisition channels?)
 - Work with business users to understand data requirements
@@ -55,7 +55,9 @@ But the lines are blurry and one person may wear many hats.
 # CRISIS
 
 TWO chilli seedlings are withering, battle stations 🚨
+
 _(10 minutes later)_
+
 Okay, the gang have been watered and some pots have been prepped to pot them up later on (have to warm up the soil first because these tropical plants don't like the northern UK climate).
 
 ---

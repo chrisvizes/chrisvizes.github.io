@@ -1,0 +1,26 @@
+---
+layout: post
+title: "Models"
+author: "Chris Meardon"
+categories: blog
+tags: [blog, dbt]
+image: "dbt-logo.png"
+cover_image: "dbt-logo.png"
+---
+
+# Learning Objectives
+
+1. Explain what models are in a dbt project.
+2. Build your first dbt model.
+3. Explain how to apply modularity to analytics with dbt.
+4. Modularize your project with the ref function.
+5. Review a brief history of modeling paradigms.
+6. Identify common naming conventions for tables.
+7. Reorganize your project with subfolders.
+
+Staging is 1-to-1 with the source data and includes light touch changes, column renames, convert units from seconds to hours.
+Intermediate models somewhere between staging and final models. Might not be for end users. Only reference staging models, not source.
+Fact models, records of events, like orders, or website traffic.
+Dimension models, records of things that you keep up-to-date, like contacts or product inventory.
+
+Config, like how to matialize a model, can be within the model but it may be more efficient to use the project yml file to set what each folder is matialized as.

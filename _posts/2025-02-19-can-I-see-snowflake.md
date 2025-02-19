@@ -9,7 +9,7 @@ cover_image: "dbt-logo.png"
 excerpt: "A note for future Chris when he next comes back to snowflake"
 ---
 
-# Difficulties finding snowflake within dbt Cloud
+## Difficulties finding snowflake within dbt Cloud
 
 I was expecting the autocomplete in the worksheets to know about the snowflake tables but I was not getting any suggestions from any tables. This was a bit of a blocker for me because I could seem to find anything in snowflake but I realised there is a much better way to find things.
 

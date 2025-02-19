@@ -90,7 +90,7 @@ hr {
 
 @media (max-width: 768px) {
   .container {
-    width: 90vw;
+    max-width: 90vw;
   }
 }
 

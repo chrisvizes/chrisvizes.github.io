@@ -4,8 +4,8 @@ title: "Who is an Analytics Engineer?"
 author: "Chris Meardon"
 categories: blog
 tags: [blog, dbt]
-image: "dbt-logo.png"
-cover_image: "dbt-logo.png"
+image: "courses.png"
+cover_image: "courses.png"
 excerpt: "Notes and thoughts from a session on who an analytics engingeer is"
 ---
 

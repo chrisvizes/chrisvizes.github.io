@@ -90,7 +90,7 @@ hr {
 
 @media (max-width: 768px) {
   .container {
-    max-width: 90vw;
+    width: 90vw;
   }
 }
 
@@ -124,7 +124,6 @@ hr {
 */
 
 .thumbnail-container {
-  max-width: 100%;
   overflow: hidden;
   border-radius: 5px;
   margin-bottom: 25px;

@@ -6,6 +6,7 @@ categories: blog
 tags: [blog, dbt, snowflake]
 image: "dbt-logo.png"
 cover_image: "dbt-logo.png"
+excerpt: "What I realised about a build failure. Lesson learnt."
 ---
 
 # Why is my build failing? The model is says doesn't exist exists!

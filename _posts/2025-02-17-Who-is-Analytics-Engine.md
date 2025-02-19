@@ -6,6 +6,7 @@ categories: blog
 tags: [blog, dbt]
 image: "dbt-logo.png"
 cover_image: "dbt-logo.png"
+excerpt: "Notes and thoughts from a session on who an analytics engingeer is"
 ---
 
 Okay so in this next section the objectives are...

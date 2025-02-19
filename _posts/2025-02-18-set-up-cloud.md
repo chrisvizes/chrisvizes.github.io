@@ -6,6 +6,7 @@ categories: blog
 tags: [blog, dbt]
 image: "dbt-logo.png"
 cover_image: "dbt-logo.png"
+excerpt: "Notes and thoughts from a session on setting up dbt Cloud"
 ---
 
 # Learning Objectives

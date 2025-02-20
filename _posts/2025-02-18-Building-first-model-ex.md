@@ -31,5 +31,5 @@ Adding a new field, using the new fact table. This requires a new CTE in the dim
 
 ## End Result
 
-Comparing my sql to what they provided as an example I can see that I have not ended up with the simplest solution. I'll admit I could do with more practice with SQL. I got to the desired comparison value but the models I left behind were the bare minimum for the answer and wouldn't re-use well (going against a key idea of dbt). I also missed that I created a new CTE were I should just edit the existing one.
+Comparing my sql to what they provided as an example I can see that I have not ended up with the simplest solution. I'll admit I could do with more practice with SQL. I got to the desired comparison value but the models I left behind were the bare minimum for the answer and wouldn't re-use well (going against a key idea of dbt). I also missed that I created a new CTE where I should just edit the existing one.
 ![Lineage](/assets/img/example-lineage.png)

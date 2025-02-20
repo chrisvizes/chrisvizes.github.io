@@ -5,7 +5,7 @@ author: "Chris Meardon"
 categories: blog
 tags: [blog, dbt, snowflake]
 image: "courses.png"
-cover_image: "courses.png"
+cover_image: "dbt-logo.png"
 excerpt: "A note for future Chris when he next comes back to snowflake"
 ---
 

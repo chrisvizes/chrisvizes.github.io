@@ -5,7 +5,7 @@ author: "Chris Meardon"
 categories: blog
 tags: [blog, dbt]
 image: "courses.png"
-cover_image: "courses.png"
+cover_image: "dbt-logo.png"
 excerpt: "Notes and thoughts from a session on setting up dbt Cloud"
 ---
 

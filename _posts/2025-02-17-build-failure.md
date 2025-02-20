@@ -5,7 +5,7 @@ author: "Chris Meardon"
 categories: blog
 tags: [blog, dbt, snowflake]
 image: "courses.png"
-cover_image: "courses.png"
+cover_image: "dbt-logo.png"
 excerpt: "What I realised about a build failure. Lesson learnt."
 ---
 

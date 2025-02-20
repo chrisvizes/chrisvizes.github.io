@@ -3,7 +3,7 @@ layout: post
 title: "Building Tests"
 author: "Chris Meardon"
 categories: blog
-tags: [blog, dbt]
+tags: [blog, dbt, tests]
 image: "courses.png"
 cover_image: "dbt-logo.png"
 excerpt: "Notes and thoughts on a session about building tests in dbt Cloud"

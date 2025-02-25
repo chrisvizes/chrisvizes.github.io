@@ -61,7 +61,7 @@ models:
 The doc reference is referencing a docs object inside a markdown file in the project. To reference it you use the object name (you don't need to know the file path to the markdown). E.g. 'order status' is the docs name within the markdown file:
 
 ```markdown
-{% docs order_status %}
+{% raw %}{% docs order_status %}{% endraw %}
 
 One of the following values:
 

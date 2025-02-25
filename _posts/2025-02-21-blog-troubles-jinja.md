@@ -1,21 +1,21 @@
 ---
 layout: post
-title: "Basic Documentation"
+title: "dbt Jinja and Jeykll Liquid Conflicting"
 author: "Chris Meardon"
 categories: blog
-tags: [blog, dbt, tests]
+tags: [blog]
 image: "courses.png"
 cover_image: "dbt-logo.png"
-excerpt: "Notes and thoughts on a session about basic documentation in dbt Cloud"
+excerpt: "Jinja and Liquid problems"
 ---
 
 The syntax for Jinja in dbt conflicts with the builder for Jekyll when creating this blog site. Double curly brackets are used for Liquid templates on the site so if I include Jinja in code snippets the builds fail.
 
 ## How to get around it
 
-To tell Liquid not to use the syntax you can surround it with `{% raw %}` and `{% endraw %}`.
+To tell Liquid not to use the syntax you can surround it with {% raw %}`{% raw %}`{% endraw %} and {% raw %}`{% endraw %}`{% endraw %}.
 
-If it's inline code you can just use `{% raw %}{% docs order_status %}{% endraw %}`.
+If it's inline code you can just use {% raw %}`{% raw %}{% docs order_status %}{% endraw %}`endraw.
 
 For block code, I've been surrounding the entire block:
 {% raw %}

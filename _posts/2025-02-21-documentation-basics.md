@@ -47,7 +47,7 @@ models:
           - unique
           - not_null
       - name: status
-        description: {% raw %}"{{ doc('order_status') }}"{% endraw %}
+        description: {% raw %}{{ doc('order_status') }}{% endraw %}
         tests:
           - accepted_values:
               values:

@@ -88,4 +88,4 @@ So you've added all the information to the objects within you project, now you c
 
 This creates a documenation interface you can now access (if it runs successfully) using the button up here:
 
-![docs-button]('assets/img/docs-button.png')
+![docs-button](assets/img/docs-button.png)

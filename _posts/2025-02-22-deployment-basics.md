@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Basic Documentation"
+title: "dbt Deployment"
 author: "Chris Meardon"
 categories: blog
-tags: [blog, dbt, documenation]
+tags: [blog, dbt, deployment]
 image: "courses.png"
 cover_image: "dbt-logo.png"
-excerpt: "Notes and thoughts on a session about basic documentation in dbt Cloud"
+excerpt: "Notes and thoughts on a session about basic deployment in dbt Cloud"
 ---
 
 ## Learning Objectives

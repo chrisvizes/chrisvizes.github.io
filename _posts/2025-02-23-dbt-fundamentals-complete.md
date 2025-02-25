@@ -4,8 +4,8 @@ title: "Course Complete: dbt Fundamentals"
 author: "Chris Meardon"
 categories: blog
 tags: [blog, dbt]
-image: "courses.png"
-cover_image: "dbt-logo.png"
+image: "courses-1-complete.png"
+cover_image: "dbt-fundamentals-complete.png"
 excerpt: "Reflecting on the course and what's next"
 ---
 

@@ -38,6 +38,8 @@ The description can bee a doc reference too:
 
 {% raw %}
 
+ <!-- prettier-ignore-start -->
+
 ```yaml
 models:
   - name: stg_jaffle_shop__orders
@@ -49,7 +51,7 @@ models:
           - unique
           - not_null
       - name: status
-        description: <!-- prettier-ignore-start -->{{ doc('order_status') }}<!-- prettier-ignore-end -->
+        description: { { doc('order_status') } }
         tests:
           - accepted_values:
               values:
@@ -59,6 +61,8 @@ models:
                 - placed
                 - return_pending
 ```
+
+<!-- prettier-ignore-end -->
 
 {% endraw %}
 

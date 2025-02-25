@@ -36,8 +36,6 @@ models:
 
 The description can bee a doc reference too:
 
- <!-- prettier-ignore-start -->
-
 {% raw %}
 
 ```yaml
@@ -51,7 +49,7 @@ models:
           - unique
           - not_null
       - name: status
-        description: { { doc('order_status') } }
+        description: {{ doc('order_status') }}
         tests:
           - accepted_values:
               values:
@@ -63,8 +61,6 @@ models:
 ```
 
 {% endraw %}
-
-<!-- prettier-ignore-end -->
 
 The doc reference is referencing a docs object inside a markdown file in the project. To reference it you use the object name (you don't need to know the file path to the markdown). E.g. 'order status' is the docs name within the markdown file:
 

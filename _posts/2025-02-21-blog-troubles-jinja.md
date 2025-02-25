@@ -15,7 +15,7 @@ The syntax for Jinja in dbt conflicts with the builder for Jekyll when creating 
 
 To tell Liquid not to use the syntax you can surround it with `{% raw %}` and `{% endraw %}`.
 
-If it's inline code you can just use {% raw %}`{% raw %}{% docs order_status %}{% endraw %}`{% endraw %}.
+If it's inline code you can just use `{% raw %}{% docs order_status %}{% endraw %}`.
 
 For block code, I've been surrounding the entire block:
 {% raw %}

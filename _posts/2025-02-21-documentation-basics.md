@@ -36,6 +36,8 @@ models:
 
 The description can bee a doc reference too:
 
+{% raw %}
+
 ```yml
 models:
   - name: stg_jaffle_shop__orders
@@ -47,7 +49,7 @@ models:
           - unique
           - not_null
       - name: status
-        description: {% raw %}{{ doc('order_status') }}{% endraw %}
+        description: { { doc('order_status') } }
         tests:
           - accepted_values:
               values:
@@ -57,6 +59,8 @@ models:
                 - placed
                 - return_pending
 ```
+
+{% endraw %}
 
 The doc reference is referencing a docs object inside a markdown file in the project. To reference it you use the object name (you don't need to know the file path to the markdown). E.g. 'order status' is the docs name within the markdown file:
 

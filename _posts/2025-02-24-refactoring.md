@@ -50,10 +50,10 @@ This is also a good time to convert long lines into new line and tabbed structur
 
 ### CTE Grouping
 
-There is an order that would be _good practice?_ to do our CTEs in.
+At this point it will be useful to order our CTEs to make the script readable from top to bottom.
 
-**Import CTEs** Anything using the source references, but just that part, e.g.
-:
+**Import CTEs**
+: Anything using the source references, but just that part, e.g:
 
 ```sql
 payments as (
@@ -62,12 +62,10 @@ payments as (
 ```
 
 Logical CTEs
-:Working with the import CTEs
+: Working with the import CTEs
 
 Final CTEs
-:The _final_ product of the script
+: The _final_ product of the script
 
 Simple Select Statement
-:I was unconvinced on this part, but it's a simple `select * from <final CTE>` and apparently this makes life easier down the line
-
-**Now our script can be read, top down**
+: I was unconvinced on this part, but it's a simple `select * from <final CTE>` and apparently this makes life easier down the line

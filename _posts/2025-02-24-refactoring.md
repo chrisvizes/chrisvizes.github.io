@@ -52,8 +52,8 @@ This is also a good time to convert long lines into new line and tabbed structur
 
 At this point it will be useful to order our CTEs to make the script readable from top to bottom.
 
-**Import CTEs**
-: Anything using the source references, but just that part, e.g:
+1. **Import CTEs**
+   : Anything using the source references, but just that part, e.g:
 
 ```sql
 payments as (
@@ -61,11 +61,11 @@ payments as (
 )
 ```
 
-Logical CTEs
-: Working with the import CTEs
+2. **Logical CTEs**
+   : Working with the import CTEs
 
-Final CTEs
-: The _final_ product of the script
+3. **Final CTEs**
+   : The _final_ product of the script
 
-Simple Select Statement
-: I was unconvinced on this part, but it's a simple `select * from <final CTE>` and apparently this makes life easier down the line
+4. **Simple Select Statement**
+   : I was unconvinced on this part, but it's a simple `select * from <final CTE>` and apparently this makes life easier down the line

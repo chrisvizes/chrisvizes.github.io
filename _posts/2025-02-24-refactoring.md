@@ -9,7 +9,7 @@ cover_image: "dbt-logo.png"
 excerpt: "Notes and thoughts on a course about refactoring in dbt Cloud"
 ---
 
-This is all about taking existing sql scripts and migrating them into dbt. This includes:
+This is all about taking existing sql scripts and migrating them into dbt
 
 1. Migrating into dbt
 2. Implementing sources
@@ -17,6 +17,8 @@ This is all about taking existing sql scripts and migrating them into dbt. This 
 4. Cosmetic cleanups, CTE groupings
 5. Centralizing logic, dividing into models (stg, int, final)
 6. Auditing dbt vs existing code
+
+---
 
 ## 1. Migration process
 
@@ -44,7 +46,7 @@ Another way to refactor would be to work along side the legacy model. You'd star
 
 The goal is to make it easier to read.
 
-If you have mixed cases used, perhaps convert all to lowercase [how to](https://chrisvizes.github.io/blog/transform-lowercase.html)
+If you have mixed cases used, perhaps convert all to lowercase **([how to](https://chrisvizes.github.io/blog/transform-lowercase.html))**
 
 This is also a good time to convert long lines into new line and tabbed structures for readability.
 
@@ -68,4 +70,47 @@ At this point it will be useful to order our CTEs to make the script readable fr
    : The _final_ product of the script
 
 4. **Simple Select Statement**
-   : I was unconvinced on this part, but it's a simple `select * from <final CTE>` and apparently this makes life easier down the line
+   : I was unconvinced on this part, but it's a simple
+   `select * from <final CTE>`
+   and apparently this makes life easier down the line
+
+## 5. Centralizing logic, dividing into models
+
+Identify what CTEs could be staging and marts models **[confused which is which?](https://chrisvizes.github.io/blog/dbt-models.html)**
+
+Aiming to have sources that have structures like:
+
+```sql
+with
+
+source as (
+
+    select * from {% raw %}{{ source('jaffle_shop', 'customers') }}{% endraw %}
+
+),
+
+transformed as (
+
+    select
+
+        id as customer_id,
+        last_name as surname,
+        first_name as givenname,
+        first_name || ' ' || last_name as full_name
+
+    from source
+
+)
+
+select * from transformed
+```
+
+These staging models are the only models to reference sources directly.
+
+Then we can build intermediate models and our final mart models in a top down fashion, building with the staging models and further CTEs to simplifiy the logic.
+
+## 6. Auditing
+
+We could now select from our legacy model and from our new mart model to compare them. However there are also packages that help do this. One of which is **[audit_helper](https://hub.getdbt.com/dbt-labs/audit_helper/latest/)**. [Read more about packages](https://chrisvizes.github.io/blog/packages.html)
+
+Using audit_helper, you can quickly compare against legacy and look for any issues that came up/ assert you new model is performing as expected.

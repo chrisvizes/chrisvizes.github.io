@@ -18,21 +18,19 @@ This is all about taking existing sql scripts and migrating them into dbt. This 
 5. Centralizing logic, dividing into models (stg, int, final)
 6. Auditing dbt vs existing code
 
-## Why refactor SQL?
-
-## Migration process
+## 1. Migration process
 
 Starting from a sql script we want to migrate into a dbt project. It might be a good first step to create a folder within your models called 'legacy' where we can copy and paste our script to. We can then run that script to check it all works in this environment.
 
 If you're migrating between source systems (e.g. SQL Server to Snowflake) then this is where work will be needed to migrate between the flavours of sql.
 
-## Sources
+## 2. Sources
 
 Look through sql for hardcoded table references. Create folder hierarchy for the staging tables following the convention of `models` > `staging` > `source system`. We can then create source configuration files within those system folders, calling them something like `_sources.yml` and it's okay if these files have the same name in different folders as the folder makes them unique.
 
 Now you can go through and replace all hardcoded table references with source references.
 
-## Choosing refactoring strategy
+## 3. Choosing refactoring strategy
 
 This is the steps you'll choose to take to organise the models you make as part of refactoring.
 
@@ -40,7 +38,7 @@ If you create a branch and start working on the legacy model, changing sources, 
 
 Another way to refactor would be to work along side the legacy model. You'd start this by have the legacy model sitting relatively untouched in the legacy folder, but you'd also copy it to the model folder that is you end goal, e.g. a `mart` folder. You'd then work on this copy in the goal destination. It might feel like you have duplicate models being run, but that's the point, something to audit against without relying on another environment.
 
-## CTE Groupings and cosmetic cleanups
+## 4. CTE Groupings and cosmetic cleanups
 
 ### Cosmetics
 
@@ -63,11 +61,13 @@ payments as (
 )
 ```
 
-**Logical CTEs**
+Logical CTEs
 :Working with the import CTEs
-**Final CTEs**
+
+Final CTEs
 :The _final_ product of the script
-**Simple Select Statement**
+
+Simple Select Statement
 :I was unconvinced on this part, but it's a simple `select * from <final CTE>` and apparently this makes life easier down the line
 
 **Now our script can be read, top down**

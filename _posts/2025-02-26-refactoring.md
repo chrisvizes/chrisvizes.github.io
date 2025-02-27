@@ -76,7 +76,7 @@ At this point it will be useful to order our CTEs to make the script readable fr
 
 ## 5. Centralizing logic, dividing into models
 
-Identify what CTEs could be staging and marts models **[confused which is which?](https://chrisvizes.github.io/blog/dbt-models.html)**
+Identify what CTEs could be staging and marts models **[confused which is which?](https://chrisvizes.github.io/blog/models.html)**
 
 Aiming to have sources that have structures like:
 

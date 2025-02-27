@@ -55,11 +55,11 @@ At this point it will be useful to order our CTEs to make the script readable fr
 1. **Import CTEs**
    : Anything using the source references, but just that part, e.g:
 
-```sql
-payments as (
- select * from {% raw %}{{ source('stripe', 'payment') }}{% endraw %}
-)
-```
+   ```sql
+   payments as (
+   select * from {% raw %}{{ source('stripe', 'payment') }}{% endraw %}
+   )
+   ```
 
 2. **Logical CTEs**
    : Working with the import CTEs

@@ -15,9 +15,9 @@
             <text x="22.32" y="20.08" font-family="Nunito, Segoe UI Emoji" font-size="20px" fill="#1e1e1e"
                   text-anchor="middle" opacity="0">
                   wow
-                  <animate attributeName="opacity" begin="1s" dur="0.3s" values="0;1" fill="freeze" />
-                  <set attributeName="opacity" to="1" begin="1.3s" dur="3.7s" fill="freeze" />
-                  <animate attributeName="opacity" begin="5s" dur="1s" values="1;0" fill="freeze" />
+                  <animate attributeName="opacity" begin="loop.begin+0.2s" dur="0.3s" values="0;1" fill="freeze" />
+                  <set attributeName="opacity" to="1" begin="loop.begin+1.3s" dur="3.7s" fill="freeze" />
+                  <animate attributeName="opacity" begin="loop.begin+5s" dur="1s" values="1;0" fill="freeze" />
             </text>
       </g>
 
@@ -26,9 +26,9 @@
             <text x="22.32" y="20.08" font-family="Nunito, Segoe UI Emoji" font-size="20px" fill="#1e1e1e"
                   text-anchor="middle" opacity="0">
                   wow
-                  <animate attributeName="opacity" begin="1.5s" dur="0.3s" values="0;1" fill="freeze" />
-                  <set attributeName="opacity" to="1" begin="1.8s" dur="3.2s" fill="freeze" />
-                  <animate attributeName="opacity" begin="5s" dur="1s" values="1;0" fill="freeze" />
+                  <animate attributeName="opacity" begin="loop.begin+1s" dur="0.3s" values="0;1" fill="freeze" />
+                  <set attributeName="opacity" to="1" begin="loop.begin+1.8s" dur="3.2s" fill="freeze" />
+                  <animate attributeName="opacity" begin="loop.begin+5s" dur="1s" values="1;0" fill="freeze" />
             </text>
       </g>
 
@@ -37,9 +37,9 @@
             <text x="39.65" y="35.67" font-family="Nunito, Segoe UI Emoji" font-size="35.53px" fill="#1e1e1e"
                   text-anchor="middle" opacity="0">
                   wow
-                  <animate attributeName="opacity" begin="2s" dur="0.3s" values="0;1" fill="freeze" />
-                  <set attributeName="opacity" to="1" begin="2.3s" dur="2.7s" fill="freeze" />
-                  <animate attributeName="opacity" begin="5s" dur="1s" values="1;0" fill="freeze" />
+                  <animate attributeName="opacity" begin="loop.begin+1.5s" dur="0.3s" values="0;1" fill="freeze" />
+                  <set attributeName="opacity" to="1" begin="loop.begin+2.3s" dur="2.7s" fill="freeze" />
+                  <animate attributeName="opacity" begin="loop.begin+5s" dur="1s" values="1;0" fill="freeze" />
             </text>
       </g>
 
@@ -48,9 +48,9 @@
             <text x="49.5" y="44.54" font-family="Nunito, Segoe UI Emoji" font-size="44.36px" fill="#1e1e1e"
                   text-anchor="middle" opacity="0">
                   wow
-                  <animate attributeName="opacity" begin="2.5s" dur="0.3s" values="0;1" fill="freeze" />
-                  <set attributeName="opacity" to="1" begin="2.8s" dur="2.2s" fill="freeze" />
-                  <animate attributeName="opacity" begin="5s" dur="1s" values="1;0" fill="freeze" />
+                  <animate attributeName="opacity" begin="loop.begin+2s" dur="0.3s" values="0;1" fill="freeze" />
+                  <set attributeName="opacity" to="1" begin="loop.begin+2.8s" dur="2.2s" fill="freeze" />
+                  <animate attributeName="opacity" begin="loop.begin+5s" dur="1s" values="1;0" fill="freeze" />
             </text>
       </g>
 
@@ -59,15 +59,15 @@
             <text x="126.20" y="112.19" font-family="Nunito, Segoe UI Emoji" font-size="111.75px" fill="#1e1e1e"
                   text-anchor="middle" opacity="0">
                   wow
-                  <animate attributeName="opacity" begin="3s" dur="0.3s" values="0;1" fill="freeze" />
-                  <set attributeName="opacity" to="1" begin="3.3s" dur="1.7s" fill="freeze" />
-                  <animate attributeName="opacity" begin="5s" dur="1s" values="1;0" fill="freeze" />
+                  <animate attributeName="opacity" begin="loop.begin+2.5s" dur="0.3s" values="0;1" fill="freeze" />
+                  <set attributeName="opacity" to="1" begin="loop.begin+3.3s" dur="1.7s" fill="freeze" />
+                  <animate attributeName="opacity" begin="loop.begin+5s" dur="1s" values="1;0" fill="freeze" />
             </text>
       </g>
 
       <!-- restart loop -->
       <rect width="0" height="0">
-            <animate id="loop" attributeName="visibility" from="hidden" to="visible" begin="6s" dur="0.001s"
-                  repeatCount="indefinite" />
+            <animate id="loop" attributeName="visibility" from="hidden" to="visible" begin="0s;loop.end" dur="6s"
+                  fill="freeze" />
       </rect>
 </svg>

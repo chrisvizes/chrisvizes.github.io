@@ -1,16 +1,13 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320.093160275679 234.86428233935715"
       width="320.093160275679" height="234.86428233935715">
-      <metadata />
       <defs>
             <style class="style-fonts">
                   @font-face {
                         font-family: Nunito;
-                        src: url(data:font/woff2;base64,...);
-                        /* truncated for clarity */
+                        src: url(data:font/woff2;base64,d09GMgABAAAAAAM0AA8AAAAABmwAAALcAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbehwuBmA/U1RBVEQAPBEICoFwgWQLCAABNgIkAwwEIAWEJAcgG1MFUZQtyjKynwdVRFZzlMU5gmz1bnm/nPrHs8mKPhVV32e68zUicI2cTfJAVIWgKhE0k6zwL4uSjKyypCocq97P6+XLWYVSEif+a+6nmKgJmuutHRZwhKbF+Y8P2wMTpegmrqkfef7n0fSgby/+Yt+zx1k0R1MF2ARHG4+icCCjtgTZjea387kUkbosEoreoOsGg2H/2/84wTAgoogIBm2XhXn0eF0bqG6PUw5QPdFiF6iwoCPI47uUC3gIoin6Rb9iGQu7hWGo0G14b4TixUZVaqc4rXcEUAatb+VwvrApm6ULOFMnyTX+CcH6MP+OfBS49Nxo/fn/Pe1Q4tYR7yA/yhXWMeUKJdMY1L24b8EEvtSQROhpLFVesgEAnQPpyS+AgoppTME0lq1AryaK50Y70N10L7sVAUS6zhiooBcVZ4AHADRAkaxCEqtd/vggpj5JKlx5f4fJt6BjZcgSUx+CZbcXTL63L5/69uztHwlXDny6Bb37ZwE+AY9ydlVdO8cCGBLapV68Kmt+9nB9DtmXX9wRkjGBbqh/YXplXFF0SGNuV31vSWxRVGg6tKEPvns9pzdWdb2DCnmhYWHCe2VKOyRXuIuXprxKWD8gWwVxg6jScKM3eH0hgS6PLwAEqHsB//NLT4PSvG8eDPji1bsN8H1/6biOtLgmA3oVEJ4XugiAvjEIfOmaX1JKkrhaJxSB6gq2R1gCAJpgyKYqbQCf/Ot87PXIF6M+89VRI/0N8z0W9XG9dksoCsO2WDDoLNiDDj7SBgEuQ5y0XOoZGVjRnKphWg5Wep2MrMwssAY0FysMKTcGo2jVocF4AXkHI4rnW8SFlCpBhiQpTZ2rQaMG5d0UBltmm9EctKiz0aTXktNLIW7jKPS7FEmSpSG1sTAiBU/ThILYGOlhpGI0zAKheJCiWGCYm0eORInMrHkeTSeBHuLc/BtBzByMTBAXzCORSykRjYmNuiwDAA==);
                   }
             </style>
       </defs>
-
       <rect x="0" y="0" width="320.093160275679" height="234.86428233935715" fill="#ffffff" />
 
       <!-- wow 1 -->

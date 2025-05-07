@@ -69,7 +69,7 @@ Once you're in this mess, it is fixable and I will now walk you through it.
 
 # How to never let it happen in the first place
 
-And that wasn't very fun was it?
+That wasn't very fun was it?
 
 So what can we remember to not get in this pickle again. Put simply:
 

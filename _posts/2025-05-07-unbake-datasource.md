@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to edit your calculations again - TabServerCloud"
+title: "How to edit your calculations again - Tableau Server/ Cloud"
 author: "Chris Meardon"
 categories: blog
 tags: [blog, Tableau Cloud, Tableau, Tableau Server, Tableau Desktop]
@@ -23,12 +23,13 @@ Firstly, how did we even get to this mess? What led us to get here is often an u
 
 So let's say we have a Tableau workbook on Cloud/Server and we are tasked to update the datasource. We need to switch it over to look at a slightly different table in our database or update the custom SQL.
 
-So we open the workbook in Desktop, edit the datasource and then republish. All is well and our datasource is updated. WRONG. **DO NOT DO THIS.**
+So we open the workbook in Desktop, edit the datasource and then republish. All is well and our datasource is updated.
+
+WRONG. **DO NOT DO THIS.**
 
 You have just published the datasource, but along with it all of the calculations in your workbook. These calculations are no longer a property of the workbook but instead a property of the published datasource. They are no longer editable in the workbook.
 
-**The calculations must stay a part of the workbook if you want them to remain editable.
-**
+**The calculations must stay a part of the workbook if you want them to remain editable.**
 
 # How to fix it
 

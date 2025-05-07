@@ -1,20 +1,13 @@
 ---
 layout: post
-title: "Create animations from excalidraw"
+title: "How to edit your calculations again - TabServerCloud"
 author: "Chris Meardon"
 categories: blog
-tags: [blog, asset creation, excalidraw, animation]
-image: "excalidraw-animate/excalidraw-animate.svg"
-cover_image: "excalidraw-animate/excalidraw-animate.svg"
-excerpt: "Animate your excalidraw!"
+tags: [blog, Tableau Cloud, Tableau, Tableau Server, Tableau Desktop]
+image: ""
+cover_image: ""
+excerpt: "How to restore your Tableau workbook datasource for editable calculations (once again)"
 ---
-
-Goal:
-Re-publish a datasource used in a workbook without 'baking in' the calculations.
-
-Why:
-So you can still edit the calculations
-Preventing build up of
 
 # Why you should care
 
@@ -44,11 +37,16 @@ Once you're in this mess, it is fixable and I will now walk you through it.
 2. Connect to published **DATASOURCE** from Tableau Cloud/Server
    ![image of connect to datasource](/assets/img/baked-datasource/connect-data.png)
 3. Create local copy of datasource
+
    ![create local copy](/assets/img/baked-datasource/create-local-copy.png)
    3.1 You should now have a new datasource:
+
    ![local copy](/assets/img/baked-datasource/local-copy.png)
+
 4. In the data pane, filter for calculations
+
    ![filter for calculations](/assets/img/baked-datasource/calc-filter.png)
+
 5. Delete the calculated fields
 6. Publish your new datasource over your original datasource
    ![publish new datasource](../assets/img/baked-datasource/publish-to-server.png)

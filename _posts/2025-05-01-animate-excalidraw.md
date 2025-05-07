@@ -30,3 +30,7 @@ Frame-by-frame, create your animation, exporting snapshots as you go.
 ![demo-claymate](/assets/img/excalidraw-animate/84717128-eedfbf80-afaf-11ea-82e4-d4c601136b9a.gif)
 
 You don't get the lovely transitions of the previous tool, but you can have more control over each frame. This seems useful where you need a bit more control, without having to open up a video editor.
+
+## In retrospect, ScreenToGif is still king
+
+Screen2Gif is a screen-record-to-gif tool, with some great features. There's more control than you have with these tools and I can't get them to work well for me.

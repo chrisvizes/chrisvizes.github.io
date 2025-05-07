@@ -11,23 +11,24 @@ excerpt: "How to restore your Tableau workbook datasource for editable calculati
 
 # Why you should care
 
-Your workbook has duplicate named fields, some locked, some editable with terrible names like `[Sales copy (6) Fred edit final]` to distinguish from `[Sales final DoNotUse]`. This is incredibly confusing to work from and distances yourself from the single source of truth we all desire.
+Your workbook has duplicate named fields, some locked, some editable with terrible names like `[Sales copy (6) Fred edit final]` to distinguish from `[Sales final DoNotUse]`. This is **incredibly confusing** to work from and distances yourself from the single source of truth we all desire.
 
-Eventually you will need to fix this issue so that the workbook can be developed efficiently and this will waste resources.
+**Eventually** you will need to fix this issue so that the workbook can be developed efficiently and this will waste resources.
 
-The good news is it's easy to prevent. Let's get stuck in.
+**The good news is it's easy to prevent**. Let's get stuck in.
 
 # How it happens
 
-Firstly, how did we even get to this mess? What led us to get here is often an unclear order of operations to update a published datasource. It's easy to do and I'd expect many beginner users to fall into this trap.
+Firstly, how did we even get to this mess? What led us to get here is often an unclear order of operations to update a published datasource. It's easy to do and I'd expect **many beginner users to fall into this trap**.
 
 So let's say we have a Tableau workbook on Cloud/Server and we are tasked to update the datasource. We need to switch it over to look at a slightly different table in our database or update the custom SQL.
 
-So we open the workbook in Desktop, edit the datasource and then republish. All is well and our datasource is updated. WRONG. DO NOT DO THIS.
+So we open the workbook in Desktop, edit the datasource and then republish. All is well and our datasource is updated. WRONG. **DO NOT DO THIS.**
 
 You have just published the datasource, but along with it all of the calculations in your workbook. These calculations are no longer a property of the workbook but instead a property of the published datasource. They are no longer editable in the workbook.
 
-The calculations must stay a part of the workbook if you want them to remain editable.
+**The calculations must stay a part of the workbook if you want them to remain editable.
+**
 
 # How to fix it
 
@@ -67,11 +68,14 @@ Once you're in this mess, it is fixable and I will now walk you through it.
 
 # How to never let it happen in the first place
 
-The simplest way:
-Never publish a datasource from your workbook with calculations
-or
-Never publish a datasource when it contains calculations
+And that wasn't very fun was it?
 
-If you need to edit a datasource, open Tableau Desktop, connect to the published datasource, make your changes and publish back to Server/Cloud. No need to have the workbook that **USES** the datasource open.
+So what can I remember to not get in this pickle again. Put simply:
 
-Your Tableau developers or future self will be thankful, or in other words, you'll be minimising technical debt.
+- Never publish a datasource from your workbook with calculations
+  or
+- Never publish a datasource when it contains calculations
+
+**If you need to edit a datasource, open Tableau Desktop, connect to the published datasource, make your changes and publish back to Server/Cloud.** No need to have the workbook that **USES** the datasource open.
+
+Your Tableau developers or future self will be thankful, or in other words, you'll be **minimising technical debt**.

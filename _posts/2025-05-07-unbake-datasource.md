@@ -4,8 +4,8 @@ title: "How to edit your calculations again - TabServerCloud"
 author: "Chris Meardon"
 categories: blog
 tags: [blog, Tableau Cloud, Tableau, Tableau Server, Tableau Desktop]
-image: ""
-cover_image: ""
+image: 
+cover_image: 
 excerpt: "How to restore your Tableau workbook datasource for editable calculations (once again)"
 ---
 
@@ -39,6 +39,7 @@ Once you're in this mess, it is fixable and I will now walk you through it.
 3. Create local copy of datasource
 
    ![create local copy](/assets/img/baked-datasource/create-local-copy.png)
+
    3.1 You should now have a new datasource:
 
    ![local copy](/assets/img/baked-datasource/local-copy.png)

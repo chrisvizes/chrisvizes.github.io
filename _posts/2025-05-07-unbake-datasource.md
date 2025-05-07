@@ -4,8 +4,8 @@ title: "How to edit your calculations again - TabServerCloud"
 author: "Chris Meardon"
 categories: blog
 tags: [blog, Tableau Cloud, Tableau, Tableau Server, Tableau Desktop]
-image: 
-cover_image: 
+image: "assets/img/baked-datasource/cover.png"
+cover_image: "assets/img/baked-datasource/cover.png"
 excerpt: "How to restore your Tableau workbook datasource for editable calculations (once again)"
 ---
 
@@ -42,7 +42,7 @@ Once you're in this mess, it is fixable and I will now walk you through it.
 
    ![create local copy](/assets/img/baked-datasource/create-local-copy.png)
 
-   3.1 You should now have a new datasource:
+   4.1 You should now have a new datasource:
 
    ![local copy](/assets/img/baked-datasource/local-copy.png)
 
@@ -54,7 +54,7 @@ Once you're in this mess, it is fixable and I will now walk you through it.
    ![delete calculated fields](../assets/img/baked-datasource/delete-fields.png)
 7. Publish your new datasource over your original datasource
    ![publish new datasource](../assets/img/baked-datasource/publish-to-server.png)
-8. Now go back to your original workbook that uses the datasource you are editing and refresh the datasource connection
+8. Now open another copy of your original workbook that uses the datasource you are editing and refresh the datasource connection. This is the workbook we will publish at the end of the process.
    ![refresh datasource](../assets/img/baked-datasource/refresh-datasource.png)
 9. Now you will have lots of missing fields as the datasource no longer contains the calculations. We now need to copy the calculations over from the workbook we opened in step #1.
    1. Navigate to workbook opened in step #1

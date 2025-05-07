@@ -45,8 +45,10 @@ Once you're in this mess, it is fixable and I will now walk you through it.
    ![image of connect to datasource](/assets/img/baked-datasource/connect-data.png)
 3. Create local copy of datasource
    ![create local copy](/assets/img/baked-datasource/create-local-copy.png)
+
    You should now have a new datasource:
    ![local copy](/assets/img/baked-datasource/local-copy.png)
+
 4. In the data pane, filter for calculations
    ![filter for calculations](/assets/img/baked-datasource/calc-filter.png)
 5. Delete the calculated fields

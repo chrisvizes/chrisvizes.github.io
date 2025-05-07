@@ -7,7 +7,7 @@ Welcome to my blog, here's a little bit about me and how I got here.
 
 ## My Current Role
 
-I am part of The Information Lab. Here, I obliterate Tableau problems, juggle data with Alteryx, team up with AI to write code, see what fits into APIs and what comes back out, and demo the dos and donts. Even a little data engineering.
+I am part of The Information Lab. Here, I obliterate Tableau problems, juggle data with Alteryx, team up with AI to write code, see what fits into APIs and demo the dos and donts. Even a little data engineering.
 
 ## University
 

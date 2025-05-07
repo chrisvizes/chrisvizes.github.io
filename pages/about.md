@@ -7,17 +7,17 @@ Welcome to my blog, here's a little bit about me and how I got here.
 
 ## My Current Role
 
-I am part of The Information Lab. Here, I have received 4 months of dedicated Tableau and Alteryx training by some of the leading members in these communities (**[Data School](https://www.thedataschool.co.uk/)**). Following this training I have had placements in a variety of industries with roles such as: Senior Consulting Analyst, Consultant BI Development Analyst & Tableau and Alteryx Consultant at clients such as Techmodal, BAE Systems, ViacomCBS and Iris Softward Group.
+I am part of The Information Lab. Here, I obliterate Tableau problems, juggle data with Alteryx, team up with AI to write code, see what fits into APIs and what comes back out and demo the dos and donts.
 
 ## University
 
 I have a BSc in **Physics** from the University of Bristol where I took particular interest in my computational and experimental units.
 
-While there I had the pleasure of working with the physics society **[Chaos](https://www.bristolchaos.com)** in a variety of roles, spending my final year as the President. The 18-person strong committee managed to achieve the Best Academic & Careers Society award from the National Union of Students in 2018.
+While there I had the pleasure of working with the physics society **[Chaos](https://www.bristolchaos.com)** in a variety of roles, spending my final year as the President. The 18-person strong committee managed to achieve the Best Academic & Careers Society award from the National Union of Students in 2018. 3 big booms.
 
-## Communication
+## Teaching
 
-A passion of mine revolves around tutoring and science communication. Helping someone achieve a lightbulb moment and get enthusiastic about a subject has been a focus of mine across a variety of roles and I am always looking to help others. I've been a personal tutor, an overseas academic mentor, a study session leader and I am now translating this experience over to the world of data visualisation and analytics.
+I love working with people to help them achieve a lightbulb moment and get enthusiastic about a subject. I've been a personal tutor, an overseas academic mentor, a study session leader and over the last 5 years taught Tableau and Alteryx through demonstrations, one-on-ones, office hours and full blown training.
 
 ## Uni-Truths Ltd
 

@@ -71,10 +71,9 @@ Once you're in this mess, it is fixable and I will now walk you through it.
 
 And that wasn't very fun was it?
 
-So what can I remember to not get in this pickle again. Put simply:
+So what can we remember to not get in this pickle again. Put simply:
 
-- Never publish a datasource from your workbook with calculations
-  or
+- Never publish a datasource from your workbook with calculations, _or_
 - Never publish a datasource when it contains calculations
 
 **If you need to edit a datasource, open Tableau Desktop, connect to the published datasource, make your changes and publish back to Server/Cloud.** No need to have the workbook that **USES** the datasource open.

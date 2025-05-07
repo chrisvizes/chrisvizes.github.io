@@ -4,8 +4,8 @@ title: "How to edit your calculations again - TabServerCloud"
 author: "Chris Meardon"
 categories: blog
 tags: [blog, Tableau Cloud, Tableau, Tableau Server, Tableau Desktop]
-image: "assets/img/baked-datasource/cover.png"
-cover_image: "assets/img/baked-datasource/cover.png"
+image: "baked-datasource/cover.png"
+cover_image: "baked-datasource/cover.png"
 excerpt: "How to restore your Tableau workbook datasource for editable calculations (once again)"
 ---
 

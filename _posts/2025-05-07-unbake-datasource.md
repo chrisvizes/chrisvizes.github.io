@@ -45,8 +45,8 @@ Once you're in this mess, it is fixable and I will now walk you through it.
    ![image of connect to datasource](/assets/img/baked-datasource/connect-data.png)
 3. Create local copy of datasource
    ![create local copy](/assets/img/baked-datasource/create-local-copy.png)
-   1. You should now have a new datasource:
-      ![local copy](/assets/img/baked-datasource/local-copy.png)
+   3.1 You should now have a new datasource:
+   ![local copy](/assets/img/baked-datasource/local-copy.png)
 4. In the data pane, filter for calculations
    ![filter for calculations](/assets/img/baked-datasource/calc-filter.png)
 5. Delete the calculated fields
@@ -54,6 +54,13 @@ Once you're in this mess, it is fixable and I will now walk you through it.
    ![publish new datasource](../assets/img/baked-datasource/publish-to-server.png)
 7. Now go back to your original workbook that uses the datasource you are editing and refresh the datasource connection
    ![refresh datasource](../assets/img/baked-datasource/refresh-datasource.png)
-8.
+8. Test you can now edit your calculations
 
 # How to never let it happen in the first place
+
+The simplest way:
+Never publish a datasource from your workbook with calculations
+or
+Never publish a datasource when it contains calculations
+
+If you need to edit a datasource, connect

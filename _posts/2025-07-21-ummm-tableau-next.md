@@ -23,7 +23,11 @@ Jargon aye, what ya gunna do. Here you can bring in your data objects and set up
 
 ## What is actually in a Workspace?
 
-So right now, I’ve got this thing called a workspace, which seems like the "project folder" for Tableau Next. Everything happens in here — your data, your semantic model, your charts, your dashboards, your metrics, your hopes and dreams, all live in this one place. And importantly, a workspace doesn’t necessarily own all the assets. It can also just reference stuff that lives elsewhere — like in another workspace or in Data Cloud. It's kind of like having a Google Doc shortcut in a shared folder. You don’t duplicate the file — you’re just saying “hey, I want to use this here too.” This means if I make a metric in Workspace A, I can use it in Workspace B without rebuilding it. Nice. But also potentially chaotic if you don’t name things clearly. (Looking at you, "New_Metric_Final_v2_Copy2").
+So right now, I’ve got this thing called a workspace, which seems like the "project folder" for Tableau Next. Everything happens in here — your data, your semantic model, your charts, your dashboards, your metrics, your hopes and dreams, all live in this one place.
+
+And importantly, a workspace doesn’t necessarily own all the assets. It can also just reference stuff that lives elsewhere — like in another workspace or in Data Cloud. It's kind of like having a Google Doc shortcut in a shared folder. You don’t duplicate the file — you’re just saying “hey, I want to use this here too.”
+
+This means if I make a metric in Workspace A, I can use it in Workspace B without rebuilding it. Nice. But also potentially chaotic if you don’t name things clearly. (Looking at you, "New_Metric_Final_v2_Copy2").
 
 ## Assets, Assets Everywhere
 
@@ -37,11 +41,19 @@ Let’s break this down. When they say “assets,” they mean all the bits that
 
 ## Is this Tableau… or Salesforce?
 
-Honestly? It’s both. Tableau Next feels like the bridge. It’s Tableau’s superpower — visual exploration — baked into Salesforce’s structured data world. And with _Agentforce_ (basically a generative AI assistant) embedded, you can get help while building, not just after the fact. Also, data doesn’t have to live in Tableau Next. If your data already lives in Salesforce Data Cloud, or you're using semantic models defined there, you just reference them in Tableau Next. And apparently, Tableau Cloud and Desktop are getting connectors for these semantic models too — so if you're used to working in Tableau Desktop but your business is moving to Data Cloud, you don’t have to throw away your workflow.
+Honestly? It’s both. Tableau Next feels like the bridge. It’s Tableau’s superpower — visual exploration — baked into Salesforce’s structured data world. And with _Agentforce_ (basically a generative AI assistant) embedded, you can get help while building, not just after the fact.
+
+Also, data doesn’t have to live in Tableau Next. If your data already lives in Salesforce Data Cloud, or you're using semantic models defined there, you just reference them in Tableau Next. And apparently, Tableau Cloud and Desktop are getting connectors for these semantic models too — so if you're used to working in Tableau Desktop but your business is moving to Data Cloud, you don’t have to throw away your workflow.
 
 ## Semantic Model: A Second Look
 
-Okay so earlier I said “jargon” and moved on, but let’s come back to it. A _semantic model_ is essentially your dataset + relationships + calculated fields + naming conventions + logic. It gives your raw data some meaning, and that meaning sticks around across charts and metrics. For example, you can define a metric called “Monthly Revenue” once in the semantic model — with its formula, filters, aggregations — and then reuse it across charts, dashboards, whatever. It’s not like a Tableau calculated field buried in one worksheet that you have to recreate or duplicate every time you need it. Also worth noting: parameters are back. They act kind of like in Tableau Desktop — custom inputs that can be reused in logic across your assets.
+Okay so earlier I said “jargon” and moved on, but let’s come back to it.
+
+A _semantic model_ is essentially your dataset + relationships + calculated fields + naming conventions + logic. It gives your raw data some meaning, and that meaning sticks around across charts and metrics.
+
+For example, you can define a metric called “Monthly Revenue” once in the semantic model — with its formula, filters, aggregations — and then reuse it across charts, dashboards, whatever. It’s not like a Tableau calculated field buried in one worksheet that you have to recreate or duplicate every time you need it.
+
+Also worth noting: parameters are back. They act kind of like in Tableau Desktop — custom inputs that can be reused in logic across your assets.
 
 ## So What?
 

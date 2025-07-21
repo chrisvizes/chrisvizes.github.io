@@ -4,9 +4,9 @@ title: "Ummmm what is Tableau Next?"
 author: "Chris Meardon"
 categories: blog
 tags: [blog, tableau, tableau next]
-image: ""
-cover_image: ""
-excerpt: ""
+image: "tableau-next-cover.jpg"
+cover_image: "tableau-next-cover.jpg"
+excerpt: "First steps with Tableau Next"
 ---
 
 I've been working with Tableau for over 5 years at this point and I still think of it, at the heart, as Tableau Desktop. A tool to take data, explore it and visualise it in a very flexible way. But Salesforce recently launched Tableau Next and that raises alarm bells for me. What do you mean next? Tableau Desktop is great and doesn't need a major overhaul! But this new ~~product~~, ~~program~~, ~~add on~~, ~~replacement~~ _part of the salesforce ecosystem_ has significant potential to cross my path as a Tableau consultant and so learning about how it works and it's significance to the businesses I work with is important.

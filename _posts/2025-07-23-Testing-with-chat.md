@@ -57,9 +57,8 @@ Q10. What are some potential limitations or drawbacks of Tableau Next today that
 
 Q11. How would you position Tableau Next differently to:
 
-A data-savvy Tableau team familiar with PDS and custom dashboards
-
-A Salesforce CRM admin team with limited BI experience
+- A data-savvy Tableau team familiar with PDS and custom dashboards
+- A Salesforce CRM admin team with limited BI experience
 
 ### 4. Innovation and Strategic Thinking
 

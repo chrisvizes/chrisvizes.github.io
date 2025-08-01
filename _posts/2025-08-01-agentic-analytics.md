@@ -11,7 +11,7 @@ excerpt: "When I first heard the term agentic analytics, I assumed it was just a
 
 ## **What Is Agentic Analytics — And Why Tableau Next Is a Big Deal**
 
-When I first heard the term agentic analytics, I assumed it was just another bit of tech jargon. Something designed to make AI in dashboards sound more impressive than it really is. But after spending a decent amount of time using Tableau Next, it’s clear this isn’t just a layer of hype on top of the old platform. **It’s something different.** Not perfect, not without limitations, but worth paying attention to.
+When I first heard the term **agentic analytics**, I assumed it was just another bit of tech jargon. Something designed to make AI in dashboards sound more impressive than it really is. But after spending a decent amount of time using Tableau Next, it’s clear this isn’t just a layer of hype on top of the old platform. **It’s something different.** Not perfect, not without limitations, but worth paying attention to.
 
 If you’ve worked in data for any length of time, the basic BI process is familiar. You pull the data, clean it, model it, build your dashboards and share them. Then you hope someone uses them to make a decision. Often they don’t, or they do, but they message you a few times first asking for help interpreting what’s going on.
 
@@ -45,7 +45,7 @@ This structure means that agents aren’t just passive tools. They become collab
 
 ### So what’s in it for businesses?
 
-Let’s be honest. Most companies don’t get stuck because they can’t build dashboards. They get stuck because no one uses them. Or because the dashboards show something important but no one follows up on it.
+Let’s be honest. Most companies don’t get stuck because they can’t build dashboards. **They get stuck because no one uses them.** Or because the dashboards show something important but no one follows up on it.
 
 Agentic analytics aims to close that loop. In theory, Tableau Next lets users move from insight to action without switching platforms. A sales manager spots a drop in performance and can immediately message the rep. A support lead notices a backlog and updates the customer case without leaving the dashboard.
 

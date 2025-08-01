@@ -45,7 +45,7 @@ This structure means that agents aren’t just passive tools. They become collab
 
 ### So what’s in it for businesses?
 
-If you’ve ever built a dashboard only to be asked the same follow-up questions again and again—or watched a report sit unread because no one knew what to do with it, agentic analytics will feel like a breath of fresh air.
+If you’ve ever built a dashboard only to be asked the same follow-up questions again and again or watched a report sit unread because no one knew what to do with it, agentic analytics will feel like a breath of fresh air.
 
 It closes the loop. Instead of making people jump from insight to action manually, Tableau Next lets them ask, understand, and act _in the same place_. For teams who live in Salesforce or work cross-functionally, this means faster responses, fewer dropped balls, and more decisions made at the speed of business.
 

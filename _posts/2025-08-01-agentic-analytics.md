@@ -39,7 +39,7 @@ This structure means that agents aren’t just passive tools. They become collab
 
 ---
 
-![diagram]("/assets/img/tableau-next/data-semantic-insight-action.png")
+![diagram](/assets/img/tableau-next/data-semantic-insight-action.png)
 
 ---
 

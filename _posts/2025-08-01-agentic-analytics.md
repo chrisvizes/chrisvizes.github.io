@@ -15,7 +15,7 @@ When I first heard the term **agentic analytics**, I assumed it was just another
 
 If you’ve worked in data for any length of time, the basic BI process is familiar. You pull the data, clean it, model it, build your dashboards and share them. Then you hope someone uses them to make a decision. Often they don’t, or they do, but they message you a few times first asking for help interpreting what’s going on.
 
-**Agentic analytics provides an alternative model.**
+<span style="color: #962aef;">**Agentic analytics provides an alternative model.**</span>
 
 ---
 

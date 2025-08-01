@@ -6,7 +6,7 @@ categories: blog
 tags: [blog, tableau, tableau next]
 image: "tableau-next-cover.jpg"
 cover_image: "tableau-next-cover.jpg"
-excerpt: "First steps with Tableau Next"
+excerpt: "Setting up tests"
 ---
 
 So far, Tableau Next is feeling pretty simple to use. Add a connection to data in Data Cloud, create a Semantic Model in Tableau Next using the connection in Data Cloud (potentially adding metrics here too), make Visualisations and then add them to Dashboards. I'm findding that reading and watching more content about Tab Next is not helping me learn and my engagement is falling with it. So I decided to take it to an LLM chatbot and asked it to quiz me and then dive into the areas I fail to answer well on. So far it is feeling like a useful tool, but does come with some issues:

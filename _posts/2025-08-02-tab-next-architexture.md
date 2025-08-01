@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Understanding the Architecture of Tableau Next (Without the Jargon)"
+title: "Understanding the Architecture of Tableau Next"
 author: "Chris Meardon"
 categories: blog
 tags: [blog, tableau, tableau next]
 image: "tableau-next-cover.jpg"
 cover_image: "tableau-next-cover.jpg"
-excerpt: ""
+excerpt: "(Without the Jargon)"
 ---
 
 ## **Understanding the Architecture of Tableau Next (Without the Jargon)**

@@ -6,7 +6,7 @@ categories: blog
 tags: [blog, tableau, tableau next]
 image: "tableau-next-cover.jpg"
 cover_image: "tableau-next-cover.jpg"
-excerpt: ""
+excerpt: "When I first heard the term agentic analytics, I assumed it was just another bit of tech jargon. Something designed to make AI in dashboards sound more impressive than it really is. But after spending a decent amount of time using Tableau Next, it’s clear this isn’t just a layer of hype on top of the old platform"
 ---
 
 ## **What Is Agentic Analytics — And Why Tableau Next Is a Big Deal**

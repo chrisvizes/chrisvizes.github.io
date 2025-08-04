@@ -67,10 +67,10 @@ You don’t need to be a developer to use them, but you do need to be clear abou
 
 Each layer builds on the one beneath it.
 
-- The **data layer** gives you access to everything, without duplication.
-- The **semantic layer** defines what that data means.
-- The **visualisation layer** lets people explore and understand it.
-- The **action layer** closes the loop by helping you do something with it.
+- The **data layer** gives you access to everything, without duplication
+- The **semantic layer** defines what that data means
+- The **visualisation layer** lets people explore and understand it
+- The **action layer** closes the loop by helping you do something with it
 
 You don’t have to use all four straight away, but the more you do, the more benefit you get from automation and scale. You also reduce the chance of people misinterpreting data or duplicating work.
 

@@ -33,7 +33,7 @@ A DMO sits on top of one or more DLOs, relating them together and adding additio
 
 Think reusable calculated results from DMOs, or in otherwords CIOs are materialised calculations. They help you optimise calculation times by letting you refer to this result from dashboards, concierge or agents without having to recalculate each time.
 
-**CIOs are materialised calculations**
+**CIOs are materialised calculations.**
 
 ## Summary
 

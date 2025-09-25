@@ -27,11 +27,13 @@ If you want to ingest data, you're going to need to upload it and that object yo
 
 A DMO sits on top of one or more DLOs, relating them together and adding additional metadata (semantics). The result is a reusable and governed data object that represents a business concept.
 
-**These are what your business users are going to interact with.**
+**DMOs are what your business users are going to interact with.**
 
 ## So what's a Calculated Insight Object?
 
 Think reusable calculated results from DMOs, or in otherwords CIOs are materialised calculations. They help you optimise calculation times by letting you refer to this result from dashboards, concierge or agents without having to recalculate each time.
+
+**CIOs are materialised calculations**
 
 ## Summary
 

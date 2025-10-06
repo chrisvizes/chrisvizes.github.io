@@ -25,7 +25,7 @@ If you want to ingest data, you're going to need to upload it and that object yo
 
 ## So what's a Data Model Object?
 
-A DMO sits on top of one or more DLOs, relating them together and adding additional metadata (semantics). The result is a reusable and governed data object that represents a business concept.
+A DMO sits on top of one or more DLOs, relating them together and adding a little additional metadata. The result is a reusable and governed data object that represents a business concept.
 
 **DMOs are what your business users are going to interact with.**
 
@@ -38,5 +38,5 @@ Think reusable calculated results from DMOs, or in otherwords CIOs are materiali
 ## Summary
 
 - DLO – Raw storage of ingested data (tables).
-- DMO – Semantic model of the data (entities, relationships).
+- DMO – A business-ready data object, created from DLOs.
 - CIO – Reusable calculated results or insights built on top of DMOs.

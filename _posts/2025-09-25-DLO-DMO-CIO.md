@@ -4,8 +4,8 @@ title: "What's the difference between a DLO, DMO and CIO in Tableau Next/ Data C
 author: "Chris Meardon"
 categories: blog
 tags: [blog, tableau next, data cloud, salesforce]
-image: "tableau-next-cover.jpg"
-cover_image: "tableau-next-cover.jpg"
+image: "data-cloud/dmo-dlo-cio-diff.png"
+cover_image: "data-cloud/dmo-dlo-cio-diff.png"
 excerpt: "Distinguishing these different objects confused me at first"
 ---
 

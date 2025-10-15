@@ -79,6 +79,7 @@ could be written as two parts
 ```
 
 converted into:
+
 [Calc 1]
 
 ```

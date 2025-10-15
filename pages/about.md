@@ -3,7 +3,7 @@ layout: misc
 title: About
 ---
 
-Welcome to my blog, here's a little bit about me and how I got here.
+Welcome to my bog, here's a little bit about me and how I got here.
 
 ## My Current Role
 

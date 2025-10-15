@@ -6,7 +6,7 @@ categories: blog
 tags: [blog, tableau next, salesforce]
 image: "tableau-next/LOD-Error.png"
 cover_image: "tableau-next/LOD-Error.png"
-excerpt: "A discussion of and solution to a weird problem in Tableau Next"
+excerpt: "A discussion of, and solution to, a weird problem in Tableau Next"
 ---
 
 In many ways Tableau Next is not the Tableau that Tableau people know, _but it does masquerade as it_.
@@ -96,3 +96,5 @@ aggregation([Field])
 ## So what have we learned?
 
 Honestly feels like a bug resulting from a product being shipped too quickly... and maybe it is. So I'm writing this down in case anyone else hits their head against the wall too.
+
+I think it's something to do with how with two calculations you can set two different configurations of Field Type, Data Role, Data type.

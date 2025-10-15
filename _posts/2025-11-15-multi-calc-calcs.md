@@ -6,7 +6,7 @@ categories: blog
 tags: [blog, tableau next,  salesforce]
 image: "tableau-next/LOD-Error.png"
 cover_image: "tableau-next/LOD-Error.png"
-excerpt: "Distinguishing these different objects confused me at first"
+excerpt: "A discussion of and solution to a weird problem in Tableau Next"
 ---
 
 In many ways Tableau Next is not the Tableau that Tableau people know, _but it does masquerade as it_.

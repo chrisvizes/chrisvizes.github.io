@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Why use DMOs when you have DLOs?"
+title: "Calculated dimensions can be only defined at either Row or LOD (Level of Detail) level bullshit"
 author: "Chris Meardon"
 categories: blog
 tags: [blog, tableau next,  salesforce]

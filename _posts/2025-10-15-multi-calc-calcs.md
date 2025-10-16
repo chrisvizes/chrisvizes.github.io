@@ -28,9 +28,10 @@ My Fixed LOD calculation looked like:
 ```
 
 The result of which is a boolean field which I need to have the properties:
-Field Type: Dimension
-Data Type: Boolean
-Data Role: Discrete
+
+- Field Type: Dimension
+- Data Type: Boolean
+- Data Role: Discrete
 
 But when I used that configuration it returned the error `Calculated dimensions can be only defined at either Row or LOD (Level of Detail) level.`
 
@@ -38,7 +39,7 @@ Umm, my calculation is LOD level?!
 
 ## The Solution
 
-It appears that Tableau Next does not like including any aggregations in a calculation that resutls in a Dimension. But if you abstract the aggregation into another calculation the problem goes away. Let me make that clearer
+It appears that Tableau Next does not like including any aggregations in a calculation that results in a dimension. But if you abstract the aggregation into another calculation the problem goes away. Let me make that clearer
 
 The calculation
 
@@ -98,4 +99,4 @@ aggregation([Field])
 
 Honestly feels like a bug resulting from a product being shipped too quickly... and maybe it is. So I'm writing this down in case anyone else hits their head against the wall too.
 
-I think it's something to do with how with two calculations you can set two different configurations of Field Type, Data Role, Data type.
+I think it's something to do with how two calculations allows you to set two different configurations of Field Type, Data Role, Data type, which is needed if you want to have a calculated dimension that includes a fixed LOD.

@@ -11,7 +11,7 @@ excerpt: "First steps with Tableau Next"
 
 I've been working with Tableau for over 5 years at this point and I still think of it, at the heart, as Tableau Desktop. A tool to take data, explore it and visualise it in a very flexible way. But Salesforce recently launched Tableau Next and that raises alarm bells for me. What do you mean next? Tableau Desktop is great and doesn't need a major overhaul! But this new ~~product~~, ~~program~~, ~~add on~~, ~~replacement~~ _part of the salesforce ecosystem_ has significant potential to cross my path as a Tableau consultant and so learning about how it works and it's significance to the businesses I work with is important.
 
-I'm going to work towards a greater understanding of Tableau Next and make notes here about it; maybe they'll be interesting to you too. Or maybe my data will be scrapped, used to train LLMs and then regurgatated back to you with emojis in the headings and a unhumanly high rate of semi-colons.
+I'm going to work towards a greater understanding of Tableau Next and make notes here about it; maybe they'll be interesting to you too. Or maybe my data will be scraped, used to train LLMs and then regurgatated back to you with emojis in the headings and a unhumanly high rate of semi-colons.
 
 ## Getting started
 

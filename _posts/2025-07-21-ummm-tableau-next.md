@@ -39,22 +39,6 @@ Let’s break this down. When they say “assets,” they mean all the bits that
 - **Vizzes**: Built in a “Visualization Builder.” It’s like Tableau-lite, all web-based. Drag and drop feels familiar, but there are fewer bells and whistles than full Desktop (so far).
 - **Dashboards**: This is where it all comes together. You can pull in vizzes, metrics, filters, text, buttons — and even add Salesforce Flow actions. It’s a bit more “app-like” than the traditional dashboard canvas in Desktop.
 
-## Is this Tableau… or Salesforce?
-
-Honestly? It’s both. Tableau Next feels like the bridge. It’s Tableau’s superpower — visual exploration — baked into Salesforce’s structured data world. And with _Agentforce_ (basically a generative AI assistant) embedded, you can get help while building, not just after the fact.
-
-Also, data doesn’t have to live in Tableau Next. If your data already lives in Salesforce Data Cloud, or you're using semantic models defined there, you just reference them in Tableau Next. And apparently, Tableau Cloud and Desktop are getting connectors for these semantic models too — so if you're used to working in Tableau Desktop but your business is moving to Data Cloud, you don’t have to throw away your workflow.
-
-## Semantic Model: A Second Look
-
-Okay so earlier I said “jargon” and moved on, but let’s come back to it.
-
-A _semantic model_ is essentially your dataset + relationships + calculated fields + naming conventions + logic. It gives your raw data some meaning, and that meaning sticks around across charts and metrics.
-
-For example, you can define a metric called “Monthly Revenue” once in the semantic model — with its formula, filters, aggregations — and then reuse it across charts, dashboards, whatever. It’s not like a Tableau calculated field buried in one worksheet that you have to recreate or duplicate every time you need it.
-
-Also worth noting: parameters are back. They act kind of like in Tableau Desktop — custom inputs that can be reused in logic across your assets.
-
 ## So What?
 
 This all sounds shiny and new — but let’s be real. If you're a longtime Tableau Desktop user like me, you're probably asking:

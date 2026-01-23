@@ -29,6 +29,10 @@ I also love to grow chillies. At the time of writing this I've got 90 little see
 
 ## Awards & Certifications
 
+- **Salesforce Certified Tableau Server Administrator** (Jan 2026)
+  - Certified Tableau Server Administrators have a comprehensive understanding of Tableau Server functionality in a single-machine environment and approximately 6 months of experience.
+- **Salesforce Certified Tableau Consultant** (Jan 2026)
+  - Certified Tableau Consultants help customers understand their data and realize business value. They are experts in visual design, performance, scalability, adoption, and governance.
 - **Tableau Certified Data Analyst** (Feb 2022)
   - Able to enable stakeholders to make business decisions by understanding the business problem, identifying data to explore for analysis, and delivering actionable insights.
 - **Tableau Desktop Certified Professional** (Jul 2020)

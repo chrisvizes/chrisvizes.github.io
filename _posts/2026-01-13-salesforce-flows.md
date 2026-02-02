@@ -4,8 +4,8 @@ title: "Exploring Salesforce Flows"
 author: "Chris Meardon"
 categories: blog
 tags: [blog, salesforce, tableau next]
-image: ""
-cover_image: ""
+image: "/assets/img/salesforce-flows/notion-actions.png"
+cover_image: "/assets/img/salesforce-flows/notion-actions.png"
 excerpt: "Automate routine tasks within Salesforce and beyond"
 ---
 
@@ -35,7 +35,7 @@ To get familiar with flows, I decided to take on building a flow to create a mar
 
 This will be useful in Tableau Next demos I build as an example of a custom flow triggered by an Agentforce Agent during conversational analytics.
 
-![notion-actions](assets\img\salesforce-flows\notion-actions.png)
+![notion-actions](/assets/img/salesforce-flows/notion-actions.png)
 
 I will use the `Create A Page` action to add a new page to my database in Notion.
 
@@ -56,4 +56,4 @@ Fortunately, you can run the action at any point to test what API call you get b
 
 So there we have it, my first flow that simply creates a new page in a Notion database. This is however a great proof of concept and a learning experience of building within Salesforce's flow builder. As it is an autolaunched flow, I can now include this within any Agents posssible actions and they can control what the name of the page is. There is much more to play with here and so I may be back for more soon!
 
-![the-flow](assets\img\salesforce-flows\flow.png)
+![the-flow](/assets/img/salesforce-flows/flow.png)

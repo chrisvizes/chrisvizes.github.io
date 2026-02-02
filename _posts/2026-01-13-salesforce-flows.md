@@ -4,8 +4,8 @@ title: "Exploring Salesforce Flows"
 author: "Chris Meardon"
 categories: blog
 tags: [blog, salesforce, tableau next]
-image: "/assets/img/salesforce-flows/notion-actions.png"
-cover_image: "/assets/img/salesforce-flows/notion-actions.png"
+image: "salesforce-flows/notion-actions.png"
+cover_image: "salesforce-flows/notion-actions.png"
 excerpt: "Automate routine tasks within Salesforce and beyond"
 ---
 

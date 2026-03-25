@@ -5,7 +5,7 @@ author: "Chris Meardon"
 categories: blog
 tags: [blog, tableau desktop, tableau, tableau server, tableau cloud, tableau prep]
 image: "/tableau-products/image 2.png"
-cover_image: ""
+cover_image: 
 excerpt: "Navigate the Tableau 'Classic' products"
 ---
 

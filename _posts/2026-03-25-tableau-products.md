@@ -15,6 +15,8 @@ So how do you nativate all of this? Which tools are relevant to you?
 
 ![decision tree](/assets/img/tableau-products/image.png)
 
+Tableau Prep left in grey there to indicate it could be used in this scenario if needed. You'll see it ommitted for scenarios using the free versions of Tableau Desktop as someone with Tableau Prep will very likely have access to Tableau Desktop (paid).
+
 This is just one way to look at it and all of these products of course have further limitations and features, but I think this is the core of it.
 
 Now I just need to extend it to include Tableau Next, Tableau Pulse, Tableau Reader, Tableau Prep Conductor, Tableau Mobile, Tableau Agent, Tableau Catalog, Tableau Cloud Manager, Tableau Bridge, Tableau Exchange and what on earth is Tableau+

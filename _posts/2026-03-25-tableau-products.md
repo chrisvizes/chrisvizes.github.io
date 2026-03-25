@@ -4,8 +4,8 @@ title: "Which Tableau Products Do I Want?"
 author: "Chris Meardon"
 categories: blog
 tags: [blog, tableau desktop, tableau, tableau server, tableau cloud, tableau prep]
-image: "assets/img/tableau-products/image 2.png"
-cover_image: "assets/img/tableau-products/image 2.png"
+image: "/tableau-products/image 2.png"
+cover_image: "/tableau-products/image 2.png"
 excerpt: "Navigate the Tableau 'Classic' products"
 ---
 
@@ -13,7 +13,7 @@ Once upon a time, Tableau meant something clear, a tool to visualise and explore
 
 So how do you nativate all of this? What tools are relevant to you?
 
-![decision tree](assets/img/tableau-products/image.png)
+![decision tree](/tableau-products/image.png)
 
 This is just one way to look at it and all of these products of course have further limitations and features, but I think this is the core of it.
 

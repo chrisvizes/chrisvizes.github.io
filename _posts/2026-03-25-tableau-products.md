@@ -4,8 +4,8 @@ title: "Which Tableau Products Do I Want?"
 author: "Chris Meardon"
 categories: blog
 tags: [blog, tableau desktop, tableau, tableau server, tableau cloud, tableau prep]
-image: ""
-cover_image: "/tableau-products/image 2.png"
+image: "/tableau-products/image 2.png"
+cover_image: ""
 excerpt: "Navigate the Tableau 'Classic' products"
 ---
 

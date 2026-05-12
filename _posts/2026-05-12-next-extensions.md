@@ -61,11 +61,11 @@ This generates a package of this extention that has an installation URL which ca
 ## Ensuring your targest include analytics dashboards
 
 Set up the following in the js-meta.xml:
-`
+```
 <targets>
     <target>analytics__Dashboard</target>
 </targets>
-`
+```
 
 ## Query Limits
 

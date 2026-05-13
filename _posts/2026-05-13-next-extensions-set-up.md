@@ -40,7 +40,7 @@ For the Trailhead module it encourages you to work on a testing org. I had hoped
 
 Within VS Codes command palette, I searched for `SFDX: Create Project` and selected standard. This created starter files.
 
-![alt text](assets/img/sf-extensions/project-files.png)
+![Project files](/sf-extensions/project-files.png)
 
 ## Setting org-name
 

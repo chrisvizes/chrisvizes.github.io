@@ -62,7 +62,7 @@ We are creating one by right clicking the directory `force-app/main/default/clas
 
 Doing that I now have two new filese in the classes directory:
 
-1. ÀccountController.cls
+1. AccountController.cls
 2. AccountController.cls-meta.xml
 
 I have copied the following into AccountController.cls

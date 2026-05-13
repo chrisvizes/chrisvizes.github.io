@@ -31,7 +31,7 @@ A lightning web combonent, which is made up of standard web assets:
 
 When working on your extensions you are working from a repo that could contain all of your extensions. When applying changes you could then apply them across all.
 
-## Things you want you LWC to do
+## Things you want your LWC to do
 
 - Use a specific semantic model
 - Create live, reactive visualisations with tooltips
@@ -50,11 +50,11 @@ This generates a package of this extention that has an installation URL which ca
 
 # Relevant docs
 
-1. [Integrate Custom LWC in Dashboards with the Extensions SDK](https://developer.salesforce.com/docs/analytics/tableau-next-isv-dev/guide/tn-development-dashboard-extensions.html)
+1. [Main Dev Guide: Integrate Custom LWC in Dashboards with the Extensions SDK](https://developer.salesforce.com/docs/analytics/tableau-next-isv-dev/guide/tn-development-dashboard-extensions.html)
 2. [Tableau Next Model Context Protocol (MCP) Server](https://help.salesforce.com/s/articleView?id=analytics.tua_data_sdm_mcp.htm&type=5)
 3. [Semantic Model docs](https://help.salesforce.com/s/articleView?id=analytics.tua_data_sdm_about_models.htm&type=5)
 4. [Semantic Query API Quick Start Guide](https://developer.salesforce.com/docs/data/semantic-layer/guide/quick-start-query-api.html)
-5. [Developer Guide on Extensions](https://developer.salesforce.com/docs/analytics/tableau-next-isv-dev/guide/tn-development-dashboard-extensions.html)
+
 
 # Some Lessons
 

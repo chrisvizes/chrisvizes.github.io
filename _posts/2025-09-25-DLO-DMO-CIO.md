@@ -9,7 +9,7 @@ cover_image: "data-cloud/dmo-dlo-cio-diff.png"
 excerpt: "Distinguishing these different objects confused me at first"
 ---
 
-I think for me the confusion started when I through myself into the Tableau Next (and more generally Salesforce) platform and started to build things to see what stuck. When building a semantic model I noticed there were three categories of data objects you could add, but I only had one:
+I think for me the confusion started when I threw myself into Tableau Next (and more generally the Salesforce) platform and started to build things to see what stuck. When building a semantic model I noticed there were three categories of data objects you could add, but I only had one:
 
 - Data Lake Objects (DLOs)
 - Data Model Objects (DMOs)

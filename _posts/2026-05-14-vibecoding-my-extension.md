@@ -15,7 +15,7 @@ I've given claude a list of documentation sources and access to my blogs. I have
 
 On it's first go, it came up with this plan:
 
-```
+
 # Plan: D3 Network Chart — Tableau Next Dashboard Extension
 
 ## Context
@@ -179,11 +179,11 @@ When ready to replace dummy data with a real semantic model:
    - Requires `CDP Semantic Query Permissions` enabled on the org
 3. Map the API response (nodes = entities, links = relationships/measures) into the D3 data format
 4. Optionally subscribe to `SDK_EVENTS.FILTER_CHANGE` so the chart re-queries when dashboard filters change
-```
+
 
 I've accepted and let it churn away... It summarised th changes as follows:
 
-```
+
 ## What was created
 
 **3 new additions to the SFDX project at `force-app/main/default/`:**

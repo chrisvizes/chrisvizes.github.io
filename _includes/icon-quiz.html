@@ -20,9 +20,9 @@
   <div class="tiq-bar" aria-hidden="true"><span class="tiq-bar-fill"></span></div>
 
   <div class="tiq-play">
-    <div class="tiq-stage">
+    <div class="tiq-stage is-waiting">
       <span class="tiq-sparkles" aria-hidden="true"></span>
-      <img class="tiq-icon" src="" alt="Tableau icon to identify">
+      <img class="tiq-icon" alt="Tableau icon to identify">
     </div>
     <div class="tiq-options" role="group" aria-label="Pick the name of this icon"></div>
     <p class="tiq-feedback" role="status" aria-live="polite"></p>
@@ -79,6 +79,18 @@
   overflow: hidden;
 }
 .tiq-icon { width: 108px; height: 108px; object-fit: contain; transition: transform .25s ease; }
+.tiq-stage.is-waiting .tiq-icon, .tiq-stage.is-broken .tiq-icon { visibility: hidden; }
+.tiq-stage.is-waiting::after {
+  content: ""; position: absolute; width: 26px; height: 26px; border-radius: 50%;
+  border: 2px solid #dcdcdc; border-top-color: var(--tiq-accent);
+  animation: tiq-spin .7s linear infinite;
+}
+.tiq-stage.is-broken::after {
+  content: "This icon would not load — press Next to move on.";
+  position: absolute; padding: 0 24px; text-align: center;
+  color: var(--tiq-muted); font-size: .88em;
+}
+@keyframes tiq-spin { to { transform: rotate(360deg); } }
 .tiq-pop .tiq-icon { animation: tiq-pop .45s ease; }
 @keyframes tiq-pop {
   0% { transform: scale(1); }
@@ -238,6 +250,7 @@
     }
 
     var deck = [], at = 0, score = 0, missed = [], locked = false;
+    var loaded = {};   // file -> 'ok' | 'bad', shared across rounds
 
     function calm() {
       return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -269,11 +282,57 @@
       els.barFill.style.width = (at / rounds * 100) + '%';
     }
 
+    // An icon is only shown once it has actually decoded, so a slow or failed
+    // request can never leave a broken image on the stage. One retry with a
+    // cache-buster covers a dropped request; anything still failing (an
+    // extension blocking the URL, say) gets swapped for a different icon.
+    function iconUrl(file) { return base + encodeURIComponent(file); }
+
+    function preload(file, done) {
+      if (loaded[file] === 'ok') { if (done) done(true); return; }
+      if (loaded[file] === 'bad') { if (done) done(false); return; }
+      var first = new Image();
+      first.onload = function () { loaded[file] = 'ok'; if (done) done(true); };
+      first.onerror = function () {
+        var retry = new Image();
+        retry.onload = function () { loaded[file] = 'ok'; if (done) done(true); };
+        retry.onerror = function () { loaded[file] = 'bad'; if (done) done(false); };
+        retry.src = iconUrl(file) + '?retry=1';
+      };
+      first.src = iconUrl(file);
+    }
+
+    function swapBrokenIcon() {
+      var used = {};
+      deck.forEach(function (item) { used[item.answer.file] = true; });
+      var spare = pool.filter(function (icon) {
+        return !used[icon.file] && loaded[icon.file] !== 'bad';
+      });
+      if (!spare.length) return false;
+      var pick = spare[Math.floor(Math.random() * spare.length)];
+      deck[at] = { answer: pick, options: buildOptions(pick, pool) };
+      ask();
+      return true;
+    }
+
     function ask() {
       locked = false;
       var q = deck[at];
-      els.icon.src = base + encodeURIComponent(q.answer.file);
+      els.stage.classList.add('is-waiting');
+      els.stage.classList.remove('is-broken');
       els.icon.alt = 'Unidentified Tableau icon, question ' + (at + 1);
+      preload(q.answer.file, function (ok) {
+        if (deck[at] !== q) return;               // player has already moved on
+        if (ok) {
+          els.icon.src = iconUrl(q.answer.file);
+          els.stage.classList.remove('is-waiting');
+        } else if (!swapBrokenIcon()) {
+          els.stage.classList.remove('is-waiting');
+          els.stage.classList.add('is-broken');
+          els.next.hidden = false;
+          els.next.textContent = (at + 1 >= rounds) ? 'See how you did' : 'Next';
+        }
+      });
       els.feedback.textContent = '';
       els.feedback.className = 'tiq-feedback';
       els.next.hidden = true;
@@ -356,7 +415,7 @@
 
       if (missed.length) {
         html += '<div class="tiq-missed"><div class="tiq-missed-title">Worth a second look</div><div class="tiq-missed-grid">';
-        missed.forEach(function (icon) {
+        missed.filter(function (icon) { return loaded[icon.file] !== 'bad'; }).forEach(function (icon) {
           html += '<div class="tiq-missed-item"><img src="' + base + encodeURIComponent(icon.file) +
                   '" alt=""><span>' + escapeHtml(icon.name) + '</span></div>';
         });
@@ -374,6 +433,7 @@
         return { answer: answerIcon, options: buildOptions(answerIcon, pool) };
       });
       at = 0; score = 0; missed = [];
+      deck.forEach(function (item) { preload(item.answer.file); });
       els.end.hidden = true;
       els.end.innerHTML = '';
       els.play.hidden = false;

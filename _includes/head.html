@@ -19,12 +19,58 @@
   <!--<link href="{{ site.github.url }}/rss-feed.xml" type="application/rss+xml" rel="alternate" title="{{ site.title }} | {{ site.description }}"/>
   //-->
 
-  <!-- One request for the three families the CSS actually uses. PT Serif and PT
-       Sans were being requested but referenced by no stylesheet; Roboto is what
-       main.css asks for and was never being loaded at all. -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700%7CQuattrocento+Sans%7CSource+Code+Pro&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Fonts are self-hosted. Fetching a stylesheet from fonts.googleapis.com put a
+       third-party host on the critical path of every page: nothing could paint until
+       it answered. These rules are inline, so they cost no request at all. The fonts
+       are deliberately not preloaded — measured, that cost 112ms of first paint for
+       bandwidth the stylesheets needed more, and font-display: swap covers the gap. -->
+  <style>
+    @font-face {
+      font-family: 'Quattrocento Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('{{ '/assets/fonts/quattrocento-sans-latin.woff2' | relative_url }}') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: 'Quattrocento Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('{{ '/assets/fonts/quattrocento-sans-latin-ext.woff2' | relative_url }}') format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400 700;
+      font-display: swap;
+      src: url('{{ '/assets/fonts/roboto-latin.woff2' | relative_url }}') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    @font-face {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400 700;
+      font-display: swap;
+      src: url('{{ '/assets/fonts/roboto-latin-ext.woff2' | relative_url }}') format('woff2');
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+    @font-face {
+      font-family: 'Source Code Pro';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('{{ '/assets/fonts/source-code-pro-latin.woff2' | relative_url }}') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+    .ic { display: inline-block; vertical-align: -.125em; fill: currentColor; }
+    /* mirrors what .fa-twitter and .fa-linkedin gave the old webfont icons */
+    .social-icons .ic, .sharing-icons .ic, .footer .ic { padding: 5px; transition: color 1s; }
+    .ic-twitter:hover { color: #00aced; }
+    .ic-linkedin:hover { color: #0073a4; }
+  </style>
 
   <!-- MathJax is ~82 KB and was loading on every page. Add `math: true` to a
        post's front matter to pull it in where it is actually needed. -->

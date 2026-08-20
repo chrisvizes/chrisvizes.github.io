@@ -1,0 +1,25 @@
+{%- comment -%}
+  Inline icon, so no third-party stylesheet sits on the critical path.
+
+  Usage: {% raw %}{% include icon.html name="calendar" %}{% endraw %}
+
+  Outlines are lifted straight from Font Awesome 4.7's own SVG font, so they are the
+  same shapes the site used to download 82 KB of webfont to draw. Font Awesome 4.7 is
+  MIT licensed (code) with SIL OFL 1.1 fonts — see http://fontawesome.io/license.
+  The glyph box is 1792 units tall with the baseline 1536 from the top, hence the flip.
+
+  Adding a social icon to _data/settings.yml needs its outline added here too.
+{%- endcomment -%}
+{%- case include.name -%}
+  {% when 'calendar' %}<svg class="ic ic-calendar" viewBox="0 0 1664 1792" width="1em" height="1em" role="img" aria-hidden="true" focusable="false"><g transform="translate(0,1536) scale(1,-1)"><path d="M128 -128h288v288h-288v-288zM480 -128h320v288h-320v-288zM128 224h288v320h-288v-320zM480 224h320v320h-320v-320zM128 608h288v288h-288v-288zM864 -128h320v288h-320v-288zM480 608h320v288h-320v-288zM1248 -128h288v288h-288v-288zM864 224h320v320h-320v-320z
+M512 1088v288q0 13 -9.5 22.5t-22.5 9.5h-64q-13 0 -22.5 -9.5t-9.5 -22.5v-288q0 -13 9.5 -22.5t22.5 -9.5h64q13 0 22.5 9.5t9.5 22.5zM1248 224h288v320h-288v-320zM864 608h320v288h-320v-288zM1248 608h288v288h-288v-288zM1280 1088v288q0 13 -9.5 22.5t-22.5 9.5h-64
+q-13 0 -22.5 -9.5t-9.5 -22.5v-288q0 -13 9.5 -22.5t22.5 -9.5h64q13 0 22.5 9.5t9.5 22.5zM1664 1152v-1280q0 -52 -38 -90t-90 -38h-1408q-52 0 -90 38t-38 90v1280q0 52 38 90t90 38h128v96q0 66 47 113t113 47h64q66 0 113 -47t47 -113v-96h384v96q0 66 47 113t113 47
+h64q66 0 113 -47t47 -113v-96h128q52 0 90 -38t38 -90z"/></g></svg>
+  {% when 'clock-o' %}<svg class="ic ic-clock-o" viewBox="0 0 1536 1792" width="1em" height="1em" role="img" aria-hidden="true" focusable="false"><g transform="translate(0,1536) scale(1,-1)"><path d="M896 992v-448q0 -14 -9 -23t-23 -9h-320q-14 0 -23 9t-9 23v64q0 14 9 23t23 9h224v352q0 14 9 23t23 9h64q14 0 23 -9t9 -23zM1312 640q0 148 -73 273t-198 198t-273 73t-273 -73t-198 -198t-73 -273t73 -273t198 -198t273 -73t273 73t198 198t73 273zM1536 640
+q0 -209 -103 -385.5t-279.5 -279.5t-385.5 -103t-385.5 103t-279.5 279.5t-103 385.5t103 385.5t279.5 279.5t385.5 103t385.5 -103t279.5 -279.5t103 -385.5z"/></g></svg>
+  {% when 'twitter' %}<svg class="ic ic-twitter" viewBox="0 0 1664 1792" width="1em" height="1em" role="img" aria-hidden="true" focusable="false"><g transform="translate(0,1536) scale(1,-1)"><path d="M1620 1128q-67 -98 -162 -167q1 -14 1 -42q0 -130 -38 -259.5t-115.5 -248.5t-184.5 -210.5t-258 -146t-323 -54.5q-271 0 -496 145q35 -4 78 -4q225 0 401 138q-105 2 -188 64.5t-114 159.5q33 -5 61 -5q43 0 85 11q-112 23 -185.5 111.5t-73.5 205.5v4q68 -38 146 -41
+q-66 44 -105 115t-39 154q0 88 44 163q121 -149 294.5 -238.5t371.5 -99.5q-8 38 -8 74q0 134 94.5 228.5t228.5 94.5q140 0 236 -102q109 21 205 78q-37 -115 -142 -178q93 10 186 50z"/></g></svg>
+  {% when 'linkedin' %}<svg class="ic ic-linkedin" viewBox="0 0 1536 1792" width="1em" height="1em" role="img" aria-hidden="true" focusable="false"><g transform="translate(0,1536) scale(1,-1)"><path d="M349 911v-991h-330v991h330zM370 1217q1 -73 -50.5 -122t-135.5 -49h-2q-82 0 -132 49t-50 122q0 74 51.5 122.5t134.5 48.5t133 -48.5t51 -122.5zM1536 488v-568h-329v530q0 105 -40.5 164.5t-126.5 59.5q-63 0 -105.5 -34.5t-63.5 -85.5q-11 -30 -11 -81v-553h-329
+q2 399 2 647t-1 296l-1 48h329v-144h-2q20 32 41 56t56.5 52t87 43.5t114.5 15.5q171 0 275 -113.5t104 -332.5z"/></g></svg>
+{%- else -%}
+{%- endcase -%}

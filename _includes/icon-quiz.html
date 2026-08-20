@@ -20,7 +20,7 @@
   <div class="tiq-bar" aria-hidden="true"><span class="tiq-bar-fill"></span></div>
 
   <div class="tiq-play">
-    <div class="tiq-stage is-waiting">
+    <div class="tiq-stage">
       <span class="tiq-sparkles" aria-hidden="true"></span>
       <img class="tiq-icon" alt="Tableau icon to identify">
     </div>
@@ -214,6 +214,26 @@
     return shuffle(picks.concat([answer]));
   }
 
+  // Run work once the page has finished loading and the browser is idle, so the
+  // quiz never competes with the page's own resources.
+  function whenIdle(fn) {
+    var go = function () {
+      if (window.requestIdleCallback) window.requestIdleCallback(fn, { timeout: 2000 });
+      else window.setTimeout(fn, 300);
+    };
+    if (document.readyState === 'complete') go();
+    else window.addEventListener('load', go);
+  }
+
+  // A quiz further down a long post costs nothing until the reader approaches it.
+  function whenNear(el, fn) {
+    if (!window.IntersectionObserver) { fn(); return; }
+    var io = new IntersectionObserver(function (entries) {
+      if (entries.some(function (e) { return e.isIntersecting; })) { io.disconnect(); fn(); }
+    }, { rootMargin: '400px 0px' });
+    io.observe(el);
+  }
+
   function init(root) {
     if (root.hasAttribute('data-tiq-ready')) return;
     root.setAttribute('data-tiq-ready', '');
@@ -241,6 +261,8 @@
       score: root.querySelector('.tiq-score'),
       barFill: root.querySelector('.tiq-bar-fill')
     };
+
+    els.stage.classList.add('is-waiting');
 
     if (pool.length < 4) {
       els.feedback.textContent = 'The icon library needs at least four icons to play.';
@@ -302,7 +324,9 @@
       first.src = iconUrl(file);
     }
 
-    function swapBrokenIcon() {
+    // Bounded: on a flaky connection an unbounded chain of swaps would walk the
+    // whole library, firing a request per icon.
+    function swapBrokenIcon(swaps) {
       var used = {};
       deck.forEach(function (item) { used[item.answer.file] = true; });
       var spare = pool.filter(function (icon) {
@@ -311,11 +335,12 @@
       if (!spare.length) return false;
       var pick = spare[Math.floor(Math.random() * spare.length)];
       deck[at] = { answer: pick, options: buildOptions(pick, pool) };
-      ask();
+      ask(swaps);
       return true;
     }
 
-    function ask() {
+    function ask(swaps) {
+      swaps = swaps || 0;
       locked = false;
       var q = deck[at];
       els.stage.classList.add('is-waiting');
@@ -326,7 +351,7 @@
         if (ok) {
           els.icon.src = iconUrl(q.answer.file);
           els.stage.classList.remove('is-waiting');
-        } else if (!swapBrokenIcon()) {
+        } else if (swaps >= 2 || !swapBrokenIcon(swaps + 1)) {
           els.stage.classList.remove('is-waiting');
           els.stage.classList.add('is-broken');
           els.next.hidden = false;
@@ -433,7 +458,9 @@
         return { answer: answerIcon, options: buildOptions(answerIcon, pool) };
       });
       at = 0; score = 0; missed = [];
-      deck.forEach(function (item) { preload(item.answer.file); });
+      whenIdle(function () {
+        deck.forEach(function (item) { preload(item.answer.file); });
+      });
       els.end.hidden = true;
       els.end.innerHTML = '';
       els.play.hidden = false;
@@ -465,7 +492,7 @@
       }
     });
 
-    start();
+    whenNear(root, start);
   }
 
   function boot() {

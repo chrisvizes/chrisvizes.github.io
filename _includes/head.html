@@ -19,19 +19,21 @@
   <!--<link href="{{ site.github.url }}/rss-feed.xml" type="application/rss+xml" rel="alternate" title="{{ site.title }} | {{ site.description }}"/>
   //-->
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento+Sans">
+  <!-- One request for the three families the CSS actually uses. PT Serif and PT
+       Sans were being requested but referenced by no stylesheet; Roboto is what
+       main.css asks for and was never being loaded at all. -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700%7CQuattrocento+Sans%7CSource+Code+Pro&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
-    MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
-        }
-      });
-  </script>
+  <!-- MathJax is ~82 KB and was loading on every page. Add `math: true` to a
+       post's front matter to pull it in where it is actually needed. -->
+  {% if page.math %}
+    <script>
+      window.MathJax = { tex2jax: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  {% endif %}
 
   <!-- Google Analytics -->
   {% include google-analytics.html %}

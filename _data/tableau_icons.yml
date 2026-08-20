@@ -84,11 +84,13 @@
 - file: field.svg
   name: "Field (text)"
   group: fields
+  play: false   # superseded by Text field (discrete/continuous) — identical Abc artwork
   note: "Abc marks a string field in the data pane."
 
 - file: calculated-field.svg
   name: "Calculated field (text)"
   group: fields
+  play: false   # superseded by Calculated text field — identical =Abc artwork
   note: "The equals sign in front of Abc means the field is calculated rather than coming straight from the source."
 
 - file: hierarchy.svg

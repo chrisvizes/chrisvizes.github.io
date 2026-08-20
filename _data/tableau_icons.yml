@@ -133,12 +133,6 @@
   group: labels
   note: "Labels are the umbrella for certifications, warnings and sensitivity labels applied to an asset."
 
-- file: warning.svg
-  name: "Warning"
-  group: labels
-  verified: false
-  note: "A generic warning triangle. Stand-in artwork — worth swapping for the real Tableau glyph."
-
 - file: alert.svg
   name: "Data-driven alert"
   group: labels

@@ -170,3 +170,551 @@
   name: "Tableau logo"
   group: admin
   note: "Not a content type at all — a freebie."
+
+# ---------------------------------------------------------------------------
+# Icons extracted from Tableau's own TabArea sprite sheet, August 2026.
+# Desktop and web authoring interface, reviewed and named by hand.
+# ---------------------------------------------------------------------------
+
+# --- Mark types (Marks card dropdown) (14) ---
+
+- file: marktype-bar-mark.svg
+  name: "Bar mark"
+  group: marktype
+  note: "The default for most measures against a dimension."
+
+- file: marktype-line-mark.svg
+  name: "Line mark"
+  group: marktype
+  note: "Connects marks in order, usually over a date."
+
+- file: marktype-area-mark.svg
+  name: "Area mark"
+  group: marktype
+  note: "A line with the space beneath it filled."
+
+- file: marktype-square-mark.svg
+  name: "Square mark"
+  group: marktype
+  note: "Fills the whole cell — the basis of a highlight table."
+
+- file: marktype-circle-mark.svg
+  name: "Circle mark"
+  group: marktype
+  note: "The workhorse of scatter plots."
+
+- file: marktype-shape-mark.svg
+  name: "Shape mark"
+  group: marktype
+  note: "Swaps marks for a shape palette you choose."
+
+- file: marktype-map-mark.svg
+  name: "Map mark"
+  group: marktype
+  note: "Filled map — polygons shaded by a measure."
+
+- file: marktype-pie-mark.svg
+  name: "Pie mark"
+  group: marktype
+  note: "Needs Angle on the Marks card to mean anything."
+
+- file: marktype-gantt-bar-mark.svg
+  name: "Gantt Bar mark"
+  group: marktype
+  note: "Bars that start at a value and run for a duration."
+
+- file: marktype-density-mark.svg
+  name: "Density mark"
+  group: marktype
+  note: "Heatmap of overlapping marks, added in 2018.3."
+
+- file: marktype-sankey-mark.svg
+  name: "Sankey mark"
+  group: marktype
+  note: "Flow diagram, added as a native mark type in 2024.2."
+
+- file: marktype-sunburst-mark.svg
+  name: "Sunburst mark"
+  group: marktype
+  note: "Radial hierarchy, the other 2024.2 native mark type."
+
+- file: marktype-viz-extension.svg
+  name: "Viz Extension"
+  group: marktype
+  note: "Drops a third-party visualisation into the sheet."
+
+- file: marktype-polygon-mark.svg
+  name: "Polygon mark"
+  group: marktype
+  note: "Draws custom shapes from a path of points."
+
+# --- Marks card properties (7) ---
+
+- file: markscard-colour.svg
+  name: "Colour"
+  group: markscard
+  note: "The Marks card shelf that assigns hue to a field."
+
+- file: markscard-size.svg
+  name: "Size"
+  group: markscard
+  note: "Scales marks by a measure."
+
+- file: markscard-label-marks-card.svg
+  name: "Label (Marks card)"
+  group: markscard
+  note: "Puts values or names on the marks themselves. Not to be confused with content Labels on Server."
+
+- file: markscard-detail.svg
+  name: "Detail"
+  group: markscard
+  note: "Adds granularity without changing the view's structure."
+
+- file: markscard-tooltip.svg
+  name: "Tooltip"
+  group: markscard
+  note: "What appears when a reader hovers a mark."
+
+- file: markscard-path.svg
+  name: "Path"
+  group: markscard
+  note: "Controls the order marks are joined in a line or polygon."
+
+- file: markscard-angle.svg
+  name: "Angle"
+  group: markscard
+  note: "Only appears for the pie mark type."
+
+# --- Analytics pane objects (8) ---
+
+- file: analytics-reference-line.svg
+  name: "Reference line"
+  group: analytics
+  note: "A constant line at a value, average or total."
+
+- file: analytics-reference-band.svg
+  name: "Reference band"
+  group: analytics
+  note: "Shades the region between two values."
+
+- file: analytics-distribution-band.svg
+  name: "Distribution band"
+  group: analytics
+  note: "Percentiles, quantiles or standard deviations."
+
+- file: analytics-box-plot.svg
+  name: "Box plot"
+  group: analytics
+  note: "Whiskers to 1.5x the interquartile range."
+
+- file: analytics-trend-line.svg
+  name: "Trend line"
+  group: analytics
+  note: "Linear, logarithmic, exponential, polynomial or power."
+
+- file: analytics-forecast.svg
+  name: "Forecast"
+  group: analytics
+  note: "Exponential smoothing projected forward."
+
+- file: analytics-average-line.svg
+  name: "Average line"
+  group: analytics
+  note: "A reference line fixed to the average of the measure."
+
+- file: analytics-totals-analytics-pane.svg
+  name: "Totals (Analytics pane)"
+  group: analytics
+  note: "The object you drag from the Analytics pane to add row or column totals."
+
+# --- Toolbar, sheet tabs, story points and the published-view toolbar (35) ---
+
+- file: toolbar-undo.svg
+  name: "Undo"
+  group: toolbar
+  note: "Tableau's unlimited undo history — the most-used button in the product."
+
+- file: toolbar-redo.svg
+  name: "Redo"
+  group: toolbar
+  note: "The other half of that history."
+
+- file: toolbar-save.svg
+  name: "Save"
+  group: toolbar
+  note: "The floppy disk survives, decades on."
+
+- file: toolbar-refresh-data-source.svg
+  name: "Refresh data source"
+  group: toolbar
+  note: "Re-queries the source so new rows appear."
+
+- file: toolbar-new-worksheet.svg
+  name: "New worksheet"
+  group: toolbar
+  note: "Adds a blank sheet to the workbook."
+
+- file: toolbar-duplicate-sheet.svg
+  name: "Duplicate sheet"
+  group: toolbar
+  note: "Copies the current sheet, fields and all."
+
+- file: toolbar-clear-sheet.svg
+  name: "Clear sheet"
+  group: toolbar
+  note: "Strips every field back to an empty view."
+
+- file: toolbar-swap-rows-and-columns.svg
+  name: "Swap rows and columns"
+  group: toolbar
+  note: "Ctrl+W. Flips the whole view on its axis."
+
+- file: toolbar-sort-ascending.svg
+  name: "Sort ascending"
+  group: toolbar
+  note: "Sorts by the measure in the view, smallest first."
+
+- file: toolbar-sort-descending.svg
+  name: "Sort descending"
+  group: toolbar
+  note: "The same, largest first."
+
+- file: toolbar-highlighter.svg
+  name: "Highlighter"
+  group: toolbar
+  note: "Dims everything that does not match your selection."
+
+- file: toolbar-show-mark-labels.svg
+  name: "Show mark labels"
+  group: toolbar
+  note: "Toggles labels on every mark at once."
+
+- file: toolbar-totals.svg
+  name: "Totals"
+  group: toolbar
+  note: "The sigma. Adds row and column totals."
+
+- file: toolbar-cell-size.svg
+  name: "Cell size"
+  group: toolbar
+  note: "Makes cells taller, shorter, wider or narrower."
+
+- file: toolbar-formatting.svg
+  name: "Formatting"
+  group: toolbar
+  note: "Fonts, borders, shading and number formats."
+
+- file: toolbar-download-toolbar.svg
+  name: "Download (toolbar)"
+  group: toolbar
+  note: "Image, PDF, crosstab or the workbook itself. This is the real Tableau glyph; the game currently uses a hand-drawn stand-in for Download."
+
+- file: toolbar-share.svg
+  name: "Share"
+  group: toolbar
+  note: "Hands the view to someone else."
+
+- file: toolbar-show-me.svg
+  name: "Show Me"
+  group: toolbar
+  note: "Suggests chart types for the fields you have selected."
+
+- file: toolbar-new-data-source.svg
+  name: "New data source"
+  group: toolbar
+  note: "Connects the workbook to something else."
+
+- file: toolbar-pause-automatic-updates.svg
+  name: "Pause automatic updates"
+  group: toolbar
+  note: "Stops Tableau re-querying while you build — a lifesaver on slow data."
+
+- file: toolbar-resume-automatic-updates.svg
+  name: "Resume automatic updates"
+  group: toolbar
+  note: "Runs the query again and keeps it live."
+
+- file: toolbar-tableau-agent.svg
+  name: "Tableau Agent"
+  group: toolbar
+  note: "The AI assistant, formerly Einstein Copilot, in web authoring."
+
+- file: toolbar-new-worksheet-tab.svg
+  name: "New worksheet tab"
+  group: toolbar
+  note: "The left-most of the three new-sheet buttons."
+
+- file: toolbar-new-dashboard-tab.svg
+  name: "New dashboard tab"
+  group: toolbar
+  note: "The middle one — a grid of panes."
+
+- file: toolbar-new-story-tab.svg
+  name: "New story tab"
+  group: toolbar
+  note: "The right-hand one — an open book."
+
+- file: toolbar-dashboard-tab.svg
+  name: "Dashboard tab"
+  group: toolbar
+  note: "Marks an existing dashboard in the tab strip."
+
+- file: toolbar-story-tab.svg
+  name: "Story tab"
+  group: toolbar
+  note: "Marks an existing story in the tab strip."
+
+- file: toolbar-update-story-point.svg
+  name: "Update story point"
+  group: toolbar
+  play: false   # identical artwork to Refresh data source, so it would be a second right answer
+  note: "Saves the current view into the selected story point."
+
+- file: toolbar-revert-story-point.svg
+  name: "Revert story point"
+  group: toolbar
+  note: "Throws away changes and restores the saved state."
+
+- file: toolbar-save-as-new-story-point.svg
+  name: "Save as new story point"
+  group: toolbar
+  note: "Keeps the original and adds another point."
+
+- file: toolbar-delete-story-point.svg
+  name: "Delete story point"
+  group: toolbar
+  note: "Removes the point from the story."
+
+- file: toolbar-open-in-tableau-desktop.svg
+  name: "Open in Tableau Desktop"
+  group: toolbar
+  note: "Hands a published view back to Desktop for editing."
+
+- file: toolbar-performance-recording.svg
+  name: "Performance recording"
+  group: toolbar
+  note: "Records query and render timings for tuning."
+
+- file: toolbar-replay-animations.svg
+  name: "Replay animations"
+  group: toolbar
+  note: "Plays the view's animation again."
+
+- file: toolbar-data-details-pane.svg
+  name: "Data details pane"
+  group: toolbar
+  note: "Opens the side pane of data details."
+
+# --- Dashboard objects (14) ---
+
+- file: dashobj-sheet-object.svg
+  name: "Sheet object"
+  group: dashobj
+  note: "Drops an existing worksheet onto the dashboard."
+
+- file: dashobj-text-object.svg
+  name: "Text object"
+  group: dashobj
+  note: "Free text — titles, commentary, footnotes."
+
+- file: dashobj-image-object.svg
+  name: "Image object"
+  group: dashobj
+  note: "A static image, optionally with a URL target."
+
+- file: dashobj-web-page-object.svg
+  name: "Web Page object"
+  group: dashobj
+  note: "Embeds a URL inside the dashboard."
+
+- file: dashobj-blank-object.svg
+  name: "Blank object"
+  group: dashobj
+  note: "Deliberate whitespace, the layout trick everyone learns late."
+
+- file: dashobj-navigation-button.svg
+  name: "Navigation button"
+  group: dashobj
+  note: "Sends the reader to another sheet or dashboard."
+
+- file: dashobj-extension-object.svg
+  name: "Extension object"
+  group: dashobj
+  note: "A sandboxed third-party add-in."
+
+- file: dashobj-horizontal-container.svg
+  name: "Horizontal container"
+  group: dashobj
+  note: "Lays its contents out side by side."
+
+- file: dashobj-vertical-container.svg
+  name: "Vertical container"
+  group: dashobj
+  note: "Stacks its contents top to bottom."
+
+- file: dashobj-download-object.svg
+  name: "Download object"
+  group: dashobj
+  note: "A button that exports the dashboard for the reader."
+
+- file: dashobj-title-object.svg
+  name: "Title object"
+  group: dashobj
+  note: "The dashboard's title zone."
+
+- file: dashobj-pages-object.svg
+  name: "Pages object"
+  group: dashobj
+  note: "The pages control, for stepping through a field."
+
+- file: dashobj-tiled-layout.svg
+  name: "Tiled layout"
+  group: dashobj
+  note: "Tiled rather than floating placement."
+
+- file: dashobj-container.svg
+  name: "Container"
+  group: dashobj
+  note: "A generic layout container."
+
+# --- Data pane field types (blue is discrete, green is continuous) (28) ---
+
+- file: field-text-field-discrete.svg
+  name: "Text field (discrete)"
+  group: fields
+  note: "Abc in blue. Discrete fields make headers."
+
+- file: field-text-field-continuous.svg
+  name: "Text field (continuous)"
+  group: fields
+  note: "Abc in green. Continuous fields make axes."
+
+- file: field-number-field-discrete.svg
+  name: "Number field (discrete)"
+  group: fields
+  note: "The # in blue — a whole number treated as a label."
+
+- file: field-number-field-continuous.svg
+  name: "Number field (continuous)"
+  group: fields
+  note: "The # in green — the usual home of a measure."
+
+- file: field-date-field-discrete.svg
+  name: "Date field (discrete)"
+  group: fields
+  note: "A blue calendar: date parts like MONTH(Order Date)."
+
+- file: field-date-field-continuous.svg
+  name: "Date field (continuous)"
+  group: fields
+  note: "A green calendar: a true date axis."
+
+- file: field-date-and-time-field-discrete.svg
+  name: "Date & Time field (discrete)"
+  group: fields
+  note: "Calendar plus clock, in blue."
+
+- file: field-date-and-time-field-continuous.svg
+  name: "Date & Time field (continuous)"
+  group: fields
+  note: "Calendar plus clock, in green."
+
+- file: field-boolean-field-discrete.svg
+  name: "Boolean field (discrete)"
+  group: fields
+  note: "T|F in blue — true, false or null."
+
+- file: field-boolean-field-continuous.svg
+  name: "Boolean field (continuous)"
+  group: fields
+  note: "T|F in green, which is rarer than you would think."
+
+- file: field-geographic-field-discrete.svg
+  name: "Geographic field (discrete)"
+  group: fields
+  note: "The globe. Tableau has assigned a geographic role."
+
+- file: field-geographic-field-continuous.svg
+  name: "Geographic field (continuous)"
+  group: fields
+  note: "A green globe — generated latitude and longitude behave this way."
+
+- file: field-currency-field-discrete.svg
+  name: "Currency field (discrete)"
+  group: fields
+  note: "A blue currency symbol from the field's default format."
+
+- file: field-currency-field-continuous.svg
+  name: "Currency field (continuous)"
+  group: fields
+  note: "The green version, and the one you will actually aggregate."
+
+- file: field-bin.svg
+  name: "Bin"
+  group: fields
+  note: "Buckets a measure into equal-sized ranges."
+
+- file: field-image-url-field.svg
+  name: "Image URL field"
+  group: fields
+  note: "Marks a field whose values are image addresses."
+
+- file: field-relationship.svg
+  name: "Relationship"
+  group: fields
+  note: "The noodle between logical tables, added in 2020.2."
+
+- file: field-time-field-discrete.svg
+  name: "Time field (discrete)"
+  group: fields
+  note: "A clock with no calendar — a time of day."
+
+- file: field-time-field-continuous.svg
+  name: "Time field (continuous)"
+  group: fields
+  note: "The green version."
+
+- file: field-calculated-text-field.svg
+  name: "Calculated text field"
+  group: fields
+  note: "The equals sign marks it as a calculation."
+
+- file: field-calculated-number-field.svg
+  name: "Calculated number field"
+  group: fields
+  note: "A calculated measure."
+
+- file: field-field-with-an-error.svg
+  name: "Field with an error"
+  group: fields
+  note: "A red exclamation: the calculation is invalid."
+
+- file: field-geographic-hierarchy.svg
+  name: "Geographic hierarchy"
+  group: fields
+  note: "Country, State, City rolled into one field."
+
+- file: field-cluster-group.svg
+  name: "Cluster group"
+  group: fields
+  note: "Groups produced by Tableau's clustering."
+
+- file: field-cube-olap-data-source.svg
+  name: "Cube (OLAP) data source"
+  group: fields
+  note: "Multidimensional sources behave differently throughout Tableau."
+
+- file: field-relationship-unlinked.svg
+  name: "Relationship (unlinked)"
+  group: fields
+  note: "A broken link between tables."
+
+- file: field-hidden-field.svg
+  name: "Hidden field"
+  group: fields
+  note: "A field hidden from the data pane."
+
+- file: field-blend-source.svg
+  name: "Blend source"
+  group: fields
+  note: "The primary side of a data blend."

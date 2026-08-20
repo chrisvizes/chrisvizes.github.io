@@ -111,13 +111,8 @@
   group: fields
   note: "The funnel appears wherever data is being narrowed down."
 
-- file: certified.svg
-  name: "Certified (outline)"
-  group: labels
-  note: "A site or project leader has vouched for this content. Certified assets rank higher in search."
-
 - file: filled-certified.svg
-  name: "Certified (filled)"
+  name: "Certified"
   group: labels
   note: "The solid green badge is the same certification mark, used where it needs to stand out in a list."
 

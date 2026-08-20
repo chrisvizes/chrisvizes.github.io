@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How do we set this all up then?"
+title: "Vibe-Coding A Tableau Next Extension"
 author: "Chris Meardon"
 categories: blog
 tags: [tableau, tableau next, salesforce]

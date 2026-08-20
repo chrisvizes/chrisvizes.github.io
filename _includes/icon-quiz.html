@@ -1,0 +1,419 @@
+<!--
+  Guess the Tableau icon — a self-contained quiz widget.
+
+  Usage, in any post or page:
+{% raw %}    {% include icon-quiz.html %}
+    {% include icon-quiz.html rounds="5" heading="Warm up" %}{% endraw %}
+
+  Icons and answers come from _data/tableau_icons.yml.
+  Everything below is scoped with a tiq- prefix so it cannot leak into the site's
+  own styles, and the markup can be dropped in more than once per page.
+-->
+<div class="tiq" data-tiq data-rounds="{{ include.rounds | default: 10 }}" data-base="{{ '/assets/IconsGame/' | relative_url }}">
+  <script type="application/json" class="tiq-data">{{ site.data.tableau_icons | jsonify }}</script>
+
+  <div class="tiq-head">
+    <span class="tiq-heading">{{ include.heading | default: "Guess the Tableau icon" }}</span>
+    <span class="tiq-meta"><span class="tiq-progress"></span><span class="tiq-score"></span></span>
+  </div>
+
+  <div class="tiq-bar" aria-hidden="true"><span class="tiq-bar-fill"></span></div>
+
+  <div class="tiq-play">
+    <div class="tiq-stage">
+      <span class="tiq-sparkles" aria-hidden="true"></span>
+      <img class="tiq-icon" src="" alt="Tableau icon to identify">
+    </div>
+    <div class="tiq-options" role="group" aria-label="Pick the name of this icon"></div>
+    <p class="tiq-feedback" role="status" aria-live="polite"></p>
+    <div class="tiq-actions">
+      <button type="button" class="tiq-btn tiq-next" hidden>Next</button>
+      <span class="tiq-hint">Tip: press 1 to 4 to answer</span>
+    </div>
+  </div>
+
+  <div class="tiq-end" hidden></div>
+
+  <noscript><p class="tiq-feedback">This quiz needs JavaScript switched on.</p></noscript>
+</div>
+
+<style>
+.tiq {
+  --tiq-ink: #2e2e2e;
+  --tiq-muted: #6a6a6a;
+  --tiq-line: #e3e3e3;
+  --tiq-panel: #fafafa;
+  --tiq-accent: #05628a;
+  --tiq-right: #00a370;
+  --tiq-wrong: #b3261e;
+  border: 1px solid var(--tiq-line);
+  border-radius: 12px;
+  padding: 18px;
+  margin: 2rem auto;
+  max-width: 680px;
+  background: #fff;
+  color: var(--tiq-ink);
+  font-size: 16px;
+  line-height: 1.45;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+}
+.tiq *, .tiq *::before, .tiq *::after { box-sizing: border-box; }
+.tiq img { max-width: none; margin: 0; display: block; }
+.tiq p { margin: 0; font-family: inherit; line-height: 1.45; }
+
+.tiq-head { display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline; justify-content: space-between; }
+.tiq-heading { font-weight: 700; font-size: 1.05em; }
+.tiq-meta { color: var(--tiq-muted); font-size: .85em; display: flex; gap: 12px; }
+
+.tiq-bar { height: 5px; border-radius: 3px; background: #eee; overflow: hidden; margin: 12px 0 16px; }
+.tiq-bar-fill { display: block; height: 100%; width: 0; background: var(--tiq-accent); transition: width .3s ease; }
+
+.tiq-stage {
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  min-height: 172px;
+  background: var(--tiq-panel);
+  border: 1px solid var(--tiq-line);
+  border-radius: 10px;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.tiq-icon { width: 108px; height: 108px; object-fit: contain; transition: transform .25s ease; }
+.tiq-pop .tiq-icon { animation: tiq-pop .45s ease; }
+@keyframes tiq-pop {
+  0% { transform: scale(1); }
+  35% { transform: scale(1.18) rotate(-3deg); }
+  100% { transform: scale(1); }
+}
+
+.tiq-sparkles { position: absolute; left: 50%; top: 50%; width: 0; height: 0; pointer-events: none; }
+.tiq-sparkles i {
+  position: absolute; left: 0; top: 0;
+  width: 9px; height: 9px; margin: -4.5px 0 0 -4.5px;
+  border-radius: 2px;
+  background: var(--tiq-spark, #f4b942);
+  opacity: 0;
+  animation: tiq-fly .85s ease-out forwards;
+  animation-delay: var(--tiq-delay, 0s);
+}
+@keyframes tiq-fly {
+  0% { opacity: 0; transform: rotate(var(--tiq-a)) translateX(18px) rotate(0) scale(.3); }
+  20% { opacity: 1; }
+  100% { opacity: 0; transform: rotate(var(--tiq-a)) translateX(var(--tiq-d)) rotate(220deg) scale(1); }
+}
+
+.tiq-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.tiq-opt {
+  display: flex; align-items: center; gap: 10px;
+  width: 100%; text-align: left;
+  font: inherit; color: inherit;
+  background: #fff;
+  border: 1px solid var(--tiq-line);
+  border-radius: 9px;
+  padding: 11px 13px;
+  cursor: pointer;
+  transition: border-color .15s ease, background .15s ease, transform .1s ease;
+}
+.tiq-opt:hover:not([disabled]) { border-color: var(--tiq-accent); background: #f5fafc; }
+.tiq-opt:active:not([disabled]) { transform: translateY(1px); }
+.tiq-opt:focus-visible { outline: 2px solid var(--tiq-accent); outline-offset: 2px; }
+.tiq-opt[disabled] { cursor: default; }
+.tiq-key {
+  flex: 0 0 auto;
+  min-width: 22px; height: 22px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 5px; background: #f0f0f0; color: var(--tiq-muted);
+  font-size: .78em; font-weight: 700;
+}
+.tiq-opt.is-right { border-color: var(--tiq-right); background: #eaf7f1; }
+.tiq-opt.is-right .tiq-key { background: var(--tiq-right); color: #fff; }
+.tiq-opt.is-wrong { border-color: var(--tiq-wrong); background: #fdeceb; }
+.tiq-opt.is-wrong .tiq-key { background: var(--tiq-wrong); color: #fff; }
+.tiq-opt.is-faded { opacity: .55; }
+
+.tiq-feedback { min-height: 1.45em; margin: 14px 0 0; font-size: .93em; color: var(--tiq-muted); }
+.tiq-feedback b { color: var(--tiq-ink); }
+.tiq-feedback.is-right b { color: var(--tiq-right); }
+.tiq-feedback.is-wrong b { color: var(--tiq-wrong); }
+
+.tiq-actions { display: flex; align-items: center; gap: 12px; margin-top: 14px; min-height: 38px; }
+.tiq-btn {
+  font: inherit; font-weight: 700;
+  color: #fff; background: var(--tiq-accent);
+  border: 1px solid var(--tiq-accent);
+  border-radius: 8px; padding: 8px 18px; cursor: pointer;
+}
+.tiq-btn:hover { filter: brightness(1.1); }
+.tiq-btn:focus-visible { outline: 2px solid var(--tiq-accent); outline-offset: 2px; }
+.tiq-hint { color: var(--tiq-muted); font-size: .8em; }
+
+.tiq-end { text-align: center; padding: 6px 0 2px; }
+.tiq-final { font-size: 1.6em; font-weight: 700; margin-bottom: 4px; }
+.tiq-verdict { color: var(--tiq-muted); font-size: .95em; }
+.tiq-best { color: var(--tiq-muted); font-size: .82em; margin-top: 6px; }
+.tiq-missed { margin-top: 18px; text-align: left; }
+.tiq-missed-title { font-size: .82em; text-transform: uppercase; letter-spacing: .05em; color: var(--tiq-muted); margin-bottom: 8px; }
+.tiq-missed-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+.tiq-missed-item { display: flex; align-items: center; gap: 9px; border: 1px solid var(--tiq-line); border-radius: 8px; padding: 8px; font-size: .84em; }
+.tiq-missed-item img { width: 30px; height: 30px; object-fit: contain; flex: 0 0 auto; }
+.tiq-end .tiq-btn { margin-top: 18px; }
+
+@media (max-width: 620px) {
+  .tiq { padding: 14px; }
+  .tiq-options { grid-template-columns: 1fr; }
+  .tiq-stage { min-height: 140px; }
+  .tiq-icon { width: 88px; height: 88px; }
+  .tiq-hint { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tiq-icon, .tiq-bar-fill { transition: none; }
+  .tiq-pop .tiq-icon { animation: none; }
+}
+</style>
+
+<script>
+(function () {
+  var SPARK_COLOURS = ['#f4b942', '#00a370', '#05628a', '#e06c2b', '#7f4fc9'];
+  var BEST_KEY = 'tiq-best-v1';
+
+  function shuffle(list) {
+    for (var i = list.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = list[i]; list[i] = list[j]; list[j] = tmp;
+    }
+    return list;
+  }
+
+  function readBest() {
+    try { return parseFloat(window.localStorage.getItem(BEST_KEY)) || 0; } catch (e) { return 0; }
+  }
+  function writeBest(ratio) {
+    try { window.localStorage.setItem(BEST_KEY, String(ratio)); } catch (e) { /* private mode */ }
+  }
+
+  function buildOptions(answer, pool) {
+    var sameGroup = shuffle(pool.filter(function (i) {
+      return i.group === answer.group && i.name !== answer.name;
+    }));
+    var others = shuffle(pool.filter(function (i) {
+      return i.group !== answer.group && i.name !== answer.name;
+    }));
+    var picks = sameGroup.concat(others).slice(0, 3);
+    return shuffle(picks.concat([answer]));
+  }
+
+  function init(root) {
+    if (root.hasAttribute('data-tiq-ready')) return;
+    root.setAttribute('data-tiq-ready', '');
+
+    var pool;
+    try { pool = JSON.parse(root.querySelector('.tiq-data').textContent); }
+    catch (e) { pool = []; }
+    pool = (pool || []).filter(function (i) { return i && i.file && i.name && i.play !== false; });
+
+    var base = root.getAttribute('data-base') || '';
+    var wanted = parseInt(root.getAttribute('data-rounds'), 10) || 10;
+    var rounds = Math.max(1, Math.min(wanted, pool.length));
+
+    var els = {
+      play: root.querySelector('.tiq-play'),
+      end: root.querySelector('.tiq-end'),
+      stage: root.querySelector('.tiq-stage'),
+      sparkles: root.querySelector('.tiq-sparkles'),
+      icon: root.querySelector('.tiq-icon'),
+      options: root.querySelector('.tiq-options'),
+      feedback: root.querySelector('.tiq-feedback'),
+      next: root.querySelector('.tiq-next'),
+      hint: root.querySelector('.tiq-hint'),
+      progress: root.querySelector('.tiq-progress'),
+      score: root.querySelector('.tiq-score'),
+      barFill: root.querySelector('.tiq-bar-fill')
+    };
+
+    if (pool.length < 4) {
+      els.feedback.textContent = 'The icon library needs at least four icons to play.';
+      els.options.hidden = true;
+      els.hint.hidden = true;
+      return;
+    }
+
+    var deck = [], at = 0, score = 0, missed = [], locked = false;
+
+    function calm() {
+      return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    }
+
+    function sparkle() {
+      els.sparkles.innerHTML = '';
+      if (calm()) return;
+      var count = 14;
+      for (var i = 0; i < count; i++) {
+        var spark = document.createElement('i');
+        var angle = (360 / count) * i + (Math.random() * 14 - 7);
+        spark.style.setProperty('--tiq-a', angle.toFixed(1) + 'deg');
+        spark.style.setProperty('--tiq-d', (58 + Math.random() * 34).toFixed(0) + 'px');
+        spark.style.setProperty('--tiq-delay', (Math.random() * 0.12).toFixed(2) + 's');
+        spark.style.setProperty('--tiq-spark', SPARK_COLOURS[i % SPARK_COLOURS.length]);
+        els.sparkles.appendChild(spark);
+      }
+      els.stage.classList.add('tiq-pop');
+      window.setTimeout(function () {
+        els.stage.classList.remove('tiq-pop');
+        els.sparkles.innerHTML = '';
+      }, 950);
+    }
+
+    function paintMeta() {
+      els.progress.textContent = 'Question ' + Math.min(at + 1, rounds) + ' of ' + rounds;
+      els.score.textContent = score + ' right';
+      els.barFill.style.width = (at / rounds * 100) + '%';
+    }
+
+    function ask() {
+      locked = false;
+      var q = deck[at];
+      els.icon.src = base + encodeURIComponent(q.answer.file);
+      els.icon.alt = 'Unidentified Tableau icon, question ' + (at + 1);
+      els.feedback.textContent = '';
+      els.feedback.className = 'tiq-feedback';
+      els.next.hidden = true;
+      els.options.innerHTML = '';
+
+      q.options.forEach(function (option, index) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'tiq-opt';
+        btn.innerHTML = '<span class="tiq-key">' + (index + 1) + '</span>';
+        var label = document.createElement('span');
+        label.textContent = option.name;
+        btn.appendChild(label);
+        btn.addEventListener('click', function () { answer(index); });
+        els.options.appendChild(btn);
+      });
+
+      paintMeta();
+    }
+
+    function answer(index) {
+      if (locked) return;
+      locked = true;
+
+      var q = deck[at];
+      var chosen = q.options[index];
+      var right = chosen.name === q.answer.name;
+      var buttons = els.options.querySelectorAll('.tiq-opt');
+
+      Array.prototype.forEach.call(buttons, function (btn, i) {
+        btn.disabled = true;
+        if (q.options[i].name === q.answer.name) btn.classList.add('is-right');
+        else if (i === index) btn.classList.add('is-wrong');
+        else btn.classList.add('is-faded');
+      });
+
+      if (right) {
+        score++;
+        sparkle();
+        els.feedback.className = 'tiq-feedback is-right';
+        els.feedback.innerHTML = '<b>Spot on.</b> ' + escapeHtml(q.answer.note || '');
+      } else {
+        missed.push(q.answer);
+        els.feedback.className = 'tiq-feedback is-wrong';
+        els.feedback.innerHTML = '<b>Not this time — it is ' + escapeHtml(q.answer.name) + '.</b> ' + escapeHtml(q.answer.note || '');
+      }
+
+      els.score.textContent = score + ' right';
+      els.next.hidden = false;
+      els.next.textContent = (at + 1 >= rounds) ? 'See how you did' : 'Next';
+      els.next.focus({ preventScroll: true });
+    }
+
+    function advance() {
+      at++;
+      if (at >= rounds) finish();
+      else ask();
+    }
+
+    function finish() {
+      els.barFill.style.width = '100%';
+      els.progress.textContent = 'Round complete';
+      els.play.hidden = true;
+      els.end.hidden = false;
+
+      var ratio = score / rounds;
+      var verdict = 'Plenty of icons left to meet.';
+      if (ratio === 1) verdict = 'Flawless. You have spent far too long in Tableau Cloud.';
+      else if (ratio >= 0.8) verdict = 'Strong. You clearly live in the content pages.';
+      else if (ratio >= 0.5) verdict = 'Respectable — the data source variants trip most people up.';
+
+      var best = readBest();
+      var bestLine = '';
+      if (ratio > best) { writeBest(ratio); bestLine = 'A new personal best.'; }
+      else if (best > 0) { bestLine = 'Your best so far: ' + Math.round(best * 100) + '%.'; }
+
+      var html = '<div class="tiq-final">' + score + ' out of ' + rounds + '</div>' +
+                 '<div class="tiq-verdict">' + verdict + '</div>' +
+                 (bestLine ? '<div class="tiq-best">' + bestLine + '</div>' : '');
+
+      if (missed.length) {
+        html += '<div class="tiq-missed"><div class="tiq-missed-title">Worth a second look</div><div class="tiq-missed-grid">';
+        missed.forEach(function (icon) {
+          html += '<div class="tiq-missed-item"><img src="' + base + encodeURIComponent(icon.file) +
+                  '" alt=""><span>' + escapeHtml(icon.name) + '</span></div>';
+        });
+        html += '</div></div>';
+      }
+
+      html += '<button type="button" class="tiq-btn tiq-again">Play again</button>';
+      els.end.innerHTML = html;
+      els.end.querySelector('.tiq-again').addEventListener('click', start);
+      els.end.querySelector('.tiq-again').focus({ preventScroll: true });
+    }
+
+    function start() {
+      deck = shuffle(pool.slice()).slice(0, rounds).map(function (answerIcon) {
+        return { answer: answerIcon, options: buildOptions(answerIcon, pool) };
+      });
+      at = 0; score = 0; missed = [];
+      els.end.hidden = true;
+      els.end.innerHTML = '';
+      els.play.hidden = false;
+      ask();
+    }
+
+    function escapeHtml(text) {
+      return String(text).replace(/[&<>"]/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+      });
+    }
+
+    els.next.addEventListener('click', advance);
+
+    document.addEventListener('keydown', function (event) {
+      if (event.metaKey || event.ctrlKey || event.altKey) return;
+      var active = document.activeElement;
+      var loose = !active || active === document.body;
+      var only = document.querySelectorAll('[data-tiq]').length === 1;
+      var mine = root.contains(active) || (loose && only);
+      if (!mine || els.play.hidden) return;
+
+      if (!locked && event.key >= '1' && event.key <= '4') {
+        var buttons = els.options.querySelectorAll('.tiq-opt');
+        var pick = parseInt(event.key, 10) - 1;
+        if (buttons[pick]) { event.preventDefault(); buttons[pick].click(); }
+      } else if (locked && (event.key === 'Enter' || event.key === ' ')) {
+        if (active !== els.next) { event.preventDefault(); advance(); }
+      }
+    });
+
+    start();
+  }
+
+  function boot() {
+    var quizzes = document.querySelectorAll('[data-tiq]');
+    Array.prototype.forEach.call(quizzes, init);
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
+  else boot();
+})();
+</script>

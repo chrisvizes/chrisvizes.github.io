@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="assets" x="0px" y="0px" viewBox="0 0 17 17" style="enable-background:new 0 0 17 17;" xml:space="preserve" width="36"  height="36" >
+<g id="file_connection_type">
+	<g>
+		<path style="fill:#666666;" d="M9.8,2L13,5.4V15H3V2h7 M10,1H2v15h12V5L10,1L10,1z"/>
+	</g>
+	<rect x="9" y="1" style="fill:#666666;" width="1" height="5"/>
+	<rect x="9" y="5" style="fill:#666666;" width="4" height="1"/>
+</g>
+</svg>

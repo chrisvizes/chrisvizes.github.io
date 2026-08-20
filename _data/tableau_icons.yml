@@ -1,0 +1,177 @@
+# Icon library for the "Guess the Tableau icon" quiz.
+#
+# Each entry:
+#   file     - filename inside assets/IconsGame/
+#   name     - the answer shown to the player
+#   group    - used to pick plausible wrong answers (distractors come from the
+#              same group first, which is what makes the quiz hard)
+#   note     - one line shown after answering, right or wrong
+#   verified - false means the artwork is a stand-in rather than a genuine
+#              Tableau UI icon, so it is a candidate for replacement later
+#
+# Set `play: false` on an entry to keep the file here but drop it from the quiz.
+
+- file: datasource.svg
+  name: "Data source"
+  group: data
+  note: "A published data source. The plain cylinder is Tableau's shorthand for data."
+
+- file: extract.svg
+  name: "Data source (extract)"
+  group: data
+  note: "The second cylinder and arrow mean the data has been extracted into a .hyper file rather than queried live."
+
+- file: datasource-embedded-live.svg
+  name: "Data source (live, embedded in workbook)"
+  group: data
+  note: "Angle brackets mean embedded — this connection lives inside a workbook instead of being published on its own."
+
+- file: datasource-embedded-extract.svg
+  name: "Data source (extract, embedded in workbook)"
+  group: data
+  note: "Embedded and extracted: two cylinders inside the brackets. Republishing the workbook replaces it."
+
+- file: virtual-connection.svg
+  name: "Virtual connection"
+  group: data
+  note: "A centrally managed connection to data, so credentials and row-level security are defined once and reused."
+
+- file: virtual-connection-extract.svg
+  name: "Virtual connection (extract)"
+  group: data
+  note: "A virtual connection whose tables are materialised as an extract on a schedule."
+
+- file: database.svg
+  name: "Database"
+  group: data
+  note: "The underlying database asset, surfaced by Tableau Catalog rather than published by a person."
+
+- file: file.svg
+  name: "File"
+  group: data
+  note: "A file-based asset such as an Excel workbook or CSV, catalogued as a data source's origin."
+
+- file: workbook.svg
+  name: "Workbook"
+  group: content
+  note: "A published workbook — the container for one or more views."
+
+- file: view.svg
+  name: "View"
+  group: content
+  note: "A single sheet, dashboard or story inside a workbook."
+
+- file: flow.svg
+  name: "Flow"
+  group: content
+  note: "A Tableau Prep flow, which can be scheduled to run on Tableau Cloud or Server."
+
+- file: project.svg
+  name: "Project"
+  group: content
+  note: "The folder of Tableau content. Permissions are usually managed here rather than per item."
+
+- file: collections.svg
+  name: "Collection"
+  group: content
+  note: "A curated, playlist-style grouping of content that cuts across projects."
+
+- file: external-assets.svg
+  name: "External assets"
+  group: content
+  note: "Databases, files and tables catalogued by Tableau Catalog — assets Tableau reads but does not own."
+
+- file: field.svg
+  name: "Field (text)"
+  group: fields
+  note: "Abc marks a string field in the data pane."
+
+- file: calculated-field.svg
+  name: "Calculated field (text)"
+  group: fields
+  note: "The equals sign in front of Abc means the field is calculated rather than coming straight from the source."
+
+- file: hierarchy.svg
+  name: "Hierarchy"
+  group: fields
+  note: "Drillable levels such as Country to State to City, grouped into one field."
+
+- file: set.svg
+  name: "Set"
+  group: fields
+  note: "A custom subset of members. The two overlapping circles hint at in/out membership."
+
+- file: group.svg
+  name: "Group"
+  group: fields
+  note: "Members combined into a larger category. Tableau really does use a paperclip for this."
+
+- file: filter.svg
+  name: "Filter"
+  group: fields
+  note: "The funnel appears wherever data is being narrowed down."
+
+- file: certified.svg
+  name: "Certified (outline)"
+  group: labels
+  note: "A site or project leader has vouched for this content. Certified assets rank higher in search."
+
+- file: filled-certified.svg
+  name: "Certified (filled)"
+  group: labels
+  note: "The solid green badge is the same certification mark, used where it needs to stand out in a list."
+
+- file: data-source-warning.svg
+  name: "Data quality warning"
+  group: labels
+  note: "Someone has flagged an issue — stale data, a deprecation, maintenance. It follows the asset downstream."
+
+- file: data-source-high-severity-warning.svg
+  name: "High severity data quality warning"
+  group: labels
+  note: "The same warning marked high severity, which makes it far more visible to anyone using the data."
+
+- file: label.svg
+  name: "Label"
+  group: labels
+  note: "Labels are the umbrella for certifications, warnings and sensitivity labels applied to an asset."
+
+- file: warning.svg
+  name: "Warning"
+  group: labels
+  verified: false
+  note: "A generic warning triangle. Stand-in artwork — worth swapping for the real Tableau glyph."
+
+- file: alert.svg
+  name: "Data-driven alert"
+  group: labels
+  verified: false
+  note: "Alerts email you when a value crosses a threshold you set on a view."
+
+- file: tag.svg
+  name: "Tag"
+  group: admin
+  verified: false
+  note: "Free-text tags help content turn up in search. Stand-in artwork — the hash is normally a numeric field in Tableau."
+
+- file: user.svg
+  name: "User"
+  group: admin
+  note: "A person on the site, with a site role that decides what they can do."
+
+- file: site.svg
+  name: "Site"
+  group: admin
+  verified: false
+  note: "A site is a self-contained tenant of content, users and permissions. Stand-in artwork."
+
+- file: export.svg
+  name: "Download"
+  group: admin
+  verified: false
+  note: "Download or export content. Stand-in artwork rather than the Tableau glyph."
+
+- file: tableau-logo.svg
+  name: "Tableau logo"
+  group: admin
+  note: "Not a content type at all — a freebie."

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="assets" x="0px" y="0px" viewBox="0 0 17 17" style="enable-background:new 0 0 17 17;" xml:space="preserve" width="36"  height="36" >
+<g id="external_server_connection_type_3_">
+	<rect x="11" y="4" style="fill:#666666;" width="2" height="1"/>
+	<rect x="11" y="8" style="fill:#666666;" width="2" height="1"/>
+	<rect x="11" y="12" style="fill:#666666;" width="2" height="1"/>
+	<g>
+		<path style="fill:#666666;" d="M14,11v3H3v-3H14 M14,10H3c-0.6,0-1,0.4-1,1v3c0,0.6,0.4,1,1,1h11c0.6,0,1-0.4,1-1v-3    C15,10.4,14.6,10,14,10L14,10z"/>
+	</g>
+	<g>
+		<path style="fill:#666666;" d="M14,7v3H3V7H14 M14,6H3C2.4,6,2,6.4,2,7v3c0,0.6,0.4,1,1,1h11c0.6,0,1-0.4,1-1V7    C15,6.4,14.6,6,14,6L14,6z"/>
+	</g>
+	<g>
+		<path style="fill:#666666;" d="M14,3v3H3V3H14 M14,2H3C2.4,2,2,2.4,2,3v3c0,0.6,0.4,1,1,1h11c0.6,0,1-0.4,1-1V3    C15,2.4,14.6,2,14,2L14,2z"/>
+	</g>
+</g>
+</svg>

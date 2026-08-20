@@ -9,6 +9,7 @@ google-ID: 'UA-163700586-1'
 menu:
 - {name: 'Home', path: ""}
 - {name: 'About', path: "pages/about.html"}
+- {name: 'Icon Quiz', path: "pages/icon-quiz.html"}
 - {name: 'Contact', path: "pages/contact.html"}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer

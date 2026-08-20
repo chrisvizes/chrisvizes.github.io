@@ -235,3 +235,5 @@ This page has an error. You might just need to refresh it.
 But I just reloaded the page and it added okay! Well that was easy.
 
 Now to make it more complicated...
+
+{% include icon-quiz.html %}

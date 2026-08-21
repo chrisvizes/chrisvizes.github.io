@@ -471,11 +471,6 @@
   group: toolbar
   note: "Keeps the original and adds another point."
 
-- file: toolbar-delete-story-point.svg
-  name: "Delete story point"
-  group: toolbar
-  note: "Removes the point from the story."
-
 - file: toolbar-open-in-tableau-desktop.svg
   name: "Open in Tableau Desktop"
   group: toolbar

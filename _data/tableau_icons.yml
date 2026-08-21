@@ -12,22 +12,22 @@
 # Set `play: false` on an entry to keep the file here but drop it from the quiz.
 
 - file: datasource.svg
-  name: "Data source"
+  name: "Datasource"
   group: data
   note: "A published data source. The plain cylinder is Tableau's shorthand for data."
 
 - file: extract.svg
-  name: "Data source (extract)"
+  name: "Datasource Extract"
   group: data
   note: "The second cylinder and arrow mean the data has been extracted into a .hyper file rather than queried live."
 
 - file: datasource-embedded-live.svg
-  name: "Data source (live, embedded in workbook)"
+  name: "Live Embedded Datasource"
   group: data
   note: "Angle brackets mean embedded — this connection lives inside a workbook instead of being published on its own."
 
 - file: datasource-embedded-extract.svg
-  name: "Data source (extract, embedded in workbook)"
+  name: "Embedded Datasource Extract"
   group: data
   note: "Embedded and extracted: two cylinders inside the brackets. Republishing the workbook replaces it."
 
@@ -37,7 +37,7 @@
   note: "A centrally managed connection to data, so credentials and row-level security are defined once and reused."
 
 - file: virtual-connection-extract.svg
-  name: "Virtual connection (extract)"
+  name: "Virtual connection Extract"
   group: data
   note: "A virtual connection whose tables are materialised as an extract on a schedule."
 
@@ -82,13 +82,13 @@
   note: "Databases, files and tables catalogued by Tableau Catalog — assets Tableau reads but does not own."
 
 - file: field.svg
-  name: "Field (text)"
+  name: "Text Field"
   group: fields
   play: false   # superseded by Text field (discrete/continuous) — identical Abc artwork
   note: "Abc marks a string field in the data pane."
 
 - file: calculated-field.svg
-  name: "Calculated field (text)"
+  name: "Calculated text field"
   group: fields
   play: false   # superseded by Calculated text field — identical =Abc artwork
   note: "The equals sign in front of Abc means the field is calculated rather than coming straight from the source."
@@ -399,11 +399,6 @@
   name: "Formatting"
   group: toolbar
   note: "Fonts, borders, shading and number formats."
-
-- file: toolbar-download-toolbar.svg
-  name: "Download (toolbar)"
-  group: toolbar
-  note: "Image, PDF, crosstab or the workbook itself. This is the real Tableau glyph; the game currently uses a hand-drawn stand-in for Download."
 
 - file: toolbar-share.svg
   name: "Share"

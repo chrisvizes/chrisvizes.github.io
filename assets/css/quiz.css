@@ -1,0 +1,361 @@
+/* TabNext + D360 Quiz
+ *
+ * Scoped behind .tnq so nothing here can reach the site's own styles or the
+ * icon quiz. Palette deliberately matches the icon quiz, since the two sit
+ * next to each other in the menu and should look related.
+ *
+ * Written mobile first. Every control is a full-width tap target by default and
+ * only spreads out once there is room, because the two awkward question types
+ * (ordering and matching) have to work with a thumb. Nothing in here depends on
+ * dragging.
+ */
+
+.tnq {
+  --tnq-ink: #2e2e2e;
+  --tnq-muted: #6a6a6a;
+  --tnq-line: #e3e3e3;
+  --tnq-panel: #fafafa;
+  --tnq-accent: #05628a;
+  --tnq-right: #00a370;
+  --tnq-wrong: #b3261e;
+  --tnq-warn: #b26a00;
+  --tnq-tap: 44px;
+
+  border: 1px solid var(--tnq-line);
+  border-radius: 12px;
+  padding: 14px;
+  margin: 2rem auto;
+  max-width: 720px;
+  background: #fff;
+  color: var(--tnq-ink);
+  font-size: 16px;
+  line-height: 1.45;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+}
+
+.tnq *, .tnq *::before, .tnq *::after { box-sizing: border-box; }
+.tnq p { margin: 0 0 .6em; font-family: inherit; line-height: 1.45; }
+.tnq p:last-child { margin-bottom: 0; }
+.tnq button { font: inherit; }
+
+/* ------------------------------------------------------------------ shared */
+
+.tnq-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: var(--tnq-tap);
+  font-weight: 700;
+  color: #fff; background: var(--tnq-accent);
+  border: 1px solid var(--tnq-accent);
+  border-radius: 8px;
+  padding: 10px 18px;
+  cursor: pointer;
+}
+.tnq-btn:hover { filter: brightness(1.1); }
+.tnq-btn:focus-visible { outline: 2px solid var(--tnq-accent); outline-offset: 2px; }
+.tnq-btn[disabled] { opacity: .45; cursor: default; filter: none; }
+.tnq-btn.tnq-ghost { color: var(--tnq-accent); background: #fff; }
+
+.tnq-note { color: var(--tnq-muted); font-size: .85em; }
+.tnq-boot { color: var(--tnq-muted); padding: 24px 0; text-align: center; }
+
+/* -------------------------------------------------------------- the picker */
+
+.tnq-pick-head { margin-bottom: 14px; }
+.tnq-pick-title { font-weight: 700; font-size: 1.15em; }
+.tnq-pick-sub { color: var(--tnq-muted); font-size: .88em; }
+
+.tnq-modes { display: grid; grid-template-columns: 1fr; gap: 10px; }
+.tnq-mode {
+  display: block; width: 100%; text-align: left;
+  min-height: var(--tnq-tap);
+  background: #fff; color: inherit;
+  border: 1px solid var(--tnq-line); border-radius: 10px;
+  padding: 13px 14px; cursor: pointer;
+}
+.tnq-mode:hover { border-color: var(--tnq-accent); background: #f5fafc; }
+.tnq-mode:focus-visible { outline: 2px solid var(--tnq-accent); outline-offset: 2px; }
+.tnq-mode-name { font-weight: 700; display: block; }
+.tnq-mode-desc { color: var(--tnq-muted); font-size: .85em; display: block; margin-top: 2px; }
+.tnq-mode-done { color: var(--tnq-right); font-size: .85em; font-weight: 700; }
+
+.tnq-panel { margin-top: 14px; border-top: 1px solid var(--tnq-line); padding-top: 14px; }
+.tnq-panel-title { font-weight: 700; margin-bottom: 8px; }
+.tnq-back { margin-top: 12px; }
+
+.tnq-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.tnq-chip {
+  min-height: var(--tnq-tap);
+  display: inline-flex; align-items: center;
+  background: #fff; color: inherit;
+  border: 1px solid var(--tnq-line); border-radius: 999px;
+  padding: 8px 16px; cursor: pointer;
+}
+.tnq-chip:hover { border-color: var(--tnq-accent); }
+.tnq-chip:focus-visible { outline: 2px solid var(--tnq-accent); outline-offset: 2px; }
+.tnq-chip[aria-pressed="true"] { background: var(--tnq-accent); border-color: var(--tnq-accent); color: #fff; }
+.tnq-chip-count { opacity: .65; font-size: .85em; margin-left: 5px; }
+
+.tnq-field { margin-bottom: 12px; }
+.tnq-field > label { display: block; font-size: .85em; color: var(--tnq-muted); margin-bottom: 6px; }
+
+/* ---------------------------------------------------------------- playing */
+
+.tnq-head {
+  display: flex; flex-wrap: wrap; gap: 4px 12px;
+  align-items: baseline; justify-content: space-between;
+  font-size: .85em; color: var(--tnq-muted);
+}
+.tnq-streak { color: var(--tnq-warn); font-weight: 700; }
+
+.tnq-bar { height: 5px; border-radius: 3px; background: #eee; overflow: hidden; margin: 10px 0 14px; }
+.tnq-bar-fill { display: block; height: 100%; width: 0; background: var(--tnq-accent); transition: width .3s ease; }
+
+.tnq-badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.tnq-badge {
+  font-size: .72em; font-weight: 700; text-transform: uppercase; letter-spacing: .04em;
+  border-radius: 4px; padding: 3px 7px;
+  background: #eef1f3; color: var(--tnq-muted);
+}
+.tnq-badge.is-buried { background: #f3ecfa; color: #6b3fa0; }
+.tnq-badge.is-beta { background: #fdf0e0; color: var(--tnq-warn); }
+
+.tnq-stem { font-size: 1.05em; margin-bottom: 14px; }
+.tnq-ask { font-size: .85em; color: var(--tnq-muted); margin-bottom: 10px; }
+
+/* single, multi, true/false: one column, always. A four-option grid looks tidy
+   on a laptop and is unusable on a phone once an option runs to 140 characters,
+   which plenty of them do. */
+.tnq-opts { display: grid; grid-template-columns: 1fr; gap: 9px; }
+.tnq-opt {
+  display: flex; align-items: flex-start; gap: 10px;
+  width: 100%; text-align: left;
+  min-height: var(--tnq-tap);
+  background: #fff; color: inherit;
+  border: 1px solid var(--tnq-line); border-radius: 9px;
+  padding: 11px 13px; cursor: pointer;
+  transition: border-color .15s ease, background .15s ease;
+}
+.tnq-opt:hover:not([disabled]) { border-color: var(--tnq-accent); background: #f5fafc; }
+.tnq-opt:focus-visible { outline: 2px solid var(--tnq-accent); outline-offset: 2px; }
+.tnq-opt[disabled] { cursor: default; }
+.tnq-key {
+  flex: 0 0 auto; min-width: 24px; height: 24px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 5px; background: #f0f0f0; color: var(--tnq-muted);
+  font-size: .78em; font-weight: 700;
+}
+.tnq-opt[aria-pressed="true"] { border-color: var(--tnq-accent); background: #eef7fb; }
+.tnq-opt[aria-pressed="true"] .tnq-key { background: var(--tnq-accent); color: #fff; }
+.tnq-opt.is-right { border-color: var(--tnq-right); background: #eaf7f1; }
+.tnq-opt.is-right .tnq-key { background: var(--tnq-right); color: #fff; }
+.tnq-opt.is-wrong { border-color: var(--tnq-wrong); background: #fdeceb; }
+.tnq-opt.is-wrong .tnq-key { background: var(--tnq-wrong); color: #fff; }
+.tnq-opt.is-faded { opacity: .55; }
+.tnq-opt.is-missed { border-color: var(--tnq-right); border-style: dashed; }
+
+.tnq-tf { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.tnq-tf .tnq-opt { justify-content: center; font-weight: 700; min-height: 58px; }
+
+/* numeric and term: 16px minimum or iOS zooms the whole page on focus */
+.tnq-input-row { display: flex; gap: 8px; align-items: stretch; }
+.tnq-input {
+  flex: 1 1 auto; min-width: 0;
+  font: inherit; font-size: 16px;
+  min-height: var(--tnq-tap);
+  color: inherit; background: #fff;
+  border: 1px solid var(--tnq-line); border-radius: 9px;
+  padding: 10px 12px;
+}
+.tnq-input:focus-visible { outline: 2px solid var(--tnq-accent); outline-offset: 1px; border-color: var(--tnq-accent); }
+.tnq-input[disabled] { background: var(--tnq-panel); }
+.tnq-unit { display: flex; align-items: center; color: var(--tnq-muted); font-size: .9em; white-space: nowrap; }
+
+/* ordering: tap in sequence. No dragging anywhere, because pointer drag is
+   unreliable on touch and needs a keyboard equivalent bolted on afterwards.
+   Tapping gives both for free. */
+.tnq-order-slots { display: grid; gap: 8px; margin-bottom: 12px; }
+.tnq-slot {
+  display: flex; align-items: flex-start; gap: 10px;
+  min-height: var(--tnq-tap);
+  border: 1px dashed var(--tnq-line); border-radius: 9px;
+  padding: 11px 13px;
+  background: var(--tnq-panel);
+  color: var(--tnq-muted);
+  width: 100%; text-align: left;
+}
+.tnq-slot.is-filled { border-style: solid; background: #fff; color: inherit; cursor: pointer; }
+.tnq-slot.is-filled:hover { border-color: var(--tnq-accent); }
+.tnq-slot:focus-visible { outline: 2px solid var(--tnq-accent); outline-offset: 2px; }
+.tnq-slot.is-right { border-color: var(--tnq-right); background: #eaf7f1; }
+.tnq-slot.is-wrong { border-color: var(--tnq-wrong); background: #fdeceb; }
+.tnq-rank {
+  flex: 0 0 auto; min-width: 24px; height: 24px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 50%; background: var(--tnq-accent); color: #fff;
+  font-size: .78em; font-weight: 700;
+}
+.tnq-slot:not(.is-filled) .tnq-rank { background: #ddd; color: var(--tnq-muted); }
+.tnq-pool { display: grid; gap: 8px; }
+
+/* matching: the short term is the tappable thing and the long definition is the
+   prompt, never the other way round. Definitions run to 120 characters and make
+   hopeless tap targets. */
+.tnq-match-row { border: 1px solid var(--tnq-line); border-radius: 10px; padding: 12px; margin-bottom: 10px; }
+.tnq-match-row.is-right { border-color: var(--tnq-right); background: #eaf7f1; }
+.tnq-match-row.is-wrong { border-color: var(--tnq-wrong); background: #fdeceb; }
+.tnq-match-def { margin-bottom: 10px; }
+.tnq-match-answer { font-size: .85em; color: var(--tnq-muted); margin-top: 8px; }
+.tnq-match-answer b { color: var(--tnq-ink); }
+
+.tnq-feedback { min-height: 1.4em; margin: 14px 0 0; font-size: .93em; color: var(--tnq-muted); }
+.tnq-feedback b { color: var(--tnq-ink); }
+.tnq-feedback.is-right b { color: var(--tnq-right); }
+.tnq-feedback.is-wrong b { color: var(--tnq-wrong); }
+
+/* the citation: the reason this quiz is worth sitting */
+.tnq-cite {
+  margin-top: 12px;
+  border-left: 3px solid var(--tnq-line);
+  padding: 2px 0 2px 12px;
+  font-size: .9em;
+}
+.tnq-cite.is-open { border-left-color: var(--tnq-accent); }
+.tnq-cite-toggle {
+  background: none; border: 0; padding: 4px 0; margin: 0;
+  color: var(--tnq-accent); cursor: pointer; font-size: .85em; font-weight: 700;
+  min-height: var(--tnq-tap);
+}
+.tnq-cite-toggle:focus-visible { outline: 2px solid var(--tnq-accent); outline-offset: 2px; }
+.tnq-quote { font-style: italic; color: var(--tnq-ink); margin: 4px 0 6px; }
+/* A recovered documentation table.
+ *
+ * Wide on a laptop, stacked on a phone. Under 620px every row becomes its own
+ * block and each cell carries its column heading in front of it, which is the
+ * only honest way to show a four-column table on a 390px screen: shrinking the
+ * text or scrolling sideways both lose the reader. The row the question rested
+ * on is marked in both layouts.
+ */
+.tnq-table-wrap { margin: 6px 0 10px; }
+.tnq-table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.tnq-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: .86em;
+  font-style: normal;
+}
+.tnq-table th, .tnq-table td {
+  border: 1px solid var(--tnq-line);
+  padding: 7px 9px;
+  text-align: left;
+  vertical-align: top;
+}
+.tnq-table thead th { background: var(--tnq-panel); font-weight: 700; white-space: nowrap; }
+.tnq-table tbody th { font-weight: 700; }
+.tnq-table tr.is-quoted > * { background: #fffbe6; }
+.tnq-table tr.is-quoted > *:first-child { box-shadow: inset 3px 0 0 var(--tnq-warn); }
+.tnq-table tr.is-extra { display: none; }
+.tnq-table.is-open tr.is-extra { display: table-row; }
+
+@media (max-width: 619px) {
+  /* Stack. Each row becomes a card and each value is labelled by its column. */
+  .tnq-table, .tnq-table tbody, .tnq-table tr, .tnq-table td, .tnq-table th { display: block; width: auto; }
+  .tnq-table thead { display: none; }
+  .tnq-table tr {
+    border: 1px solid var(--tnq-line);
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+  }
+  .tnq-table tr.is-quoted { border-color: var(--tnq-warn); background: #fffbe6; }
+  .tnq-table tr.is-quoted > * { background: none; }
+  .tnq-table tr.is-quoted > *:first-child { box-shadow: none; }
+  .tnq-table th, .tnq-table td { border: 0; padding: 3px 0; }
+  .tnq-table tbody th { font-size: 1.05em; margin-bottom: 2px; }
+  .tnq-table td[data-label]:not([data-label=""])::before {
+    content: attr(data-label);
+    display: block;
+    font-size: .82em;
+    font-weight: 700;
+    color: var(--tnq-muted);
+  }
+  .tnq-table.is-open tr.is-extra { display: block; }
+}
+
+.tnq-quote-list { margin: 4px 0 8px; padding-left: 20px; font-style: italic; }
+.tnq-quote-list li { margin-bottom: 3px; }
+.tnq-cite-link { font-size: .85em; }
+.tnq-why { color: var(--tnq-muted); margin-top: 6px; }
+
+.tnq-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 16px; }
+.tnq-actions .tnq-btn { flex: 1 1 auto; }
+.tnq-hint { color: var(--tnq-muted); font-size: .8em; display: none; }
+
+/* --------------------------------------------------------------- the score */
+
+.tnq-end { text-align: center; }
+.tnq-final { font-size: 2em; font-weight: 700; }
+.tnq-final small { font-size: .5em; font-weight: 400; color: var(--tnq-muted); }
+.tnq-verdict { color: var(--tnq-muted); margin-top: 2px; }
+.tnq-best { color: var(--tnq-muted); font-size: .85em; margin-top: 6px; }
+
+.tnq-sub { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 18px 0; text-align: left; }
+.tnq-sub-item { border: 1px solid var(--tnq-line); border-radius: 9px; padding: 10px 12px; }
+.tnq-sub-label { font-size: .78em; text-transform: uppercase; letter-spacing: .05em; color: var(--tnq-muted); }
+.tnq-sub-value { font-weight: 700; font-size: 1.15em; }
+.tnq-sub-note { font-size: .82em; color: var(--tnq-muted); }
+
+.tnq-breakdown { text-align: left; margin: 18px 0; }
+.tnq-breakdown-title,
+.tnq-review-title {
+  font-size: .78em; text-transform: uppercase; letter-spacing: .05em;
+  color: var(--tnq-muted); margin-bottom: 8px;
+}
+.tnq-row { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; font-size: .88em; }
+.tnq-row-name { flex: 0 0 40%; }
+.tnq-row-bar { flex: 1 1 auto; height: 8px; background: #eee; border-radius: 4px; overflow: hidden; }
+.tnq-row-fill { display: block; height: 100%; background: var(--tnq-accent); }
+.tnq-row-num { flex: 0 0 auto; color: var(--tnq-muted); font-variant-numeric: tabular-nums; }
+
+.tnq-review { text-align: left; margin-top: 18px; }
+.tnq-review-item { border: 1px solid var(--tnq-line); border-radius: 9px; padding: 12px; margin-bottom: 10px; }
+.tnq-review-stem { font-size: .92em; margin-bottom: 6px; }
+/* The question number does the work a coloured edge used to. Everything in this
+   list was got wrong, so flagging each card red says nothing and just shouts. */
+.tnq-review-num { font-weight: 700; margin-right: 7px; }
+.tnq-review-answer { font-size: .88em; }
+.tnq-review-answer b { color: var(--tnq-right); }
+
+.tnq-share { margin-top: 16px; }
+.tnq-grid {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 1.1em; letter-spacing: 2px; line-height: 1.3;
+  margin: 10px 0; word-break: break-all;
+}
+.tnq-copied { color: var(--tnq-right); font-size: .85em; font-weight: 700; }
+
+.tnq-end-actions { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 16px; }
+
+.tnq-foot { margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--tnq-line); font-size: .78em; color: var(--tnq-muted); text-align: left; }
+
+/* ------------------------------------------------------------ bigger screens */
+
+@media (min-width: 620px) {
+  .tnq { padding: 20px; }
+  .tnq-modes { grid-template-columns: 1fr 1fr; }
+  .tnq-actions .tnq-btn { flex: 0 0 auto; }
+  .tnq-hint { display: inline; }
+  .tnq-sub { grid-template-columns: repeat(3, 1fr); }
+  .tnq-end-actions { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tnq-bar-fill { transition: none; }
+  .tnq-pop { animation: none !important; }
+}
+
+.tnq-pop { animation: tnq-pop .4s ease; }
+@keyframes tnq-pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}

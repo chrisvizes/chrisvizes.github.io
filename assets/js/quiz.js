@@ -371,7 +371,7 @@
       var head = el('div', 'tnq-pick-head');
       head.appendChild(el('div', 'tnq-pick-title', 'How much do you know?'));
       head.appendChild(el('div', 'tnq-pick-sub',
-        manifest.items + ' questions on Tableau Next, Tableau Semantics and Data 360. Every one cites the page it came from.'));
+        'Test your knowledge against a bank of Tableau Next, Tableau Semantics and Data 360 questions and learn a thing or two along the way.'));
       elPick.appendChild(head);
 
       var modes = el('div', 'tnq-modes');

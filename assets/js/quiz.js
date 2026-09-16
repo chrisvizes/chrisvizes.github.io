@@ -307,6 +307,29 @@
     return take(pool, Math.min(want, pool.length), [], rnd);
   }
 
+  /* The daily challenge ramps rather than shuffling: five foundation questions,
+   * then three practitioner, then two advanced. Opening on something answerable
+   * and tightening from there is a better ten minutes than a random set where
+   * the second question can be a limit nobody remembers.
+   *
+   * The result is deliberately not shuffled afterwards, since the order is the
+   * whole point. A level short of its quota passes the shortfall to the next one
+   * up, so the ramp survives a bank that is thin somewhere. */
+  var DAILY_RAMP = [['foundation', 5], ['practitioner', 3], ['advanced', 2]];
+
+  function drawDaily(items, rnd) {
+    var deck = [];
+    var owed = 0;
+    DAILY_RAMP.forEach(function (step) {
+      var want = step[1] + owed;
+      var pool = items.filter(function (i) { return i.level === step[0]; });
+      var got = take(pool, want, deck, rnd);
+      owed = want - got.length;
+      deck = deck.concat(got);
+    });
+    return deck;
+  }
+
   // =====================================================================
   // the quiz
   // =====================================================================
@@ -387,12 +410,12 @@
       var doneToday = daily && daily.date === todayKey();
       modes.appendChild(modeButton(
         'Daily challenge',
-        doneToday ? 'Done today: ' + daily.score + ' out of ' + daily.total + '. Back tomorrow.' : 'Ten questions. The same ten for everyone, today only.',
+        doneToday ? 'Done today: ' + daily.score + ' out of ' + daily.total + '. Back tomorrow.' : 'Ten questions that get harder as you go. The same ten for everyone, today only.',
         function () {
           if (doneToday) { showDailyResult(daily); return; }
           needItems().then(function (list) {
             var rnd = mulberry32(seedFrom('tnq-' + todayKey()));
-            start(drawSimple(list, 10, rnd), 'Daily challenge', 'daily');
+            start(drawDaily(list, rnd), 'Daily challenge', 'daily');
           });
         },
         doneToday ? 'done' : ''
@@ -576,8 +599,12 @@
       bar.appendChild(fill);
       elPlay.appendChild(bar);
 
-      if (item.buried || item.beta) {
+      // On the daily the level is worth showing: it makes the ramp legible and
+      // turns "that got harder" into something the player can see happening.
+      var showLevel = run.key === 'daily';
+      if (item.buried || item.beta || showLevel) {
         var badges = el('div', 'tnq-badges');
+        if (showLevel) badges.appendChild(el('span', 'tnq-badge is-' + item.level, item.level));
         if (item.buried) badges.appendChild(el('span', 'tnq-badge is-buried', 'buried'));
         if (item.beta) badges.appendChild(el('span', 'tnq-badge is-beta', 'beta'));
         elPlay.appendChild(badges);
@@ -598,11 +625,17 @@
       elPlay.appendChild(feedback);
 
       var actions = el('div', 'tnq-actions');
-      var submit = el('button', 'tnq-btn tnq-submit', 'Check');
-      submit.type = 'button';
-      submit.disabled = true;
-      submit.addEventListener('click', check);
-      actions.appendChild(submit);
+      // Single-choice and true/false mark the moment you tap an option, so a
+      // Check button there is dead furniture that invites a pointless click.
+      // The other five types need one, because the answer isn't complete until
+      // the player says it is.
+      if (item.type !== 'single' && item.type !== 'tf') {
+        var submit = el('button', 'tnq-btn tnq-submit', 'Check');
+        submit.type = 'button';
+        submit.disabled = true;
+        submit.addEventListener('click', check);
+        actions.appendChild(submit);
+      }
       actions.appendChild(el('span', 'tnq-hint', hintFor(item)));
       elPlay.appendChild(actions);
     }
@@ -1137,7 +1170,8 @@
       back.addEventListener('click', function () { showPicker(); });
       actions.appendChild(back);
       elEnd.appendChild(actions);
-      again.focus({ preventScroll: true });
+      // Focus whichever button is actually there. The daily has no Another go.
+      actions.firstChild.focus({ preventScroll: true });
     }
 
     function scoreBlock(score, total, ratio) {

@@ -117,6 +117,11 @@
   background: #eef1f3; color: var(--tnq-muted);
 }
 .tnq-badge.is-buried { background: #f3ecfa; color: #6b3fa0; }
+/* Level badges, shown on the daily challenge so its ramp is visible. Deliberately
+   cool to warm as the questions get harder. */
+.tnq-badge.is-foundation { background: #e8f4ea; color: #1d6b32; }
+.tnq-badge.is-practitioner { background: #e6f0f7; color: #10537a; }
+.tnq-badge.is-advanced { background: #fae9e7; color: #a03226; }
 .tnq-badge.is-beta { background: #fdf0e0; color: var(--tnq-warn); }
 
 .tnq-stem { font-size: 1.05em; margin-bottom: 14px; }

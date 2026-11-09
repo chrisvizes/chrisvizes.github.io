@@ -253,6 +253,7 @@
   padding: 7px 9px;
   text-align: left;
   vertical-align: top;
+  white-space: pre-line;
 }
 .tnq-table thead th { background: var(--tnq-panel); font-weight: 700; white-space: nowrap; }
 .tnq-table tbody th { font-weight: 700; }
